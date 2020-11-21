@@ -44,7 +44,6 @@ const TocButtom = styled.button`
   font-size: 16px;
   line-height: 24px;
   border-radius: 2px;
-  border: solid 1px ${({ theme }) => theme.colors.highlightBorder};
   background-color: #eff6fe;
   text-align: left;
   padding: 10px 12px;
@@ -68,7 +67,6 @@ const TocContent = styled.div`
   border-radius: 2px;
   backdrop-filter: blur(27px);
   box-shadow: 4px 6px 8px 0 rgba(0, 0, 0, 0.05);
-  border: solid 1px ${({ theme }) => theme.colors.highlightBorder};
   background-color: #ffffff;
   width: max-content;
 
@@ -87,7 +85,6 @@ const TocContent = styled.div`
 
         &:hover,
         &:focus {
-          color: ${({ theme }) => theme.colors.primary};
         }
       }
     }
@@ -98,6 +95,5 @@ const ArrowDown = styled.div`
   height: 0px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid ${({ theme }) => theme.colors.primary};
   position: relative;
 `

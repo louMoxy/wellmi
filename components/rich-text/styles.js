@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const StyledRichText = styled.div`
-  font-family: ${({ theme }) => theme.fonts.body};
   & img {
     max-width: 100%;
     width: 100%;
@@ -14,7 +13,6 @@ export const StyledRichText = styled.div`
     letter-spacing: -0.1px;
   }
   a {
-    color: ${({ theme }) => theme.colors.primary};
   }
   ul {
     padding-left: 18px;
@@ -47,13 +45,10 @@ export const StyledRichText = styled.div`
     font-weight: 700;
   }
   blockquote {
-    background-color: ${({ theme }) => theme.colors.highlight};
-    border: 1px solid ${({ theme }) => theme.colors.highlightBorder};
     border-radius: 2px;
     margin: 0;
     padding: 24px;
     padding-bottom: 0;
-    color: ${({ theme }) => theme.colors.primary};
     margin-bottom: 2rem;
   }
   code {
@@ -89,7 +84,6 @@ export const StyledRichText = styled.div`
     color: #707070;
   }
   th {
-    background: ${({ theme }) => theme.colors.highlight};
     font-size: 16px;
     font-weight: 300;
   }

@@ -1,28 +1,20 @@
 import { node, bool, any, string } from "prop-types"
 import { useGithubToolbarPlugins } from "react-tinacms-github"
-import { ThemeProvider } from "styled-components"
-
-import TopBar from "@components/topbar"
 import Footer from "@components/footer"
+import Header from "@components/header"
+import { Grommet } from "grommet"
+import theme from "./theme"
 
-import { LayoutStyled, LayoutBodyStyled } from "./styles"
-
-const Layout = ({ children, showDocsSearcher, splitView, theme, searchIndex, searchText }) => {
+const Layout = ({ children, splitView }) => {
+  // Todo: Join up the custom style to the grommet theme
+  // require("../../content/styles.json")
   useGithubToolbarPlugins()
   return (
-    // if the theme isnt avaible load it from the file system
-    <ThemeProvider theme={theme || require("../../content/styles.json")}>
-      <LayoutStyled>
-        <TopBar
-          showDocsSearcher={showDocsSearcher}
-          theme={theme || require("../../content/styles.json")}
-          searchIndex={searchIndex}
-          searchText={searchText}
-        />
-        <LayoutBodyStyled splitView={splitView}>{children}</LayoutBodyStyled>
-        <Footer />
-      </LayoutStyled>
-    </ThemeProvider>
+    <Grommet theme={theme}>
+      <Header />
+      {children}
+      <Footer />
+    </Grommet>
   )
 }
 
@@ -31,7 +23,6 @@ Layout.propTypes = {
   showDocsSearcher: bool,
   splitView: bool,
   searchIndex: string,
-  theme: any,
   searchText: string,
 }
 

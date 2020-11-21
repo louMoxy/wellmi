@@ -28,7 +28,7 @@ const Head = (props) => (
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,400&display=swap"
       rel="stylesheet"
     ></link>
   </NextHead>

@@ -6,50 +6,32 @@ import Router from "next/router"
 
 import Head from "@components/head"
 import Layout from "@components/layout"
-import Container from "@components/container"
+import Columns from "@components/columns"
 import { usePlugin } from "tinacms"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
-import { useGlobalStyleForm } from "@hooks"
 
 const Page = ({ file, preview, styleFile }) => {
-  // can remove this if you want to use the index page
-  useEffect(() => {
-    const { pathname } = Router
-    if (pathname == "/") {
-      Router.push("/docs")
-    }
-  })
-  const formOptions = {
-    label: "home page",
-    fields: [
-      {
-        name: "title",
-        component: "text",
-      },
-    ],
-  }
-  const [data, form] = useGithubJsonForm(file, formOptions)
-  usePlugin(form)
+  // const formOptions = {
+  //   label: "home page",
+  //   fields: [
+  //     {
+  //       name: "title",
+  //       component: "text",
+  //     },
+  //   ],
+  // }
+  // const [data, form] = useGithubJsonForm(file, formOptions)
+  // usePlugin(form)
 
-  const [styleData, styleForm] = useGlobalStyleForm(styleFile, preview)
+  // const [styleData, styleForm] = useGlobalStyleForm(styleFile, preview)
 
   return (
-    <Layout form={form} theme={styleData}>
+    <Layout>
       <Head title="Home" />
-      <Container className="container">
-        <Title className="title">{data.title}</Title>
-        <p className="description">
-          To get started, edit <code>pages/index.js</code> and save to reload.
-        </p>
-      </Container>
+      <Columns />
     </Layout>
   )
 }
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
 
 /**
  * Fetch data with getStaticProps based on 'preview' mode

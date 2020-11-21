@@ -41,7 +41,6 @@ export const FooterLink = styled.a`
 
 export const EditWithTinaButton = styled.a`
   box-sizing: border-box;
-  border: 1px solid ${({ theme }) => theme.colors.highlightBorder};
   background-color: #eff6fe;
   cursor: pointer;
   text-decoration: none;
@@ -61,7 +60,6 @@ export const EditWithTinaButton = styled.a`
     font-size: 18px;
     position: relative;
     top: -2px;
-    color: ${({ theme }) => theme.colors.primary};
   }
   &:hover {
     border-color: #77b1fa;

@@ -153,7 +153,6 @@ const HighlightContent = styled.div`
   color: #707070;
   mark {
     background-color: transparent;
-    color: ${({ theme }) => theme.colors.primary};
     font-weight: 700;
   }
 `
@@ -179,7 +178,6 @@ const Search = styled.input`
 
   &:focus {
     & ~ i {
-      color: ${({ theme }) => theme.colors.primary};
     }
   }
 
@@ -193,9 +191,7 @@ const HitsWrapper = styled.div`
   display: block;
   width: 100%;
   background: #fff;
-  border: 1px solid ${({ theme }) => theme.colors.highlightBorder};
   box-shadow: 2px 4px 8px 0px rgba(60, 60, 60, 0.2);
-  display: ${({ show }) => (show ? `block` : `none`)};
   @media all and (min-width: 1024px) {
     top: 45px;
   }
@@ -203,16 +199,13 @@ const HitsWrapper = styled.div`
 const HitItem = styled.a`
   display: block;
   padding: 15px;
-  box-shadow: 0px 1px 0 0px ${({ theme }) => theme.colors.highlightBorder};
   text-decoration: none;
 
   & .ais-Highlight-highlighted {
-    color: ${({ theme }) => theme.colors.primary};
     font-weight: bold;
     font-style: normal;
   }
   &:hover {
-    background-color: ${({ theme }) => theme.colors.highlight};
   }
 `
 const EmptyResult = styled.div`

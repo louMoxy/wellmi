@@ -1,6 +1,5 @@
 import Head from "@components/head"
 import Layout from "@components/layout"
-import Container from "@components/container"
 import { getBlogPosts } from "@utils"
 import { useGlobalStyleForm } from "@hooks"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
@@ -18,12 +17,10 @@ const Blog = (props) => {
       theme={styleData}
     >
       <Head title="Blog" />
-      <Container>
-        <h1>Blog</h1>
-        {props.posts.map((post) => {
-          return <BlogCard key={post.fileName} post={post} />
-        })}
-      </Container>
+      <h1>Blog</h1>
+      {props.posts.map((post) => {
+        return <BlogCard key={post.fileName} post={post} />
+      })}
     </Layout>
   )
 }

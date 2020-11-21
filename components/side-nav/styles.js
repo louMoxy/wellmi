@@ -51,9 +51,7 @@ export const NavItemLink = styled.a`
   ${({ active }) =>
     active &&
     css`
-      color: ${({ theme }) => theme.colors.primary};
       .dot {
-        background-color: ${({ theme }) => theme.colors.primary};
       }
     `}
   ${({ show }) =>
@@ -88,7 +86,6 @@ export const H3Styled = styled.h3`
     position: absolute;
     top: 22px;
     left: 6px;
-    color: ${({ theme }) => theme.colors.primary};
   }
   ${({ active }) =>
     active &&

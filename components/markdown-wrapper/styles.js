@@ -2,7 +2,6 @@ import styled from "styled-components"
 import ReactMarkdown from "react-markdown"
 
 export const ReactMarkdowStyled = styled(ReactMarkdown)`
-  font-family: ${({ theme }) => theme.fonts.body};
   p {
     font-size: 16px;
     line-height: 32px;
@@ -12,7 +11,6 @@ export const ReactMarkdowStyled = styled(ReactMarkdown)`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.primary};
     text-decoration: none;
     &:hover {
       text-decoration: underline;
@@ -49,13 +47,10 @@ export const ReactMarkdowStyled = styled(ReactMarkdown)`
   }
 
   blockquote {
-    background-color: ${({ theme }) => theme.colors.highlight};
-    border: 1px solid ${({ theme }) => theme.colors.highlightBorder};
     border-radius: 2px;
     margin: 0;
     padding: 24px;
     padding-bottom: 0;
-    color: ${({ theme }) => theme.colors.primary};
     margin-bottom: 2rem;
   }
 
@@ -86,7 +81,6 @@ export const ReactMarkdowStyled = styled(ReactMarkdown)`
   }
 
   th {
-    background: ${({ theme }) => theme.colors.highlight};
     font-size: 16px;
     font-weight: 300;
   }

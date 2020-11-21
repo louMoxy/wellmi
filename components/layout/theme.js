@@ -13,6 +13,10 @@ export default {
         light: "#03C1E1",
         dark: "#03C1E1",
       },
+      "accent-2": {
+        light: "#20222E",
+        dark: "#20222E",
+      },
       background: {
         dark: "#4F5458",
         light: "#F9FCFF",

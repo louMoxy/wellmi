@@ -31,17 +31,15 @@ const HeaderComponent = () => {
   return (
     <Header pad="medium" height="xsmall" justify="center" border="bottom">
       <Box width="xlarge" direction="row" justify="between" align="center">
-        <Link href="/">
-          <>
-            <Image
-              src="/images/logo.png"
-              alt="Wellmi"
-              width={130}
-              height={94}
-              layout="fixed"
-            />
-          </>
-        </Link>
+        <a href="/">
+          <Image
+            src="/images/logo.png"
+            alt="Wellmi"
+            width={130}
+            height={94}
+            layout="fixed"
+          />
+        </a>
         <ResponsiveContext.Consumer>
           {size =>
             size === 'small' ? (
@@ -70,7 +68,7 @@ const HeaderComponent = () => {
                   <NavLink href="/">
                     About Us
                   </NavLink>
-                  <SecondaryButton label="Login"/>
+                  <SecondaryButton label="Login" />
                   <Button primary label="Get a Demo" />
                 </Box>
               )

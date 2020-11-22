@@ -1,36 +1,38 @@
+import {useEffect, useRef, useState} from 'react';
 import styled from 'styled-components';
 import theme from '../layout/theme';
+import { format } from 'path';
 
-const SVG = styled.svg`
+const Container = styled.div`
     position: absolute;
     height: 100%;
+    width: 100%;
     top: 0;
     right:0;
-    width: 100%;
     z-index: 1;
 `;
 
-const BackgroundText = ({ text }) => {
-    const id = `svg${text.replace(' ', '')}`;
-    const rightPath = "M100 100 L 100 0";
+interface Props {
+    text: string;
+    style?: object;
+}
+
+const BackgroundText = ({text, style={}}: Props) => {
+    const ref = useRef(null);
+    const [viewBox, setViewBox] = useState('0 0 100 100')
+    useEffect(() => {
+        const text = ref.current;
+        const {x, y, width, height} = text.getBBox(); 
+        setViewBox([x, y, width - 2, height - 2].join(' '));
+    }, [])
     return (
-        <SVG xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMax" height="100" width="100" viewBox="0 0 100 100">
-            <g>
-                <path id={id} d={rightPath} fill="transparent" />
-                <text>
-                    <textPath
-                        xlinkHref={`#${id}`}
-                        method="stretch"
-                        lengthAdjust="spacingAndGlyphs"
-                        textLength="100%"
-                        fontSize="34px"
-                        fill={theme.global.colors["text-weak"].dark}
-                        fontWeight="bold"
-                        opacity={0.2}
-                    >{text}</textPath>
+        <Container style={style}>
+            <svg viewBox={viewBox}>
+                <text ref={ref} opacity={0.2} fill={theme.global.colors["text-weak"].dark} fontWeight="bold" textAnchor="middle">
+                    {text}
                 </text>
-            </g>
-        </SVG>
+            </svg>
+        </Container>
     )
 }
 

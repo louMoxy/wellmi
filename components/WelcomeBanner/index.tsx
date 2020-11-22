@@ -9,7 +9,7 @@ const Columns = () => {
         <ResponsiveContext.Consumer>
             {size =>
                 <Box style={{position: 'relative'}}>
-                    <BackgroundText text="Wellmi" />
+                    <BackgroundText text="Wellmi" style={{transform: 'rotate(-90deg)', transformOrigin: '100% 0', right: 214, width: 700}}/>
                     <Box direction="row" justify="center" background={{ image: "url(/images/homepage-bg1.png)", position: '80%', repeat: 'no-repeat', size: 'contain' }} style={{zIndex: 2}}>
 
                         <Box width="xlarge" direction="row" align="center">

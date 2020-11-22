@@ -54,7 +54,7 @@ export const NewsletterCard = () => {
                     </Box>
                 </Box>
                 <ResponsiveContext.Consumer>
-                    {size => size === 'medium' && (
+                    {size =>( size === 'medium'||  size === 'large') && (
                         <OvelayImg width="500px">
                             <Image
                                 src="/images/newsletter-img.png"

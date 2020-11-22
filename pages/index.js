@@ -6,7 +6,8 @@ import Router from "next/router"
 
 import Head from "@components/head"
 import Layout from "@components/layout"
-import Columns from "@components/columns"
+import WelcomeBanner from "@components/WelcomeBanner"
+import Partners from "@components/Partners"
 import { usePlugin } from "tinacms"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 
@@ -28,7 +29,8 @@ const Page = ({ file, preview, styleFile }) => {
   return (
     <Layout>
       <Head title="Home" />
-      <Columns />
+      <WelcomeBanner />
+      <Partners />
     </Layout>
   )
 }

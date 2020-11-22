@@ -10,6 +10,7 @@ const Container = styled.div`
     top: 0;
     right:0;
     z-index: 1;
+    pointer-events: none;
 `;
 
 interface Props {
@@ -23,7 +24,7 @@ const BackgroundText = ({text, style={}}: Props) => {
     useEffect(() => {
         const text = ref.current;
         const {x, y, width, height} = text.getBBox(); 
-        setViewBox([x, y, width - 2, height - 2].join(' '));
+        setViewBox([x, y, width, height].join(' '));
     }, [])
     return (
         <Container style={style}>

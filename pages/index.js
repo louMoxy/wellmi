@@ -8,6 +8,8 @@ import Head from "@components/head"
 import Layout from "@components/layout"
 import WelcomeBanner from "@components/WelcomeBanner"
 import Partners from "@components/Partners"
+import WorldclassSection from "../components/WorldClassComponent"
+import LastestInsights from "../components/LastestInsights"
 import { usePlugin } from "tinacms"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 
@@ -31,6 +33,8 @@ const Page = ({ file, preview, styleFile }) => {
       <Head title="Home" />
       <WelcomeBanner />
       <Partners />
+      <WorldclassSection />
+      <LastestInsights />
     </Layout>
   )
 }

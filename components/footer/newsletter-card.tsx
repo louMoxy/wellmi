@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Text, Paragraph, Heading, ResponsiveContext, TextInput, Image, Button } from "grommet"
+import { Box, Text, ResponsiveContext, TextInput, Image, Button } from "grommet"
 import theme from '../layout/theme';
 import styled from 'styled-components';
 
@@ -8,7 +8,13 @@ const secondaryColor = theme.global.colors["accent-1"].light;
 const SecondaryButton = styled(Button)`
   background-color: ${secondaryColor};
   border-color: ${secondaryColor};
-  border-radius: 0 8px 8px 0px;
+  border-radius: 18px;
+  border: solid 2px white;
+  margin-left: -15px;
+  z-index: 2;
+  &:hover {
+    box-shadow: none;
+  }
 `;
 
 const OvelayImg = styled(Box)`
@@ -41,7 +47,7 @@ export const NewsletterCard = () => {
                         <TextInput
                             placeholder="example@gmail.com"
                             value={value}
-                            style={{ background: 'white', borderRadius: '8px 0 0 8px' }}
+                            style={{ background: 'white', borderRadius: '8px 0 0 8px', paddingRight: 20 }}
                             onChange={event => setValue(event.target.value)}
                         />
                         <SecondaryButton type="submit" label="submit" />

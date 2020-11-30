@@ -27,8 +27,7 @@ const Page = ({ file, preview, styleFile }) => {
   // const [data, form] = useGithubJsonForm(file, formOptions)
   // usePlugin(form)
 
-  // const [styleData, styleForm] = useGlobalStyleForm(styleFile, preview)
-
+  const [styleData, styleForm] = useGlobalStyleForm(styleFile, preview)
   return (
     <Layout>
       <Head title="Home" />

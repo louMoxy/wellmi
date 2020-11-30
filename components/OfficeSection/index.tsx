@@ -21,7 +21,7 @@ const Component = () => {
                             <Box height="medium">
                                 <Image src="/images/office-1.png" fit="contain" style={{ borderRadius: 10 }} />
                             </Box>
-                            <Box  height="small" width="small" round="medium" j>
+                            <Box  height="small" width="small" round="medium">
                                 <Image src="/images/office-2.png" fit="contain" style={{ borderRadius: 10 }} />
                             </Box>
                         </Box>

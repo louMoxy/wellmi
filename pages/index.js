@@ -10,6 +10,7 @@ import WelcomeBanner from "@components/WelcomeBanner"
 import Partners from "@components/Partners"
 import WorldclassSection from "../components/WorldClassComponent"
 import LastestInsights from "../components/LastestInsights"
+import Supporting from "../components/Supporting"
 import { usePlugin } from "tinacms"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 
@@ -35,6 +36,7 @@ const Page = ({ file, preview, styleFile }) => {
       <Partners />
       <WorldclassSection />
       <LastestInsights />
+      <Supporting />
     </Layout>
   )
 }

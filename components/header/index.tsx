@@ -8,8 +8,9 @@ import styled from 'styled-components';
 const secondaryColor = theme.global.colors["accent-1"].light;
 
 const SecondaryButton = styled(Button)`
-  background-color: ${secondaryColor};
-  border-color: ${secondaryColor};
+  background-color: ${props => props.dark ? 'transparent' : secondaryColor};
+  border-color: ${props => props.dark ? 'white' : secondaryColor};
+  color: white;
   &:hover {
     box-shadow: 0px 0px 0px 2px ${secondaryColor};
   }
@@ -17,7 +18,7 @@ const SecondaryButton = styled(Button)`
 
 const NavLink = styled.a`
   text-decoration: none;
-  color: ${theme.global.colors.text.light};
+  color: ${props => props.dark ? theme.global.colors.text.dark : theme.global.colors.text.light};
   margin-top: 6px;
   padding-right: 15px;
   transition: color 0.4s;
@@ -26,10 +27,15 @@ const NavLink = styled.a`
   }
 `
 
+interface Props {
+  bg: string;
+  dark: boolean;
+}
 
-const HeaderComponent = () => {
+
+const HeaderComponent = ({bg, dark}: Props) => {
   return (
-    <Header pad="medium" height="xsmall" justify="center" border="bottom">
+    <Header pad="medium" height="xsmall" justify="center" border="bottom" background={bg}>
       <Box width="xlarge" direction="row" justify="between" align="center">
         <a href="/">
           <Image
@@ -48,6 +54,7 @@ const HeaderComponent = () => {
                   a11yTitle="Navigation Menu"
                   dropProps={{ align: { top: 'bottom', right: 'right' } }}
                   icon={<MenuIcon color="brand" />}
+                  // Todo!
                   items={[
                     {
                       label: <Box pad="small">Grommet.io</Box>,
@@ -62,13 +69,13 @@ const HeaderComponent = () => {
               </Box>
             ) : (
                 <Box justify="end" direction="row" gap="small">
-                  <NavLink href="/">
+                  <NavLink href="/" dark={dark}>
                     Why Wellmi
                     </NavLink>
-                  <NavLink href="/">
+                  <NavLink href="/" dark={dark}>
                     About Us
                   </NavLink>
-                  <SecondaryButton label="Login" />
+                  <SecondaryButton label="Login" dark={dark}/>
                   <Button primary label="Get a Demo" />
                 </Box>
               )

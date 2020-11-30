@@ -10,9 +10,7 @@ export const StyledFooter = styled(Footer)`
       text-decoration: underline;
     }
   }
-  @media (min-width: 700px) {
-    margin-top: 100px;
-  }
+  margin-top: 100px;
   @media (min-width: 850px) {
     margin-top: 200px;
   }

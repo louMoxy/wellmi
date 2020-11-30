@@ -47,7 +47,7 @@ export default {
       },
       "text-xweak": {
         dark: "#999999",
-        light: "#666666",
+        light: "#919191",
       },
       border: {
         dark: "#444444",

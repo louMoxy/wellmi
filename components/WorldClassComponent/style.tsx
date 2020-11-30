@@ -1,4 +1,4 @@
-import { Box, Text, Button } from "grommet";
+import { Box, Button } from "grommet";
 import styled from 'styled-components';
 import theme from '../layout/theme';
 

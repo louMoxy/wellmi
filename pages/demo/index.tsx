@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 import theme from '../../components/layout/theme';
 import Banner from "../../components/Banner";
 import DemoForm from "../../components/DemoForm";
-import Partners from "@components/Partners";
+import Partners from "../../components/Partners";
 
 const Page = () => {
     const bgColor = theme.global.colors["accent-3"];

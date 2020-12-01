@@ -17,6 +17,7 @@ export default {
         light: "#20222E",
         dark: "#20222E",
       },
+      "accent-3": "#009BDC",
       background: {
         dark: "#4F5458",
         light: "#F9FCFF",

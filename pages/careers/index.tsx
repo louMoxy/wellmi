@@ -10,10 +10,12 @@ import JobList from '../../components/JobList'
 import theme from '../../components/layout/theme';
 
 const Page = () => {
+    const bgColor = theme.global.colors["accent-2"].dark;
     return (
-        <Layout bg={theme.global.colors["accent-2"].dark} dark={true}> 
+        <Layout bg={bgColor} dark={true}> 
             <Head title="Careers" />
-           <CareersBanner />
+           <CareersBanner color={bgColor} title="Careers" title2="at Wellmi" 
+           text="Want to Join The Wellmi family? <br>Looking for a career that let's you make a difference?" image="/images/carreer1.png"/>
            <CareerIntro />
            <CareerImages />
             <LifeAt />

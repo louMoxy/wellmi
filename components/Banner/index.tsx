@@ -7,26 +7,36 @@ const StyledBackground = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    height: 85%;
+    height: 75%;
     width: 100%;
     z-index: -1;
     border-radius: 0 0 0px 80px;
 `
 
-const Component = () => {
+interface Props {
+    color: string;
+    title: string;
+    title2: string;
+    text: string;
+    largeSecond?: boolean;
+    image: string;
+    imageWidth?: string;
+}
+
+const Component = ({color, title, title2, text, largeSecond = false, image, imageWidth = "medium"}: Props) => {
     return (
         <Box pad={{top: 'medium'}} style={{position: 'relative', zIndex: 1}}>
-            <StyledBackground background={theme.global.colors["accent-2"].dark}></StyledBackground>
+            <StyledBackground background={color}></StyledBackground>
             <Box direction="row" justify="center" pad="medium"> 
                 <Box width="xlarge" direction="row" justify="between" wrap={true}>
                     <Box pad={{left: 'medium', right: 'medium'}}>
-                        <Heading level="2" size="xlarge" margin={{bottom: 'none'}} color={theme.global.colors.text.dark}>Careers</Heading>
-                        <Heading level="2" size="medium" margin={{top: 'none'}} color={theme.global.colors.text.dark}>at Wellmi</Heading>
-                        <Text color={theme.global.colors.text.dark}>Want to Join The Wellmi family? <br></br> Looking for a career that let's you make a difference?</Text>
+                        <Heading level="2" size="xlarge" margin={{bottom: 'none'}} color={theme.global.colors.text.dark}>{title}</Heading>
+                        <Heading level="2" size={largeSecond ? "7rem" : "medium"} margin={{top: 'none', bottom: 'small'}} color={theme.global.colors.text.dark}>{title2}</Heading>
+                        <Text color={theme.global.colors.text.dark} dangerouslySetInnerHTML={{__html: text}}></Text>
                     </Box>
-                    <Box width="medium" style={{margin: 20, marginTop: 50, marginLeft: 'auto'}}>
+                    <Box width={imageWidth} style={{margin: 20, marginTop: 50, marginLeft: 'auto'}}>
                         <Image
-                            src="/images/carreer1.png"
+                            src={image}
                             fill="horizontal"
                         />
                     </Box>
@@ -35,5 +45,6 @@ const Component = () => {
         </Box>
     )
 }
+
 
 export default Component;

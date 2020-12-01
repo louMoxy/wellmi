@@ -10,10 +10,10 @@ const images = [
     "/images/ncs-ltd.png",
 ]
 
-const Partners = () => {
+const Partners = ({showBackgroundText = true}) => {
     return (
         <Box pad="large" style={{ position: 'relative' }}>
-            <BackgroundText text='partners' style={{width: '50%', top: '19%'}}/>
+            {showBackgroundText && <BackgroundText text='partners' style={{width: '50%', top: '19%'}}/>}
             <Box style={{zIndex: 2}} align="center">
                 <Title text='Organizations already enjoying Wellmi' />
                 <Box direction="row" gap="large" width="xlarge" justify="around" pad='large' background="white" border round="40px" margin="medium">

@@ -1,7 +1,6 @@
 import { Box, Image } from "grommet";
 import Title from "../title";
 import BackgroundText from '../backgroundText';
-import { relative } from "path";
 
 const images = [
     "/images/Heart-Heroes-Logo-colour.png",

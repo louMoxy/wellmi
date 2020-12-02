@@ -14,7 +14,7 @@ const Component = () => {
                     </Box>
                 </Box>
                 <Box pad="small" flex={true} width={{min: "400px"}}>
-                    <Paragraph fill={true} color="text-weak">
+                    <Paragraph fill={true} color="text-light">
                             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur. <br></br>
                         All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the.
                         <br></br>

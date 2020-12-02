@@ -4,6 +4,7 @@ import theme from '../../components/layout/theme';
 import Banner from "../../components/Banner";
 import About from "../../components/About";
 import OurOffices from "../../components/OurOffices";
+import TeamImages from "../../components/TeamImages";
 
 const Page = () => {
     const bgColor = theme.global.colors["accent-3"];
@@ -14,6 +15,7 @@ const Page = () => {
             text="Watch the video to learn more about us" largeSecond={true} image="/images/about-us-1.png" link="#"/>
             <About />
             <OurOffices />
+            <TeamImages />
         </Layout>
     )
 }

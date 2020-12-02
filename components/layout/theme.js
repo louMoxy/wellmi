@@ -38,6 +38,9 @@ export default {
         dark: "#fff",
         light: "#4F5458",
       },
+      "text-light": {
+        light: "#8A8A8A",
+      },
       "text-strong": {
         dark: "#FFFFFF",
         light: "#233E86",

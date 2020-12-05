@@ -1,5 +1,11 @@
-import { useState } from 'react';
-import { Box, Heading, Text, Accordion, AccordionPanel, Form, FormField, TextInput, Button, TextArea, Select, Image } from "grommet"
+import { useEffect } from "react"
+import styled from "styled-components"
+import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
+import { useGithubJsonForm } from "react-tinacms-github"
+import Router from "next/router"
+import { usePlugin } from "tinacms"
+import getGlobalStaticProps from "../../utils/getGlobalStaticProps";
+import { Box, Heading, Text, Button, Image } from "grommet"
 import Layout from "../../components/layout";
 import theme from '../../components/layout/theme';
 import Head from "../../components/head";
@@ -16,13 +22,24 @@ const ContentCard = ({right = false, src}) => {
     )
 }
 
-const HelpPage = () => {
-    const bgColor = "#02DB9A";
+const WhyWellmiPage = ({ file, preview, styleFile }) => {
+      const formOptions = {
+            label: "Why Wellmi Page",
+            fields: [
+            {
+                name: "title",
+                component: "text",
+            }
+        ],
+        }
+        const [data, form] = useGithubJsonForm(file, formOptions)
+        usePlugin(form)
+    const {title, bgColor, bannerImg, bannerText1, bannerText2 , bannerText} = data;
     return (
         <Layout bg={bgColor} dark={true}>
-            <Head title="Help Center" />
-            <Banner color={bgColor} title="Why" title2="Wellmi?"
-                text="" largeSecond={true} image="/images/whywellmi.png" />
+            <Head title={title} />
+            <Banner color={bgColor} title={bannerText1} title2={bannerText2}
+                text={bannerText} largeSecond={true} image={bannerImg} />
             <Box align="center" margin={{top: "medium", bottom: "medium"}}>
                 <Box width="xlarge" pad="medium">
                     <Box direction="row" wrap>
@@ -50,4 +67,42 @@ const HelpPage = () => {
     )
 }
 
-export default HelpPage;
+/**
+ * Fetch data with getStaticProps based on 'preview' mode
+ */
+export const getStaticProps = async function ({ preview, previewData }) {
+    const global = await getGlobalStaticProps(preview, previewData)
+  
+    if (preview) {
+      // get data from github
+      const file = (
+        await getGithubPreviewProps({
+          ...previewData,
+          fileRelativePath: "content/whyWellmi.json",
+          parse: parseJson,
+        })
+      ).props
+  
+      return {
+        props: {
+          ...file,
+          ...global,
+        },
+      }
+    }
+    // render from the file system.
+    return {
+      props: {
+        sourceProvider: null,
+        error: null,
+        preview: false,
+        file: {
+          fileRelativePath: "content/whyWellmi.json",
+          data: (await import("../../content/whyWellmi.json")).default,
+        },
+        ...global,
+      },
+    }
+  }
+
+export default WhyWellmiPage;

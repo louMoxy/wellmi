@@ -138,6 +138,7 @@ const FooterComponent = () => {
       <Box border="top" width="100%" align="center">
         <LegalBit />
       </Box>
+      <EditLink />
     </StyledFooter>
   )
 }

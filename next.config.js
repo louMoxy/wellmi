@@ -2,6 +2,8 @@ const path = require("path")
 const withSvgr = require("next-svgr")
 require("dotenv").config()
 
+console.log(process.env)
+
 module.exports = withSvgr({
   webpack: (config) => {
     config.node = {

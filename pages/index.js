@@ -4,7 +4,7 @@ import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { useGithubJsonForm } from "react-tinacms-github"
 import Router from "next/router"
 
-import Head from "../components/head"
+import Head from "@components/head"
 import Layout from "../components/layout"
 import WelcomeBanner from "../components/WelcomeBanner"
 import Partners from "../components/Partners"

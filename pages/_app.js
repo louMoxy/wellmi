@@ -12,8 +12,8 @@ import "./app.css"
 
 class MyApp extends App {
   constructor(props) {
+    const inEditMode = !!props.pageProps.preview
     super(props)
-    console.log(props.pageProps)
     const client = new AlpacaGitHubClient({
       proxy: "/api/proxy-github",
       authCallbackRoute: "/api/create-github-access-token",
@@ -22,12 +22,12 @@ class MyApp extends App {
       baseBranch: process.env.BASE_BRANCH,
     })
     this.cms = new TinaCMS({
-      enabled: !!props.pageProps.preview,
+      enabled: inEditMode,
       apis: {
         github: client,
       },
       media: new NextGithubMediaStore(client),
-      toolbar: props.pageProps.preview,
+      toolbar: inEditMode,
     })
   }
 
@@ -59,7 +59,6 @@ export const EditLink = ({ cms }) => {
 
 const enterEditMode = () => {
   const token = localStorage.getItem("tinacms-github-token") || null
-
   const headers = new Headers()
 
   if (token) {

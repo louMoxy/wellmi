@@ -1,4 +1,4 @@
-import { node, bool, string } from "prop-types"
+import { node, bool, string, object } from "prop-types"
 import { useGithubToolbarPlugins } from "react-tinacms-github"
 import styled from "styled-components"
 import Footer from "@components/footer"
@@ -30,7 +30,6 @@ export const LayoutBodyStyled = styled.main`
 `
 
 const Layout = ({ form, children, splitView, bg = "#fff", dark = false }) => {
-  console.log(form, splitView)
   // Todo: Join up the custom style to the grommet theme
   // require("../../content/styles.json")
   useGithubToolbarPlugins()
@@ -54,6 +53,7 @@ Layout.propTypes = {
   searchText: string,
   bg: string,
   dark: bool,
+  form: object,
 }
 
 Layout.defaultProps = {

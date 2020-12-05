@@ -72,7 +72,7 @@ const HeaderComponent = ({bg, dark}: Props) => {
                   <NavLink href="/" dark={dark}>
                     Why Wellmi
                     </NavLink>
-                  <NavLink href="/" dark={dark}>
+                  <NavLink href="/about-us" dark={dark}>
                     About Us
                   </NavLink>
                   <SecondaryButton label="Login" dark={dark}/>

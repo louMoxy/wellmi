@@ -191,4 +191,9 @@ export default {
       light: "#FAFCFF",
     },
   },
+  accordion: {
+    border: {
+      color: "#EBEBEB",
+    },
+  },
 }

@@ -12,7 +12,25 @@ const Container = styled.div`
   overflow: hidden;
 `
 
-const Layout = ({ children, splitView, bg = "#fff", dark = false }) => {
+export const LayoutBodyStyled = styled.main`
+  min-height: calc(100vh - 250px);
+  max-width: calc(1048px + 40px);
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 1px;
+  padding-top: 6px;
+  ${({ splitView }) =>
+    splitView &&
+    css`
+      @media all and (min-width: 768px) {
+        display: flex;
+        padding-top: 24px;
+      }
+    `}
+`
+
+const Layout = ({ form, children, splitView, bg = "#fff", dark = false }) => {
+  console.log(form, splitView)
   // Todo: Join up the custom style to the grommet theme
   // require("../../content/styles.json")
   useGithubToolbarPlugins()
@@ -21,6 +39,7 @@ const Layout = ({ children, splitView, bg = "#fff", dark = false }) => {
       <Container>
         <Header bg={bg} dark={dark} />
         {children}
+        <LayoutBodyStyled splitView={splitView}>{children}</LayoutBodyStyled>
         <Footer />
       </Container>
     </Grommet>

@@ -13,15 +13,16 @@ import "./app.css"
 class MyApp extends App {
   constructor(props) {
     super(props)
+    console.log(props.pageProps)
     const client = new AlpacaGitHubClient({
       proxy: "/api/proxy-github",
       authCallbackRoute: "/api/create-github-access-token",
       clientId: process.env.GITHUB_CLIENT_ID,
-      baseRepoFullName: process.env.REPO_FULL_NAME, // e.g: tinacms/tinacms.org,
+      baseRepoFullName: process.env.REPO_FULL_NAME,
       baseBranch: process.env.BASE_BRANCH,
     })
     this.cms = new TinaCMS({
-      enabled: props.pageProps.preview,
+      enabled: !!props.pageProps.preview,
       apis: {
         github: client,
       },
@@ -41,10 +42,19 @@ class MyApp extends App {
         >
           <Normalize />
           <Component {...pageProps} />
+          <EditLink cms={this.cms} />
         </TinacmsGithubProvider>
       </TinaProvider>
     )
   }
+}
+
+export const EditLink = ({ cms }) => {
+  return (
+    <button onClick={() => cms.toggle()}>
+      {cms.enabled ? "Exit Edit Mode" : "Edit This Site"}
+    </button>
+  )
 }
 
 const enterEditMode = () => {

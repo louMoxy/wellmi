@@ -22,7 +22,7 @@ const ContentCard = ({right = false, src}) => {
     )
 }
 
-const WhyWellmiPage = ({ file, preview, styleFile }) => {
+const WhyWellmiPage = ({ file, preview }) => {
       const formOptions = {
             label: "Why Wellmi Page",
             fields: [
@@ -35,8 +35,9 @@ const WhyWellmiPage = ({ file, preview, styleFile }) => {
         const [data, form] = useGithubJsonForm(file, formOptions)
         usePlugin(form)
     const {title, bgColor, bannerImg, bannerText1, bannerText2 , bannerText} = data;
+    console.log(preview)
     return (
-        <Layout bg={bgColor} dark={true}>
+        <Layout bg={bgColor} dark={true} form={form} >
             <Head title={title} />
             <Banner color={bgColor} title={bannerText1} title2={bannerText2}
                 text={bannerText} largeSecond={true} image={bannerImg} />

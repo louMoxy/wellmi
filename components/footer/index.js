@@ -1,7 +1,6 @@
 import { Box, Text, Paragraph, Heading } from "grommet"
 import Image from "next/image"
 import Link from "next/link"
-import { useCMS } from "tinacms"
 import { FacebookOption, Twitter, Instagram, LinkedinOption } from "grommet-icons"
 import { StyledFooter, StyledIcon } from "./styles"
 import { NewsletterCard } from "./newsletter-card"
@@ -138,17 +137,7 @@ const FooterComponent = () => {
       <Box border="top" width="100%" align="center">
         <LegalBit />
       </Box>
-      <EditLink />
     </StyledFooter>
-  )
-}
-export const EditLink = () => {
-  const cms = useCMS()
-  return (
-    <a onClick={() => cms.toggle()}>
-      <i className="icon-edit" />
-      {cms.enabled ? "Exit Edit Mode" : "Edit This Site With TinaCMS"}
-    </a>
   )
 }
 export default FooterComponent

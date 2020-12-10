@@ -38,7 +38,6 @@ const Layout = ({ form, children, splitView, bg = "#fff", dark = false }) => {
       <Container>
         <Header bg={bg} dark={dark} />
         {children}
-        <LayoutBodyStyled splitView={splitView}>{children}</LayoutBodyStyled>
         <Footer />
       </Container>
     </Grommet>

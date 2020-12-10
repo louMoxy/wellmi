@@ -15,17 +15,17 @@ import { usePlugin } from "tinacms"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 
 const Page = ({ file, preview, styleFile }) => {
-  // const formOptions = {
-  //   label: "home page",
-  //   fields: [
-  //     {
-  //       name: "title",
-  //       component: "text",
-  //     },
-  //   ],
-  // }
-  // const [data, form] = useGithubJsonForm(file, formOptions)
-  // usePlugin(form)
+  const formOptions = {
+    label: "home page",
+    fields: [
+      {
+        name: "title",
+        component: "text",
+      },
+    ],
+  }
+  const [data, form] = useGithubJsonForm(file, formOptions)
+  usePlugin(form)
 
   // const [styleData, styleForm] = useGlobalStyleForm(styleFile, preview)
   return (

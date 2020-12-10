@@ -69,7 +69,7 @@ const HeaderComponent = ({bg, dark}: Props) => {
               </Box>
             ) : (
                 <Box justify="end" direction="row" gap="small">
-                  <NavLink href="/" dark={dark}>
+                  <NavLink href="/why-wellmi" dark={dark}>
                     Why Wellmi
                     </NavLink>
                   <NavLink href="/about-us" dark={dark}>

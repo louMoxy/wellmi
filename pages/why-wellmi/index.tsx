@@ -25,23 +25,27 @@ const ContentCard = ({ right = false, src }) => {
 
 const WhyWellmiPage = ({ file, preview }) => {
     const formOptions = {
-    label: "home page",
-    fields: [
-      {
-        name: "title",
-        component: "text",
-      },
-    ],
-  }
-  const [data, form] = useGithubJsonForm(file, formOptions)
-  usePlugin(form)
+        label: "Why Wellmi Page",
+        fields: [
+            {
+                name: "title",
+                component: "text",
+            },
+            {
+                name: "bgColor",
+                component: "text",
+            }
+        ]
+    }
+    const [data, form] = useGithubJsonForm(file, formOptions)
+    usePlugin(form)
     // useGithubToolbarPlugins();
     const { title, bgColor, bannerImg, bannerText1, bannerText2, bannerText } = data;
     return (
         <InlineForm form={form}>
             <Layout bg={bgColor} dark={true} form={form} >
                 <Head title={title} />
-                {/* <InlineText name="title" /> */}
+                <InlineText name="title" />
                 <Banner color={bgColor} title={bannerText1} title2={bannerText2}
                     text={bannerText} largeSecond={true} image={bannerImg} />
                 <Box align="center" margin={{ top: "medium", bottom: "medium" }}>

@@ -18,9 +18,9 @@ const Blog = (props) => {
     >
       <Head title="Blog" />
       <h1>Blog</h1>
-      {props.posts.map((post) => {
+      {/* {props.posts.map((post) => {
         return <BlogCard key={post.fileName} post={post} />
-      })}
+      })} */}
     </Layout>
   )
 }

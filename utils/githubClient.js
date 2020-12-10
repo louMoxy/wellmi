@@ -15,7 +15,7 @@ export class AlpacaGitHubClient extends GithubClient {
     const repo = this.workingRepoFullName
     const branch = this.branchName
     const request = await this.req({
-      url: `https://api.github.com/repos/${repo}/contents/${filePath}?ref=${branch}`,
+      url: `https://api.github.com/repos/${repo}/${filePath}?ref=${branch}`,
       method: "GET",
     })
 

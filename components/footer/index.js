@@ -1,7 +1,6 @@
 import { Box, Text, Paragraph, Heading, Button } from "grommet"
-import Image from "next/image"
 import Link from "next/link"
-import { FacebookOption, Twitter, Instagram, LinkedinOption } from "grommet-icons"
+import { FacebookOption, Twitter, Instagram, LinkedinOption, Image } from "grommet-icons"
 import { StyledFooter, StyledIcon } from "./styles"
 import { NewsletterCard } from "./newsletter-card"
 import { useCMS } from "tinacms"

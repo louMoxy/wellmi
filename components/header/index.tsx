@@ -1,6 +1,5 @@
 import Link from "next/link"
-import Image from 'next/image'
-import { Header, Box, ResponsiveContext, Menu, Button } from 'grommet';
+import { Header, Box, ResponsiveContext, Menu, Button, Image } from 'grommet';
 import { Menu as MenuIcon } from 'grommet-icons';
 import theme from '../layout/theme';
 import styled from 'styled-components';
@@ -43,7 +42,6 @@ const HeaderComponent = ({bg, dark}: Props) => {
             alt="Wellmi"
             width={130}
             height={94}
-            layout="fixed"
           />
         </a>
         <ResponsiveContext.Consumer>

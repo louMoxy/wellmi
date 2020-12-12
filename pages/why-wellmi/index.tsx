@@ -87,7 +87,7 @@ export const getStaticProps = async function ({ preview, previewData }) {
         const file = (
             await getGithubPreviewProps({
                 ...previewData,
-                fileRelativePath: "content/whyWellmi.json",
+                fileRelativePath: "whyWellmi.json",
                 parse: parseJson,
             })
         ).props

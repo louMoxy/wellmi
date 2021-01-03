@@ -1,0 +1,26 @@
+{
+  "logo": {
+    "light": "/images/logo.png",
+    "dark": "/images/logo.png"
+  },
+  "navigation": [
+    {
+      "name": "Why Wellmi",
+      "link": "/why-wellmi"
+    },
+    {
+      "name": "About Us",
+      "link": "/about-us"
+    }
+  ],
+  "buttons": [
+    {
+      "name": "Login",
+      "link": "/"
+    },
+    {
+      "name": "Get a Demo",
+      "link": "/"
+    }
+  ]
+}

@@ -1,30 +1,85 @@
 import { Box, Heading, Text, Image } from "grommet";
+import { InlineText, InlineTextarea, BlocksControls } from 'react-tinacms-inline'
 import theme from '../layout/theme';
+import { HeaderText } from '../HeaderText';
+import ImageComponent from '../Image';
 import { UnderLine } from '../title/underline';
 import { LocationText } from '../LocationText';
 
-const Component = () => {
+export const Offices = ({ index, data }) => {
     return (
-        <Box align="center">
-            <Box width="xlarge" direction="row" wrap={true} pad="medium">
-                <Box basis="60%" pad="small" round="medium" margin={{top: "95px"}}>
-                    <Image src="/images/about-us-2.png" style={{borderRadius: 20}} fill="horizontal"/>
-                    <Box width={{max: "380px"}}>
-                        <LocationText text="37 Basepoint business center, Oakfield close, tewksbury, united kingdom, GL20 8SD"/>
+        <BlocksControls index={index} insetControls>
+            <Box align="center">
+                <Box width="xlarge" direction="row" wrap={true} pad="medium">
+                    <Box basis="60%" width={{min: "300px"}} pad="small" round="medium" margin={{ top: "95px" }} justify="end" flex="grow" >
+                        <ImageComponent name="img1" className="border"/>
+                        <Box width={{ max: "380px" }}>
+                            <LocationText name="locationText1" imgName="locationImg1"/>
+                        </Box>
                     </Box>
-                </Box>
-                <Box basis="40%" pad="small" align="end">
-                    <Text size="small" color="text-xweak" textAlign="end">Our Offices</Text>
-                    <Heading textAlign="end" margin="none" size="medium"><span style={{ color: theme.global.colors.brand.light }}>Offices </span>in United Kingdom </Heading>
-                    <Box style={{ position: 'relative', transform: 'scale(0.5)', marginRight: -70 }} width="300px">
-                        <UnderLine width="100%" />
+                    <Box basis="40%" pad="small" align="end" justify="end" flex="grow">
+                        <Text size="small" color="text-xweak" textAlign="end"><InlineText name="smallText"/></Text>
+                        <HeaderText data={data} textAlign="end" margin="none" size="medium"/>
+                        <Box style={{ position: 'relative', transform: 'scale(0.5)', marginRight: -70 }} width="300px">
+                            <UnderLine width="100%" />
+                        </Box>
+                        <ImageComponent name="img2" className="border"/>
+                        <LocationText name="locationText2" imgName="locationImg2"/>
                     </Box>
-                    <Image src="/images/about-us-3.png" style={{borderRadius: 20}} fill="horizontal" margin={{top: "large"}}/>
-                    <LocationText text="Bizspace House, Bristol Road, Glouscester GL1 5RZ"/>
                 </Box>
             </Box>
-        </Box>
+        </BlocksControls>
     )
 }
 
-export default Component;
+export const offices_template = {
+    label: 'Our Offices',
+    defaultItem: {
+        headingText: 'Add your Heading text here',
+        text: 'Add text here ',
+    },
+    fields: [
+        {
+            name: "smallText",
+            label: "Small title text",
+            component: "text",
+        },
+        {
+            name: "headingText",
+            label: "Title text",
+            component: "text",
+        },
+        {
+            name: "num",
+            label: "Number of words in accent color for title text",
+            component: "number",
+            step: 1
+        },
+        {
+            name: "locationText1",
+            label: "Location 1 text",
+            component: "text",
+        },
+        {
+            name: "locationText2",
+            label: "Location 1 text",
+            component: "text",
+        },
+        {
+            label: 'Image 1',
+            name: 'img1',
+            component: 'image',
+            parse: media => `/images/${media.filename}`,
+            uploadDir: () => 'public/images/',
+            previewSrc: fullSrc => fullSrc.replace('/public', ''),
+        },
+        {
+            label: 'Image 2',
+            name: 'img2',
+            component: 'image',
+            parse: media => `/images/${media.filename}`,
+            uploadDir: () => 'public/images/',
+            previewSrc: fullSrc => fullSrc.replace('/public', ''),
+        }
+    ],
+}

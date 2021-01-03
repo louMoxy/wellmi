@@ -1,28 +1,121 @@
-
+import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
+import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
+import { usePlugin } from "tinacms"
+import { InlineForm, InlineBlocks } from 'react-tinacms-inline'
+import getGlobalStaticProps from "../../utils/getGlobalStaticProps";
 import Head from "../../components/head"
 import Layout from "../../components/layout"
-import CareersBanner from "../../components/Banner"
-import CareerIntro from '../../components/CareerIntro'
-import CareerImages from '../../components/CareerImages'
-import LifeAt from '../../components/LifeAt'
-import Office from '../../components/OfficeSection'
-import JobList from '../../components/JobList'
+import { Banner, banner_template } from "../../components/Banner"
+import {CareersIntro, careerIntro_template} from '../../components/CareerIntro'
+import {CareerImages, careerImages_template} from '../../components/CareerImages'
+import {lifeAt_template, LifeAt} from '../../components/LifeAt'
+import {OfficeSection, office_template} from '../../components/OfficeSection'
+import {JobCard, card_template } from '../../components/JobList'
+import {textContent_template, TextContent} from "../../components/TextContent";
+import {textAndButton_template, TextAndButton} from "../../components/TextAndButton";
 import theme from '../../components/layout/theme';
+import { config } from '../../utils/globalCMSConfig';
 
-const Page = () => {
-    const bgColor = theme.global.colors["accent-2"].dark;
+const formConfig = {
+    id: 'Careers',
+    label: 'Careers',
+    fields: config,
+    initialValues: {
+        "title": "Careers",
+        "bgColor": "transparent",
+    }
+}
+// TODO: Move into CMS
+const bgColor = theme.global.colors["accent-2"].dark;
+
+const Page = ({ file, preview, global}) => {
+    const [data, form, loading] = useGithubJsonForm(file, formConfig)
+    if (loading) {
+        return <p>Loading</p>
+    }
+    usePlugin(form)
+    const { title } = data;
     return (
-        <Layout bg={bgColor} dark={true}> 
-            <Head title="Careers" />
-           <CareersBanner color={bgColor} title="Careers" title2="at Wellmi" 
-           text="Want to Join The Wellmi family? <br>Looking for a career that let's you make a difference?" image="/images/carreer1.png"/>
-           <CareerIntro />
-           <CareerImages />
-            <LifeAt />
-            <Office />
-            <JobList/>
-        </Layout>
+        <InlineForm form={form}>
+            <Layout bg={data.bgColor} dark={true} global={global}>
+                <Head title={title} />
+                <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} itemProps={{ bgColor }} />
+            </Layout>
+        </InlineForm>
     )
+}
+
+const PAGE_BLOCKS = {
+    banner: {
+        Component: Banner,
+        template: banner_template,
+    },
+    intro: {
+        Component: CareersIntro,
+        template: careerIntro_template,
+    },
+    careerImages: {
+        Component: CareerImages,
+        template: careerImages_template,
+    },
+    lifeAt: {
+        Component: LifeAt,
+        template: lifeAt_template,
+    },
+    office: {
+        Component: OfficeSection,
+        template: office_template,
+    },
+    textContent: {
+        Component: TextContent,
+        template: textContent_template
+    },
+    jobCard: {
+        Component: JobCard,
+        template: card_template
+    },
+    textAndButton: {
+        Component: TextAndButton,
+        template: textAndButton_template
+    },
+}
+
+/**
+ * Fetch data with getStaticProps based on 'preview' mode
+ */
+export const getStaticProps = async function ({ preview, previewData }) {
+    const global = await getGlobalStaticProps(preview, previewData)
+
+    if (preview) {
+        // get data from github
+        const file = (
+            await getGithubPreviewProps({
+                ...previewData,
+                fileRelativePath: "careers.json",
+                parse: parseJson,
+            })
+        ).props
+
+        return {
+            props: {
+                ...file,
+                ...global,
+            },
+        }
+    }
+    // render from the file system.
+    return {
+        props: {
+            sourceProvider: null,
+            error: null,
+            preview: false,
+            file: {
+                fileRelativePath: "content/careers.json",
+                data: (await import("../../content/careers.json")).default,
+            },
+            ...global,
+        },
+    }
 }
 
 export default Page

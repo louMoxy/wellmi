@@ -1,12 +1,19 @@
 import { Box, Text, Image } from 'grommet';
+import { InlineTextarea } from 'react-tinacms-inline'
+import ImageComponent from './Image';
 
-export const LocationText = ({text}) => (
-    <Box margin={{ top: "medium" }} direction="row" gap="small" pad="small" align="center">
-        <Location />
-        <Text size="small">{text}</Text>
-    </Box>
-)
+interface Props {
+    name: string;
+    imgName: string;
+}
 
-export const Location = () => (
-    <Image src="/images/united-kingdom.png" width="40px" height="40px" style={{ border: 'solid 4px white', borderRadius: "50%" }} />
-)
+export const LocationText = ({name, imgName}: Props) => {
+    return (
+        <Box margin={{ top: "medium" }} direction="row" gap="small" pad="small" align="center">
+            <ImageComponent name={imgName} className="location"/>
+            <Text size="small">
+                <InlineTextarea name={name} />
+            </Text>
+        </Box>
+    )
+}

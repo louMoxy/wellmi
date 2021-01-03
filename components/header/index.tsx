@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { Header, Box, ResponsiveContext, Menu, Button, Image } from 'grommet';
 import { Menu as MenuIcon } from 'grommet-icons';
 import theme from '../layout/theme';
@@ -29,16 +28,38 @@ const NavLink = styled.a`
 interface Props {
   bg: string;
   dark: boolean;
+  global: {
+    logo: {
+      light: string;
+      dark: string;
+    },
+    navigation: {
+      name: string;
+      link: string;
+    }[],
+    buttons: {
+      name: string;
+      link: string;
+    }[],
+    
+  }
 }
 
 
-const HeaderComponent = ({bg, dark}: Props) => {
+const HeaderComponent = ({ bg, dark, global }: Props) => {
+  const logo = dark ? global.logo.dark : global.logo.light;
+  const menuItems = [...global.navigation, ...global.buttons].map(({name, link}) => (
+    {
+      label: <Box pad="small">{name}</Box>,
+      href: link,
+    }
+  ))
   return (
     <Header pad="medium" height="xsmall" justify="center" border="bottom" background={bg}>
       <Box width="xlarge" direction="row" justify="between" align="center">
         <a href="/">
           <Image
-            src="/images/logo.png"
+            src={logo}
             alt="Wellmi"
             width={130}
             height={94}
@@ -52,29 +73,18 @@ const HeaderComponent = ({bg, dark}: Props) => {
                   a11yTitle="Navigation Menu"
                   dropProps={{ align: { top: 'bottom', right: 'right' } }}
                   icon={<MenuIcon color="brand" />}
-                  // Todo!
-                  items={[
-                    {
-                      label: <Box pad="small">Grommet.io</Box>,
-                      href: '/',
-                    },
-                    {
-                      label: <Box pad="small">Feedback</Box>,
-                      href: '/',
-                    },
-                  ]}
+                  items={menuItems}
                 />
               </Box>
             ) : (
                 <Box justify="end" direction="row" gap="small">
-                  <NavLink href="/why-wellmi" dark={dark}>
-                    Why Wellmi
+                  {global.navigation.map(({name, link}) => (
+                    <NavLink href={link} dark={dark} key={link}>
+                      {name}
                     </NavLink>
-                  <NavLink href="/about-us" dark={dark}>
-                    About Us
-                  </NavLink>
-                  <SecondaryButton label="Login" dark={dark}/>
-                  <Button primary label="Get a Demo" />
+                  ))}
+                  <SecondaryButton label={global.buttons[0].name} dark={dark}/>
+                  <Button primary label={global.buttons[1].name}  />
                 </Box>
               )
           }

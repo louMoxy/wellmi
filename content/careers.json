@@ -1,0 +1,119 @@
+{
+  "blocks": [
+    {
+      "bannerText": "Want to Join The Wellmi family? ↵ Looking for a career that let's you make a difference?",
+      "bannerText1": "Careers",
+      "bannerText2": "at Wellmi",
+      "bannerImg": "images/carreer1.png",
+      "_template": "banner"
+    },
+    {
+      "text": "At Wellmi, we’re all about supporting people when and where they need it the most. If you want to work for one of the fastest growing wellbeing providers in the UK , while growing and developing personally and professionally, then Wellmi is the right place for you.",
+      "text1": "We are currently looking for new people  to join us.",
+      "buttonText": "View Open Positions",
+      "buttonLink": "/",
+      "_template": "intro"
+    },
+    {
+      "_template": "careerImages",
+      "image1": {
+        "title": "Respect",
+        "text": "We respect human being, opinions and choices.",
+        "image": "images/career1.png"
+      },
+      "image2": {
+        "title": "Trust",
+        "text": "We trust ourselves and each other",
+        "image": "images/career2.png"
+      },
+      "image3": {
+        "title": "Transparency",
+        "text": "We value transparency to take the best decisions as a team.",
+        "image": "images/career3.png"
+      }
+    },
+    {
+      "_template": "lifeAt",
+      "num": 1,
+      "headingText": "Life at Wellmi",
+      "text": "At Wellmi, we love our people and we want everyone to feel loved and make the most of your career here. That’s why we support every aspect of your physical and mental well-being with our core values.",
+      "point1": {
+        "title": "Be Happy",
+        "text": "We approach life in a positive and optimistic way"
+      },
+      "point2": {
+        "title": "Breathe",
+        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since"
+      },
+      "point3": {
+        "title": "Meet Great People",
+        "text": "We approach life in a positive and optimistic way"
+      },
+      "point4": {
+        "title": "Start Doing",
+        "text": "We approach life in a positive and optimistic way"
+      },
+      "point5": {
+        "title": "Work Smarter",
+        "text": "We approach life in a positive and optimistic way"
+      },
+      "point6": {
+        "title": "Become a Better You",
+        "text": "We approach life in a positive and optimistic way"
+      }
+    },
+    {
+      "_template": "office",
+      "num": 1,
+      "locationImg": "/images/united-kingdom.png",
+      "headingText": "Office In Glouscester",
+      "text": "A few snaps from our base in Gloucester, UK",
+      "img1": "images/office-1.png",
+      "img2": "images/office-2.png",
+      "img3": "images/office-3.png",
+      "img4": "images/office-4.png",
+      "locationText": "Bizspace House, Bristol Road, Glouscester GL1 5RZ"
+    },
+    {
+      "_template": "textContent",
+      "headingText": "Want to become one of us?",
+      "text": "See a range of available positions below. Use the Arrows to select one before submitting a CV. We can’t wait to hear from you.",
+      "alignment": "Center",
+      "textSize": "xsmall"
+    },
+    {
+      "_template": "jobCard",
+      "title": "Product Designer",
+      "location": "Glouscester, UK",
+      "price": "2500",
+      "type": "Full Time"
+    },
+    {
+      "_template": "jobCard",
+      "title": "Digital Marketer",
+      "location": "Remote",
+      "price": "2500",
+      "type": "Contractual"
+    },
+    {
+      "_template": "jobCard",
+      "title": "Social Media Manager",
+      "location": "Glouscester, UK",
+      "price": "1800",
+      "type": "Full Time"
+    },
+    {
+      "_template": "jobCard",
+      "title": "Software Engineer",
+      "location": "Glouscester, UK",
+      "price": "2500",
+      "type": "Full Time"
+    },
+    {
+      "_template": "textAndButton",
+      "link": "/",
+      "text": "Did not find a position that suits you? Don't worry you can send us your CV and we will review it.",
+      "buttonText": "Send CV"
+    }
+  ]
+}

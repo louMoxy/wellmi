@@ -1,80 +1,67 @@
-import { useEffect } from "react"
-import styled from "styled-components"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
-import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
-import { InlineForm, InlineText } from 'react-tinacms-inline'
-import Router from "next/router"
+import { useGithubJsonForm } from "react-tinacms-github"
+import { InlineForm, InlineBlocks } from 'react-tinacms-inline'
 import { usePlugin } from "tinacms"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps";
-import { Box, Heading, Text, Button, Image } from "grommet"
 import Layout from "../../components/layout";
-import theme from '../../components/layout/theme';
 import Head from "../../components/head";
-import Banner from "../../components/Banner";
+import {banner_template, Banner} from "../../components/Banner";
+import {imageAndContent_template, ImageAndContent} from "../../components/ImageAndContent";
+import {textContent_template, TextContent} from "../../components/TextContent";
+import {image_template, ImageBlock} from "../../components/ImageBlock";
+import {ImageCard, imageCard_template} from "../../components/largeImageCard";
+import {config} from '../../utils/globalCMSConfig';
 
-const ContentCard = ({ right = false, src }) => {
-    return (
-        <Box pad="large" width={{ min: "400px", max: "900px" }} background="linear-gradient( transparent, transparent 30%, white 31%, white)" alignSelf={right ? 'end' : 'start'} margin={{ bottom: "large" }}>
-            <Image src={src} width="85%" margin={{ bottom: "medium" }} alignSelf={right ? 'end' : 'start'} />
-            <Heading size="small" textAlign={right ? 'end' : 'start'}>What makes Wellmi different from other EAP solutions?</Heading>
-            <Text textAlign={right ? 'end' : 'start'}>Traditional EAP programmes typically have a very low uptake rate, only reaching the small percentage of you’re employees who report an issue or ask for help. </Text>
-            <Text textAlign={right ? 'end' : 'start'}>Traditional EAP programmes typically have a very low uptake rate, only reaching the small percentage of you’re employees who report an issue or ask for help. </Text>
-        </Box>
-    )
-}
-
-const WhyWellmiPage = ({ file, preview }) => {
-    const formOptions = {
-        label: "Why Wellmi Page",
-        fields: [
-            {
-                name: "title",
-                component: "text",
-            },
-            {
-                name: "bgColor",
-                component: "text",
-            }
-        ]
+const formConfig = {
+    id: 'whyWellmi',
+    label: 'Why Wellmi',
+    fields: config,
+    initialValues: {
+        "title": "Why Wellmi",
+        "bgColor": "#02DB9A",
     }
-    const [data, form] = useGithubJsonForm(file, formOptions)
+  }
+
+const WhyWellmiPage = ({ file, preview, global}) => {
+    const [data, form, loading] = useGithubJsonForm(file, formConfig)
+    
+    if(loading){
+        return <p>Loading</p>
+    }
     usePlugin(form)
-    // useGithubToolbarPlugins();
-    const { title, bgColor, bannerImg, bannerText1, bannerText2, bannerText } = data;
+    const { title, bgColor} = data;
     return (
         <InlineForm form={form}>
-            <Layout bg={bgColor} dark={true} form={form} >
+            <Layout bg={data.bgColor} dark={true} global={global}>
                 <Head title={title} />
-                <InlineText name="title" />
-                <Banner color={bgColor} title={bannerText1} title2={bannerText2}
-                    text={bannerText} largeSecond={true} image={bannerImg} />
-                <Box align="center" margin={{ top: "medium", bottom: "medium" }}>
-                    <Box width="xlarge" pad="medium">
-                        <Box direction="row" wrap>
-                            <Box pad="small" basis="45%">
-                                <Image src="/images/whywellmi1.png" fill="horizontal" fit="contain" />
-                            </Box>
-                            <Box pad={{ left: "medium", right: "medium", top: "medium", bottom: "large" }} basis="55%" align="start" justify="end">
-                                <Text style={{ marginBottom: 40 }}>
-                                    Employee support in the modern world should be proactive, genuine, and accessible.  Giving your valued workforce the tools they deserve to prevent poor mental and physical health & wellbeing.
-                    </Text>
-                                <Button label="Know More" primary></Button>
-                            </Box>
-                        </Box>
-                        <Box width={{ min: "min-content", max: "700px" }} pad="medium" margin={{ top: "xlarge", bottom: "xlarge" }}>
-                            <Heading size="small"><span style={{ color: theme.global.colors.brand.light }}>Why make </span>employee wellbeing a priority</Heading>
-                            <Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</Text>
-                        </Box>
-                        <Image src="/images/whywellmi-chart.png" fill="horizontal" fit="contain" />
-                        <ContentCard src="/images/whywellmi2.png" />
-                        <ContentCard right src="/images/whywellmi3.png" />
-                    </Box>
-                </Box>
-
+                <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} itemProps={{bgColor}}/>
             </Layout>
         </InlineForm>
     )
 }
+
+const PAGE_BLOCKS = {
+    banner: {
+      Component: Banner,
+      template: banner_template,
+    },
+    imageAndContent: {
+        Component: ImageAndContent,
+        template: imageAndContent_template,
+    },
+    textContent: {
+        Component: TextContent,
+        template: textContent_template
+    },
+    imageContent: {
+        Component: ImageBlock,
+        template: image_template
+    },
+    ImageCard: {
+        Component: ImageCard,
+        template: imageCard_template
+    }
+  }
 
 /**
  * Fetch data with getStaticProps based on 'preview' mode

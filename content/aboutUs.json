@@ -1,0 +1,88 @@
+{
+  "title": "About Us",
+  "bgColor": "#009bdc",
+  "blocks": [
+    {
+      "bannerText": "Watch the video to learn more about us",
+      "bannerText1": "We Are",
+      "bannerText2": "Wellmi",
+      "bannerImg": "images/about-us-1.png",
+      "link": "#",
+      "_template": "banner",
+      "largeSecond": true
+    },
+    {
+      "_template": "titleAndContent",
+      "smallText": "Our Story",
+      "headingText": "How it all started in 2017?",
+      "text": "Add text"
+    },
+    {
+      "_template": "offices",
+      "locationText1": "37 Basepoint business center, Oakfield close, tewksbury, united kingdom, GL20 8SD",
+      "locationText2": "Bizspace House, Bristol Road, Glouscester GL1 5RZ",
+      "smallText": "Our Offices",
+      "locationImg1": "images/united-kingdom.png",
+      "locationImg2": "images/united-kingdom.png",
+      "headingText": "Offices in United Kingdom",
+      "num": 1,
+      "img1": "images/about-us-2.png",
+      "img2": "images/about-us-3.png"
+    },
+    {
+      "_template": "team",
+      "smallText": "Our Team",
+      "headingText": "A Few People Behind Wellmi",
+      "cards": [
+        {
+          "_template": "employeeCard",
+          "name": "Ben Caton",
+          "title": "Founder & CEO",
+          "image": "images/employee1.png",
+          "locationImg": "images/united-kingdom.png"
+        },
+        {
+          "_template": "employeeCard",
+          "name": "Ben Caton",
+          "title": "Founder & CEO",
+          "image": "images/employee1.png",
+          "locationImg": "images/united-kingdom.png"
+        },
+        {
+          "_template": "employeeCard",
+          "name": "Ben Caton",
+          "title": "Founder & CEO",
+          "image": "images/employee1.png",
+          "locationImg": "images/united-kingdom.png"
+        },
+        {
+          "_template": "employeeCard",
+          "name": "Ben Caton",
+          "title": "Founder & CEO",
+          "image": "images/employee1.png",
+          "locationImg": "images/united-kingdom.png"
+        },
+        {
+          "_template": "employeeCard",
+          "name": "Ben Caton",
+          "title": "Founder & CEO",
+          "image": "images/employee1.png",
+          "locationImg": "images/united-kingdom.png"
+        },
+        {
+          "_template": "employeeCard",
+          "name": "Ben Caton",
+          "title": "Founder & CEO",
+          "image": "images/employee1.png",
+          "locationImg": "images/united-kingdom.png"
+        },
+        {
+          "_template": "LinkBox",
+          "link": "/",
+          "image": "images/logo-white.png",
+          "text": "Join us"
+        }
+      ]
+    }
+  ]
+}

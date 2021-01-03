@@ -7,9 +7,17 @@ export default async (preview, previewData) => {
       fileRelativePath: "content/styles.json",
       parse: parseJson,
     })
+    const global = (
+      await getGithubPreviewProps({
+        ...previewData,
+        fileRelativePath: "global.json",
+        parse: parseJson,
+      })
+    ).props
 
     return {
       styleFile: styleFormsProps.props.file,
+      global,
     }
   }
 
@@ -17,6 +25,10 @@ export default async (preview, previewData) => {
     styleFile: {
       data: (await import("../content/styles.json")).default,
       fileRelativePath: "content/styles.json",
+    },
+    global: {
+      data: (await import("../content/global.json")).default,
+      fileRelativePath: "content/global.json",
     },
   }
 }

@@ -1,8 +1,46 @@
 {
-  "title": "Help Center",
+  "title": "Why Wellmi",
   "bgColor": "#02DB9A",
-  "bannerImg": "/images/whywellmi.png",
-  "bannerText1": "Why",
-  "bannerText2": "Wellmi?",
-  "bannerText": ""
+  "blocks": [
+    {
+      "bannerText": "",
+      "bannerText1": "Why",
+      "bannerText2": "Wellmi?",
+      "bannerImg": "images/whywellmi.png",
+      "_template": "banner"
+    },
+    {
+      "text": "Employee support in the modern world should be proactive, genuine, and accessible.  Giving your valued workforce the tools they deserve to prevent poor mental and physical health & wellbeing.",
+      "buttonText": "Know More",
+      "image": "images/whywellmi1.png",
+      "side": "Left",
+      "link": "/",
+      "_template": "imageAndContent"
+    },
+    {
+      "headingText": "Why make employee wellbeing a priority",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.",
+      "num": 2,
+      "_template": "textContent"
+    },
+    {
+      "image": "images/whywellmi-chart.png",
+      "size": "xlarge",
+      "_template": "imageContent"
+    },
+    {
+      "image": "images/whywellmi2.png",
+      "alignment": "left",
+      "text": "Traditional EAP programmes typically have a very low uptake rate, only reaching the small percentage of you’re employees who report an issue or ask for help. Traditional EAP programmes typically have a very low uptake rate, only reaching the small percentage of you’re employees who report an issue or ask for help.",
+      "headerText": "What makes Wellmi different from other EAP solutions?",
+      "_template": "ImageCard"
+    },
+    {
+      "image": "images/whywellmi3.png",
+      "alignment": "right",
+      "text": "Traditional EAP programmes typically have a very low uptake rate, only reaching the small percentage of you’re employees who report an issue or ask for help. Traditional EAP programmes typically have a very low uptake rate, only reaching the small percentage of you’re employees who report an issue or ask for help.",
+      "headerText": "What makes Wellmi different from other EAP solutions?",
+      "_template": "ImageCard"
+    }
+  ]
 }

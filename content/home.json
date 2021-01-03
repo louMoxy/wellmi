@@ -1,3 +1,66 @@
 {
-  "title": "TinaCMS is awesome!"
+  "title": "Wellmi",
+  "bgColor": "transparent",
+  "blocks": [
+    {
+      "_template": "banner",
+      "smallText": "WELL",
+      "headingText": "World-class cloud wellbeing resources that scale to any number of employees",
+      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
+      "buttonText1": "JOIN US",
+      "buttonText2": "GET A DEMO",
+      "link1": "/",
+      "link2": "/"
+    },
+    {
+      "_template": "partners",
+      "backgroundText": "Partners",
+      "text": "Organizations already enjoying Wellmi",
+      "image1": "/images/Heart-Heroes-Logo-colour.png",
+      "image2": "/images/Cirencester-College-Logo.png",
+      "image3": "/images/opp-hub-png.png",
+      "image4": "/images/ncs-ltd.png"
+    },
+    {
+      "_template": "worldclass",
+      "image": "/images/worldimage.png",
+      "num": 3,
+      "headingText": "The first unified total well-being platform",
+      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. LifeWorks by Morneau Shepell combines modern employee assistance, wellness, recognition and incentive programs into a unified total well-being solution that engages with 100% of your",
+      "button1": "REVIEW PRODUCTS",
+      "button2": "GET A DEMO",
+      "link1": "/",
+      "link2": "/"
+    },
+    {
+      "_template": "latestInsights",
+      "title": "Latest insight"
+    },
+    {
+      "_template": "supporting",
+      "headingText": "Supporting Millons of employees around the world",
+      "num": 1,
+      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. LifeWorks by Morneau Shepell combines modern employee assistance, wellness, recognition and incentive programs into a unified total well-being solution that engages with 100% of your",
+      "button1": "JOIN US",
+      "button2": "GET A DEMO",
+      "link1": "/",
+      "link2": "/",
+      "contentCard1": {
+        "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "heading": "London City Airport",
+        "image": "/images/pexels-pixabay.png",
+        "buttonLink": "/"
+      },
+      "contentCard2": {
+        "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "heading": "Nestlé",
+        "image": "/images/woman-in-blue-suit-jacket.png"
+      },
+      "contentCard3": {
+        "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "heading": "Dr. Martens",
+        "image": "/images/group-of-people-sitting-indoors.png"
+      }
+    }
+  ]
 }

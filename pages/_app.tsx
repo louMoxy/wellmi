@@ -1,13 +1,14 @@
 import App from 'next/app'
 import { TinaCMS, TinaProvider } from 'tinacms'
 import { GithubClient, TinacmsGithubProvider, GithubMediaStore } from 'react-tinacms-github'
+import './app.css';
 
 export default class Site extends App {
   cms: TinaCMS
 
   constructor(props) {
     super(props)
-    console.log(props.pageProps)
+    console.log(props)
     const github = new GithubClient({
       proxy: '/api/proxy-github',
       authCallbackRoute: '/api/create-github-access-token',
@@ -24,6 +25,12 @@ export default class Site extends App {
       sidebar: true,
       // toolbar: props.pageProps.preview,
     })
+
+    import("react-tinacms-editor").then(
+      ({ HtmlFieldPlugin }) => {
+        this.cms.plugins.add(HtmlFieldPlugin)
+      }
+    )
   }
 
   render() {
@@ -35,7 +42,6 @@ export default class Site extends App {
           onLogout={onLogout}
           error={pageProps.error}
         >
-          <EditLink cms={this.cms} />
           <Component {...pageProps} />
         </TinacmsGithubProvider>
       </TinaProvider>

@@ -1,4 +1,3 @@
-import matter from "gray-matter"
 import {
   getFiles as getGithubFiles,
   getGithubPreviewProps,
@@ -29,20 +28,12 @@ export default async (preview, previewData, contentDir) => {
           data: previewProps.props.file?.data,
         }
       }
-      const content = fs.readFileSync(`${file}`, "utf8")
-      const data = matter(content)
+      const content = fs.readFileSync(file)
+      const data = JSON.parse(content)
       return {
-        fileName: file.substring(contentDir.length + 1, file.length - 3),
+        fileName: file.replace(".json", "").replace(contentDir, "").replace("/", ""),
         fileRelativePath: file,
-        data: {
-          frontmatter: {
-            description: data.data.description || "",
-            title: data.data.title,
-            date: data.data.date || "",
-            author: data.data.author || "",
-          },
-          markdownBody: data.content,
-        },
+        data,
       }
     })
   )
@@ -52,6 +43,6 @@ export default async (preview, previewData, contentDir) => {
 const getLocalFiles = async (filePath) => {
   // grab all md files
   const fg = require("fast-glob")
-  const files = await fg(`${filePath}**/*.md`)
+  const files = await fg(`${filePath}**/*.json`)
   return files
 }

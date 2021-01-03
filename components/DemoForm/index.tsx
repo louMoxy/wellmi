@@ -4,6 +4,7 @@ import {FormNextLink} from 'grommet-icons';
 import styled from 'styled-components';
 import theme from '../layout/theme';
 import countries from './countries.json';
+import { BlocksControls, InlineTextarea, InlineText } from 'react-tinacms-inline'
 
 const employeeOptions = [
     "1-20",
@@ -13,7 +14,7 @@ const employeeOptions = [
     "200+"
 ]
 
-const DemoForm = () => {
+export const DemoForm = () => {
     const [employees, setEmployees] = useState(employeeOptions[0]);
     const [country, setCountry] = useState(countries[0]);
 
@@ -21,14 +22,15 @@ const DemoForm = () => {
         <Box align="center">
             <Box direction="row" width="xlarge" wrap={true}>
                 <Box basis="1/2" flex={true} pad="medium">
-                    <Heading color={theme.global.colors.brand.light} margin="none" size="3rem">Experience</Heading>
-                    <Heading margin="none" size="3rem">Wellbeing with Wellmi.</Heading>
-                    <Text margin={{ top: "medium", bottom: "medium" }}>Help, support and guidance that adapts and changes for your entire workforce.</Text>
+                    <Heading color={theme.global.colors.brand.light} margin="none" size="3rem"><InlineText name="title1"/></Heading>
+                    <Heading margin="none" size="3rem"><InlineText name="title2"/></Heading>
+                    <Text margin={{ top: "medium", bottom: "medium" }}><InlineTextarea name="text"/></Text>
                 </Box>
                 <Box basis="1/2" flex={true} pad="medium" width={{ min: "medium" }}>
-                    <Form onSubmit={({ value }) => { }}>
+                    <Form method="POST" data-netlify="true" name="contact">
+                        <input type="hidden" name="form-name" value="Contact form"/>
                         <FormField name="firstName" label="First Name" style={{ background: 'white' }}>
-                            <TextInput id="firstName" name="First Name" placeholder="Jahid" />
+                            <TextInput id="firstName" name="First Name" placeholder="Jahid" required/>
                         </FormField>
                         <FormField name="lastName" label="Last Name" style={{ background: 'white' }}>
                             <TextInput id="lastName" name="Last Name" placeholder="Jaykar" />
@@ -61,7 +63,7 @@ const DemoForm = () => {
                         </FormField>
                         <Box direction="row" justify="between" gap="medium" margin={{top: "medium"}} pad="small">
                             <Box>
-                                <Text size="xsmall">By registering, I confirm that I have read and agree to the <a href="/">privacy policy.</a></Text>
+                                <Text size="xsmall">By registering, I confirm that I have read and agree to the <a href="/privacyPolicy">privacy policy.</a></Text>
                             </Box>
                             <Box direction="row" width="small">
                                 <Button type="submit" primary label="Submit" gap="large" icon={<FormNextLink color="white"/>} reverse={true}/>
@@ -74,4 +76,23 @@ const DemoForm = () => {
     )
 }
 
-export default DemoForm;
+export const demo_template = {
+    label: 'Demo',
+    fields: [
+        {
+            component: 'text',
+            name: "title1",
+            label: "Title text 1",
+        },
+        {
+            component: 'text',
+            name: "title2",
+            label: "Title text 2",
+        },
+        {
+            component: 'textarea',
+            name: "text",
+            label: "Text",
+        }
+    ],
+}

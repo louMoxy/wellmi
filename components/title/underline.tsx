@@ -4,15 +4,22 @@ const color = theme.global.colors.brand.light;
 
 export const UnderLine  = styled.div`
     width: ${props => props.width ? props.width : "60%"};
-    height: 2px;
+    height: 30px;
     margin: 20px auto;
-    background: linear-gradient(90deg, ${color} 0%, ${color} 43%, transparent 43%, transparent 56%, ${color} 56%, ${color} 100%);
     position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        background: linear-gradient(90deg, ${color} 0%, ${color} 44%, transparent 44%, transparent 57%, ${color} 57%, ${color} 100%);
+        height: 3px;
+    }
     &:before {
         content: '';
         background: ${theme.global.colors.brand.light};
-        height: 20px;
-        width: 20px;
+        height: 22px;
+        width: 22px;
         left: calc(50% - 10px);
         top: -9px;
         position: absolute;

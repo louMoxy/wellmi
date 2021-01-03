@@ -24,6 +24,7 @@ const secondaryColor = theme.global.colors["accent-1"].light;
 export const StyledButton = styled(Button)`
   background-color: ${secondaryColor};
   border-color: ${secondaryColor};
+  padding: 5px 20px; 
   &:hover {
     box-shadow: 0px 0px 0px 2px ${secondaryColor};
   }

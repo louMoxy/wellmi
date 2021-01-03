@@ -1,0 +1,34 @@
+{
+  "title": "Help Center",
+  "bgColor": "#009bdc",
+  "text": "Help, support and guidance that adapts and changes for your entire workforce.",
+  "headingText": "Wellmi Frequently asked questions",
+  "num": 1,
+  "blocks": [
+    {
+      "bannerText": "Simply fill out some details below and we’ll take care of the rest.",
+      "bannerText1": "Wellmi",
+      "bannerText2": "Help Centre",
+      "bannerImg": "images/helpBanner.png",
+      "_template": "banner",
+      "largeSecond": true
+    }
+  ],
+  "accordion": [
+    {
+      "_template": "panel",
+      "text": "There are two different ways to sign up for Wellmi. <br> Email invitation: <br>If you have received an email invitation, follow the link in the email to create your Wellmi account.<br>Auto Enrolment:<br>If your company has completed the auto enrolment process for you, you can simply download the free Wellmi mobile app from the Apple App Store or Google Play Store on your smartphone and enter details provided to you by your company representative on the “login” section.<br>If you haven't received an email invitation or login details, please contact your HR/Benefits department or Wellmi administrator to find out how to sign up.<br>Have more questions? Submit a request.",
+      "question": "How do I sign up for Wellmi?"
+    },
+    {
+      "_template": "panel",
+      "question": "How do I change my password?",
+      "text": "..."
+    },
+    {
+      "_template": "panel",
+      "question": "What of my invitation/sign up link doesn’t work?",
+      "text": "..."
+    }
+  ]
+}

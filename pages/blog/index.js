@@ -50,6 +50,7 @@ export const getStaticProps = async function ({ preview, previewData }) {
       },
     }
   } catch (e) {
+    console.log("catch")
     return {
       props: {
         ...global,

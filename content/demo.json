@@ -1,0 +1,30 @@
+{
+  "title": "Demo",
+  "bgColor": "#02DB9A",
+  "blocks": [
+    {
+      "bannerText": "Simply fill out some details below and we’ll take care of the rest.",
+      "bannerText1": "Get a",
+      "bannerText2": "Demo!",
+      "bannerImg": "images/demo1.png",
+      "_template": "banner",
+      "largeSecond": true,
+      "imageWidth": "600px"
+    },
+    {
+      "_template": "demo",
+      "title1": "Experience",
+      "title2": "Wellbeing with Wellmi.",
+      "text": "Help, support and guidance that adapts and changes for your entire workforce.        "
+    },
+    {
+      "_template": "partners",
+      "backgroundText": "Partners",
+      "text": "Organizations already enjoying Wellmi",
+      "image1": "/images/Heart-Heroes-Logo-colour.png",
+      "image2": "/images/Cirencester-College-Logo.png",
+      "image3": "/images/opp-hub-png.png",
+      "image4": "/images/ncs-ltd.png"
+    }
+  ]
+}

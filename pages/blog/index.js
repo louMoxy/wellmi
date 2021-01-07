@@ -6,15 +6,16 @@ import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
 import useCreateBlogPage from "../../hooks/useCreateBlogPage"
 import BlogCard from "@components/blogCard"
 
-const Blog = (props) => {
-  useCreateBlogPage(props.posts)
-  const [styleData] = useGlobalStyleForm(props.styleFile, props.preview)
+const Blog = ({ styleFile, posts, file, preview, global }) => {
+  useCreateBlogPage(posts)
+  const [styleData] = useGlobalStyleForm(styleFile, preview)
   return (
     <Layout
       searchText="Search blog posts"
       showDocsSearcher
       searchIndex="tina-starter-alpaca-Blogs"
       theme={styleData}
+      global={global}
     >
       <Head title="Blog" />
       <h1>Blog</h1>
@@ -50,7 +51,6 @@ export const getStaticProps = async function ({ preview, previewData }) {
       },
     }
   } catch (e) {
-    console.log("catch")
     return {
       props: {
         ...global,

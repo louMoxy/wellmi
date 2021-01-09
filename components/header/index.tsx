@@ -61,8 +61,7 @@ const HeaderComponent = ({ bg, dark, global }: Props) => {
           <Image
             src={logo}
             alt="Wellmi"
-            width={130}
-            height={94}
+            width={110}
           />
         </a>
         <ResponsiveContext.Consumer>
@@ -72,7 +71,7 @@ const HeaderComponent = ({ bg, dark, global }: Props) => {
                 <Menu
                   a11yTitle="Navigation Menu"
                   dropProps={{ align: { top: 'bottom', right: 'right' } }}
-                  icon={<MenuIcon color="brand" />}
+                  icon={<MenuIcon color={dark ? "white" : "brand"} />}
                   items={menuItems}
                 />
               </Box>

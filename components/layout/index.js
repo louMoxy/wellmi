@@ -29,6 +29,9 @@ const Container = styled.div`
       width: 90px;
       margin: 24px;
     }
+    &.partners {
+      height: 100%;
+    }
     &.location {
       width: max-content;
       img {

@@ -16,7 +16,7 @@ export const Partners = ({ index, data }) => {
                     <Box direction="row" gap="large" width="xlarge" justify="around" pad='large' background="white" border round="40px" margin="medium">
                         {images.map((img, i) => (
                             <Box key={i} height="80px" width="auto">
-                                <ImageComponent name={img}/>
+                                <ImageComponent name={img} className="partners"/>
                             </Box>
                         ))}
                     </Box>

@@ -1,5 +1,5 @@
-import { Box, Text, Paragraph, Heading, Button, Anchor } from "grommet"
-import { FacebookOption, Twitter, Instagram, LinkedinOption, Image } from "grommet-icons"
+import { Box, Text, Paragraph, Heading, Button, Anchor, Image } from "grommet"
+import { FacebookOption, Twitter, Instagram, LinkedinOption } from "grommet-icons"
 import { StyledFooter, StyledIcon } from "./styles"
 import { NewsletterCard } from "./newsletter-card"
 import { useCMS } from "tinacms"
@@ -91,7 +91,7 @@ const FooterNav = ({
           </a>
         ))}
       </Box>
-      <Box pad="small" width="small">
+      <Box pad="small" width="small" width="250px">
         <Heading level="4" margin={{ bottom: "medium", top: "none" }}>
           {header4}
         </Heading>
@@ -102,14 +102,7 @@ const FooterNav = ({
           {downloadImgs.map(({ image, alt, link }, index) => (
             <div style={{ flex: 1 }} key={index}>
               <a href={link}>
-                <Image
-                  src={image}
-                  alt={alt}
-                  style={{ width: "100%" }}
-                  layout="responsive"
-                  width={144}
-                  height={47}
-                />
+                <Image src={image} alt={alt} style={{ width: "100%" }} layout="responsive" />
               </a>
             </div>
           ))}

@@ -6,7 +6,7 @@ import Footer from "@components/footer"
 import Header from "@components/header"
 import { Grommet } from "grommet"
 import theme from "./theme"
-import { getBlogPosts } from "@utils"
+import { headerForm, footerForm } from "./globalForm"
 
 const Container = styled.div`
   background: #f3f9ff;
@@ -60,90 +60,18 @@ export const LayoutBodyStyled = styled.main`
     `}
 `
 
-const globalForm = {
-  label: "Header settings",
-  fields: [
-    {
-      label: "Logo for light background",
-      name: "logo.light",
-      component: "image",
-      parse: (media) => `/images/${media.filename}`,
-      uploadDir: () => "public/images/",
-      previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
-    },
-    {
-      label: "Logo for dark background",
-      name: "logo.dark",
-      component: "image",
-      parse: (media) => `/images/${media.filename}`,
-      uploadDir: () => "public/images/",
-      previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
-    },
-    {
-      label: "Navigation",
-      name: "navigation",
-      component: "group-list",
-      description: "Navigation List",
-      itemProps: (item) => ({
-        key: item.name,
-        label: item.name,
-      }),
-      defaultItem: () => ({
-        name: "New Link",
-        link: "/",
-      }),
-      fields: [
-        {
-          label: "Name",
-          name: "name",
-          component: "text",
-        },
-        {
-          label: "Link",
-          name: "link",
-          component: "text",
-        },
-      ],
-    },
-    {
-      label: "Buttons Navigation",
-      name: "buttons",
-      component: "group-list",
-      description: "Button List",
-      itemProps: (item) => ({
-        key: item.name,
-        label: item.name,
-      }),
-      defaultItem: () => ({
-        name: "New Link",
-        link: "/",
-      }),
-      fields: [
-        {
-          label: "Name",
-          name: "name",
-          component: "text",
-        },
-        {
-          label: "Link",
-          name: "link",
-          component: "text",
-        },
-      ],
-    },
-  ],
-}
-
 const Layout = ({ children, bg = "#fff", dark = false, global }) => {
-  const [_, form] = useGithubJsonForm(global, globalForm)
+  const [_, hForm] = useGithubJsonForm(global, headerForm)
+  const [__, fForm] = useGithubJsonForm(global, footerForm)
 
-  useFormScreenPlugin(form)
+  useFormScreenPlugin(hForm)
+  useFormScreenPlugin(fForm)
   return (
     <Grommet theme={theme}>
       <Container>
-        <Header bg={bg} dark={dark} global={global.data} />
+        <Header bg={bg} dark={dark} global={global.data.header} />
         {children}
-        <Footer />
+        <Footer data={global.data.footer} />
       </Container>
     </Grommet>
   )

@@ -1,60 +1,61 @@
-import { Box, Text, Paragraph, Heading, Button } from "grommet"
-import Link from "next/link"
+import { Box, Text, Paragraph, Heading, Button, Anchor } from "grommet"
 import { FacebookOption, Twitter, Instagram, LinkedinOption, Image } from "grommet-icons"
 import { StyledFooter, StyledIcon } from "./styles"
 import { NewsletterCard } from "./newsletter-card"
 import { useCMS } from "tinacms"
 
-const LegalBit = () => (
+const LegalBit = ({ year, terms }) => (
   <Box direction="row" justify="between" pad="small" width="xlarge">
     <Text size="xsmall">
-      Copyright © wellmi 2020 All rights reserved. | Developed by{" "}
-      <a href="louisemoxhay.co.uk" size="xsmall">
+      Copyright © wellmi {year} All rights reserved. | Developed by{" "}
+      <a href="https://louisemoxhay.co.uk/" size="xsmall">
         Louise Moxhay
       </a>
     </Text>
     <Box direction="row" gap="small">
-      <Link href="">
-        <Text size="xsmall"> Terms and conditions</Text>
-      </Link>
-      <Link href="">
-        <Text size="xsmall">Privacy policy</Text>
-      </Link>
+      {terms.map(({ name, link }, index) => (
+        <Anchor href={link} key={index}>
+          <Text size="xsmall"> {name}</Text>
+        </Anchor>
+      ))}
     </Box>
   </Box>
 )
 
-const text = [
-  "Solution",
-  "Product Overview",
-  "Employee Assistance",
-  "News Feed & Recognition",
-  "Wellness",
-  "Perks & Savings",
-]
-const FooterNav = () => (
+const FooterNav = ({
+  logoImg,
+  p1,
+  header1,
+  navigation1,
+  facebook,
+  instagram,
+  linkedin,
+  twitter,
+  header2,
+  header4,
+  header3,
+  navigation2,
+  navigation3,
+  p2,
+  downloadImgs,
+}) => (
   <Box direction="row" justify="between" pad="small" wrap>
     <Box pad={{ bottom: "large", top: "medium" }}>
-      <Image src="/images/wellmi-w.png" alt="Wellmi" width={97} height={62} layout="fixed" />
+      <Image src={logoImg} alt="Wellmi" width={97} height={62} layout="fixed" />
       <Paragraph margin={{ top: "medium" }} size="small">
-        It is a long established fact that a reader will be distracted by the readable content of a
-        page when looking at its layout. The point of using
-        <br></br>
-        <br></br>
-        It is a long established fact that a reader will be distracted by the readable content of a
-        page when looking at its layout. The point of usingIt is a long established fact
+        {p1}
       </Paragraph>
       <Box gap="small" direction="row">
-        <StyledIcon href="/" color="#3B5998">
+        <StyledIcon href={facebook} color="#3B5998">
           <FacebookOption strokeWidth={0} />
         </StyledIcon>
-        <StyledIcon href="/" color="#1DA1F2">
+        <StyledIcon href={twitter} color="#1DA1F2">
           <Twitter strokeWidth={0} />
         </StyledIcon>
-        <StyledIcon href="/" color="#E1306C">
+        <StyledIcon href={instagram} color="#E1306C">
           <Instagram strokeWidth={0} />
         </StyledIcon>
-        <StyledIcon href="/" color="#0077B5">
+        <StyledIcon href={linkedin} color="#0077B5">
           <LinkedinOption strokeWidth={0} />
         </StyledIcon>
       </Box>
@@ -62,80 +63,73 @@ const FooterNav = () => (
     <Box direction="row" justify="between" pad="small" margin={{ left: "auto" }} wrap>
       <Box pad="small" margin={{ bottom: "small" }}>
         <Heading level="4" margin={{ bottom: "medium", top: "none" }}>
-          Solution
+          {header1}
         </Heading>
-        {text.map((text, i) => (
-          <Text key={i} size="small">
-            {text}
-          </Text>
+        {navigation1.map(({ name, link }, i) => (
+          <a key={i} href={link}>
+            <Text size="small">{name}</Text>
+          </a>
         ))}
       </Box>
       <Box pad="small" margin={{ bottom: "small" }}>
         <Heading level="4" margin={{ bottom: "medium", top: "none" }}>
-          Company
+          {header2}
         </Heading>
-        {text.map((text, i) => (
-          <Text key={i} size="small">
-            {text}
-          </Text>
+        {navigation2.map(({ name, link }, i) => (
+          <a key={i} href={link}>
+            <Text size="small">{name}</Text>
+          </a>
         ))}
       </Box>
       <Box pad="small" margin={{ bottom: "small" }}>
         <Heading level="4" margin={{ bottom: "medium", top: "none" }}>
-          Community
+          {header3}
         </Heading>
-        {text.map((text, i) => (
-          <Text key={i} size="small">
-            {text}
-          </Text>
+        {navigation3.map(({ name, link }, i) => (
+          <a key={i} href={link}>
+            <Text size="small">{name}</Text>
+          </a>
         ))}
       </Box>
       <Box pad="small" width="small">
         <Heading level="4" margin={{ bottom: "medium", top: "none" }}>
-          Get Started
+          {header4}
         </Heading>
         <Paragraph margin={{ top: "none" }} size="small">
-          It is a long established fact that a reader will be distracted by the readable content of
-          a page when looking at its layout.
-          <br></br>
-          <br></br>
-          readable content of a page when
+          {p2}
         </Paragraph>
         <Box margin={{ top: "medium" }} direction="row" gap="small">
-          <div style={{ flex: 1 }}>
-            <Image
-              src="/images/android-store.png"
-              alt="Download for android"
-              style={{ width: "100%" }}
-              layout="responsive"
-              width={144}
-              height={47}
-            />
-          </div>
-          <div style={{ flex: 1 }}>
-            <Image
-              src="/images/ios-store.png"
-              alt="Download for IOS"
-              layout="responsive"
-              width={144}
-              height={47}
-            />
-          </div>
+          {downloadImgs.map(({ image, alt, link }, index) => (
+            <div style={{ flex: 1 }} key={index}>
+              <a href={link}>
+                <Image
+                  src={image}
+                  alt={alt}
+                  style={{ width: "100%" }}
+                  layout="responsive"
+                  width={144}
+                  height={47}
+                />
+              </a>
+            </div>
+          ))}
         </Box>
       </Box>
     </Box>
   </Box>
 )
 
-const FooterComponent = () => {
+const FooterComponent = ({ data }) => {
+  const { footerNav, terms } = data
+  const year = new Date().getFullYear()
   return (
     <StyledFooter background="accent-2" justify="center" direction="column">
       <NewsletterCard />
       <Box width="xlarge">
-        <FooterNav />
+        <FooterNav {...footerNav} />
       </Box>
       <Box border="top" width="100%" align="center">
-        <LegalBit />
+        <LegalBit year={year} terms={terms} />
       </Box>
       <EditLink />
     </StyledFooter>

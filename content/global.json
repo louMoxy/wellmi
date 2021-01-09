@@ -1,8 +1,8 @@
 {
   "header": {
     "logo": {
-      "light": "/images/logo.png",
-      "dark": "/images/logo.png"
+      "light": "/images/logo-light.png",
+      "dark": "/images/logo-dark.png"
     },
     "navigation": [
       {

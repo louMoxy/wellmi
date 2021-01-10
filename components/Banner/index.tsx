@@ -1,8 +1,10 @@
 import { Box, Heading, Text, Anchor } from "grommet";
+import { Mail, Phone } from 'grommet-icons';
+
 import styled from 'styled-components';
 import theme from '../layout/theme';
 import { CirclePlay, FormNextLink } from 'grommet-icons';
-import { InlineForm, InlineText, InlineTextarea, BlocksControls } from 'react-tinacms-inline'
+import { InlineText, InlineTextarea, BlocksControls } from 'react-tinacms-inline'
 import ImageComponent from '../Image';
 
 const StyledBackground = styled.div`
@@ -16,97 +18,73 @@ const StyledBackground = styled.div`
     border-radius: 0 0 0px 80px;
 `
 
-interface Props {
-    color: string;
-    title: string;
-    title2: string;
-    text: string;
-    largeSecond?: boolean;
-    image: string;
-    imageWidth?: string;
-    link?: string;
-    form?: any;
-}
+const StyledPhone = styled(Phone)`
+    path {
+        fill: currentColor !important;
+    }
+`
 
-const Component = ({ color, title, title2, text, largeSecond = false, image, imageWidth = "medium", link, form}: Props) => {
+const getDescription = (link, contact, bgColor) => {
     const textColor = theme.global.colors.text.dark;
-    const Description = link ? (
-        <Anchor href={link}>
-            <Box direction="row" pad="small" gap="small" align="center">
-                <CirclePlay color={textColor} size="40px"/>
-                <Box width="200px">
-                    <Text color={textColor} weight="normal">
-                        <InlineTextarea name="bannerText" />
-                    </Text>
+    if (contact) {
+        return (
+            <>
+                <Text color={textColor}>
+                    <InlineTextarea name="bannerText" />
+                </Text>
+                <Box gap="small" direction="row" wrap={true} margin={{top: "small"}}>
+                    <Anchor href={`mailto:${contact.email}`}>
+                        <Box direction="row" gap="small">
+                            <Box background="rgba(255,255,255,0.8)" round="50%" width="33px" height="33px" pad="6px">
+                                <Mail size="20px" color={bgColor} />
+                            </Box>
+                            <Text color={textColor} margin={{ top: "4px" }} weight="normal">
+                                <InlineText name="contact.email" />
+                            </Text>
+                        </Box>
+                    </Anchor>
+                    <Anchor href={`tel:${contact.number}`}>
+                        <Box direction="row" gap="small">
+                            <Box background="rgba(255,255,255,0.8)" round="50%" width="33px" height="33px" pad="6px">
+                                <StyledPhone size="20px" color={bgColor} fill={bgColor} style={{color: bgColor}}/>
+                            </Box>
+                            <Text color={textColor} margin={{ top: "4px" }} weight="normal">
+                                <InlineText name="contact.number" />
+                            </Text>
+                        </Box>
+                    </Anchor>
                 </Box>
-                <FormNextLink color={textColor} size="50px"/>
-            </Box>
-        </Anchor>
-    ) : (
-        <Text color={textColor}> 
-            <InlineTextarea name="bannerText" />
-        </Text>
-    )
-    return (
-        <InlineForm form={form}>
-            <Box pad={{ top: 'medium' }} style={{ position: 'relative', zIndex: 1 }}>
-                <StyledBackground background={color}></StyledBackground>
-                <Box direction="row" justify="center" pad="medium">
-                    <Box width="xlarge" direction="row" justify="between" wrap={true}>
-                        <Box pad={{ left: 'medium', right: 'medium' }}>
-                            <Heading level="2" size="xlarge" margin={{ bottom: 'none' }} color={theme.global.colors.text.dark}>
-                                <InlineText name="bannerText1" />
-                            </Heading>
-                            <Heading level="2" size={largeSecond ? "6rem" : "medium"} margin={{ top: 'none', bottom: 'small' }} color={theme.global.colors.text.dark}>
-                                <InlineText name="bannerText2" />
-                            </Heading>
-                            {Description}
-                        </Box>
-                        <Box width={imageWidth} style={{ margin: '10', marginTop: 50, marginLeft: 'auto' }}>
-                            {link ?
-                                (
-                                    <Anchor href={link}>
-                                       <ImageComponent name="bannerImg" />
-                                    </Anchor>
-                                ) :
-                                <ImageComponent name="bannerImg" />
-                            }
-
-                        </Box>
+            </>
+        )
+    }
+    if (link) {
+        return (
+            <Anchor href={link}>
+                <Box direction="row" pad="small" gap="small" align="center">
+                    <CirclePlay color={textColor} size="40px" />
+                    <Box width="200px">
+                        <Text color={textColor} weight="normal">
+                            <InlineTextarea name="bannerText" />
+                        </Text>
                     </Box>
+                    <FormNextLink color={textColor} size="50px" />
                 </Box>
-            </Box>
-        </InlineForm>
-    )
-}
-
-// Todo: Remove
-export default Component;
-
-
-export const Banner = ({index, data, ...args}) => {
-    const {bgColor} = args
-    const textColor = theme.global.colors.text.dark;
-    const {largeSecond = false, imageWidth = "medium", link} = data;
-    const Description = link ? (
-        <Anchor href={link}>
-            <Box direction="row" pad="small" gap="small" align="center">
-                <CirclePlay color={textColor} size="40px"/>
-                <Box width="200px">
-                    <Text color={textColor} weight="normal">
-                        <InlineTextarea name="bannerText" />
-                    </Text>
-                </Box>
-                <FormNextLink color={textColor} size="50px"/>
-            </Box>
-        </Anchor>
-    ) : (
-        <Text color={textColor}> 
+            </Anchor>
+        )
+    }
+    return (
+        <Text color={textColor}>
             <InlineTextarea name="bannerText" />
         </Text>
     )
+}
+
+export const Banner = ({ index, data, ...args }) => {
+    const { bgColor } = args
+    const { largeSecond = false, imageWidth = "medium", link, contact } = data;
+    const Description = getDescription(link, contact, bgColor);
     return (
-      <BlocksControls index={index} insetControls>
+        <BlocksControls index={index} insetControls>
             <Box pad={{ top: 'medium' }} style={{ position: 'relative', zIndex: 1 }}>
                 <StyledBackground background={bgColor}></StyledBackground>
                 <Box direction="row" justify="center" pad="medium">
@@ -134,10 +112,10 @@ export const Banner = ({index, data, ...args}) => {
                     </Box>
                 </Box>
             </Box>
-      </BlocksControls>
+        </BlocksControls>
     )
-  }
-  
+}
+
 export const banner_template = {
     label: 'Banner',
     defaultItem: {

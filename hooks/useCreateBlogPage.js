@@ -2,8 +2,6 @@ import { useCMS, usePlugins } from "tinacms"
 import { useRouter } from "next/router"
 import slugify from "slugify"
 import { FORM_ERROR } from "final-form"
-
-import { toMarkdownString, flatDocs, getRandID } from "@utils"
 import { removeInvalidChars } from "../utils/removeInvalidChars"
 
 const useCreateBlogPage = (allBlogs) => {
@@ -29,12 +27,6 @@ const useCreateBlogPage = (allBlogs) => {
           },
         },
         {
-          name: "author",
-          label: "Author",
-          component: "text",
-          required: true,
-        },
-        {
           name: "date",
           label: "Date",
           component: "date",
@@ -48,23 +40,32 @@ const useCreateBlogPage = (allBlogs) => {
           component: "text",
           required: false,
         },
+        {
+          label: "Feature Image",
+          name: "featureImg",
+          component: "image",
+          parse: (media) => `/images/${media.filename}`,
+          uploadDir: () => "public/images/",
+          previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
+          required: true,
+        },
       ],
       onSubmit: async (frontMatter) => {
         const github = cms.api.github
         const slug = removeInvalidChars(slugify(frontMatter.title, { lower: true }))
-        const fileRelativePath = `content/blog/${slug}.md`
+        const fileRelativePath = `content/blog/${slug}.json`
         frontMatter.date = frontMatter.date || new Date().toString()
         return await github
           .commit(
             fileRelativePath,
             null,
-            toMarkdownString({
+            {
               fileRelativePath,
-              rawFrontmatter: {
+              data: {
                 ...frontMatter,
               },
-            }),
-            "Update from TinaCMS"
+            },
+            "Add new blog page"
           )
           .then((response) => {
             setTimeout(() => router.push(`/blog/${slug}`), 1500)

@@ -1,0 +1,24 @@
+{
+  "bgColor": "#02DB9A",
+  "blocks": [
+    {
+      "bannerText": "Global press contact:",
+      "bannerText1": "Wellmi",
+      "largeSecond": true,
+      "bannerText2": "Press",
+      "bannerImg": "images/newsBanner.png",
+      "_template": "banner",
+      "contact": {
+        "email": "Info@wellmi.io",
+        "number": "01452 539 129"
+      }
+    },
+    {
+      "_template": "textContent",
+      "headingText": "There’s always Something great happening at Wellmi",
+      "num": 2,
+      "textSize": "small",
+      "text": "We’re dedicated to helping the world’s best companies connect to their employees."
+    }
+  ]
+}

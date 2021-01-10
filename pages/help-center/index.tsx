@@ -66,13 +66,6 @@ const HelpPage = ({ file, preview, global }) => {
                         </Box>
                         <Accordion margin={{ top: "medium", bottom: "medium" }} pad="medium" gap="medium" activeIndex={active} onActive={setActive} multiple={true}>
                         <InlineBlocks name="accordion" blocks={ACCORDION_BLOCKS} />
-                        {/* {questions.map((q, i) => (
-                                <AccordionPanel key={i} label={q.question} style={{ background: "white", paddingLeft: 20, color: "#233E86" }}>
-                                    <Box pad="medium" background="white">
-                                        <Text dangerouslySetInnerHTML={{ __html: q.answer }} />
-                                    </Box>
-                                </AccordionPanel>
-                            ))} */}
                         </Accordion>
                     </Box>
                 </Box>

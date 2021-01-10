@@ -13,7 +13,6 @@ import {OfficeSection, office_template} from '../../components/OfficeSection'
 import {JobCard, card_template } from '../../components/JobList'
 import {textContent_template, TextContent} from "../../components/TextContent";
 import {textAndButton_template, TextAndButton} from "../../components/TextAndButton";
-import theme from '../../components/layout/theme';
 import { config } from '../../utils/globalCMSConfig';
 
 const formConfig = {
@@ -25,8 +24,6 @@ const formConfig = {
         "bgColor": "transparent",
     }
 }
-// TODO: Move into CMS
-const bgColor = theme.global.colors["accent-2"].dark;
 
 const Page = ({ file, preview, global}) => {
     const [data, form, loading] = useGithubJsonForm(file, formConfig)
@@ -39,7 +36,7 @@ const Page = ({ file, preview, global}) => {
         <InlineForm form={form}>
             <Layout bg={data.bgColor} dark={true} global={global}>
                 <Head title={title} />
-                <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} itemProps={{ bgColor }} />
+                <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} itemProps={{ bgColor: data.bgColor }} />
             </Layout>
         </InlineForm>
     )

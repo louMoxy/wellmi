@@ -1,5 +1,6 @@
 import App from 'next/app'
 import { TinaCMS, TinaProvider } from 'tinacms'
+import { DateFieldPlugin } from "react-tinacms-date"
 import { GithubClient, TinacmsGithubProvider, GithubMediaStore } from 'react-tinacms-github'
 import './app.css';
 
@@ -8,7 +9,6 @@ export default class Site extends App {
 
   constructor(props) {
     super(props)
-    console.log(props)
     const github = new GithubClient({
       proxy: '/api/proxy-github',
       authCallbackRoute: '/api/create-github-access-token',
@@ -17,14 +17,13 @@ export default class Site extends App {
       baseBranch: process.env.BASE_BRANCH, // e.g. 'master' or 'main' on newer repos
     })
     this.cms = new TinaCMS({
-      // enabled: props.pageProps.preview,
       apis: {
         github,
       },
       media: new GithubMediaStore(github),
       sidebar: true,
-      // toolbar: props.pageProps.preview,
     })
+    this.cms.plugins.add(DateFieldPlugin)
 
     import("react-tinacms-editor").then(
       ({ HtmlFieldPlugin }) => {

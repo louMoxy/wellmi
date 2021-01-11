@@ -55,17 +55,16 @@ const useCreateBlogPage = (allBlogs) => {
         const slug = removeInvalidChars(slugify(frontMatter.title, { lower: true }))
         const fileRelativePath = `content/blog/${slug}.json`
         frontMatter.date = frontMatter.date || new Date().toString()
-        console.log(frontMatter)
         return await github
           .commit(
             fileRelativePath,
             null,
-            {
+            JSON.stringify({
               fileRelativePath,
               data: {
                 ...frontMatter,
               },
-            },
+            }),
             "Add new blog page"
           )
           .then((response) => {

@@ -37,7 +37,7 @@ const useCreateBlogPage = (allBlogs) => {
         {
           name: "description",
           label: "Description",
-          component: "text",
+          component: "textarea",
           required: false,
         },
         {
@@ -55,6 +55,7 @@ const useCreateBlogPage = (allBlogs) => {
         const slug = removeInvalidChars(slugify(frontMatter.title, { lower: true }))
         const fileRelativePath = `content/blog/${slug}.json`
         frontMatter.date = frontMatter.date || new Date().toString()
+        console.log(frontMatter)
         return await github
           .commit(
             fileRelativePath,

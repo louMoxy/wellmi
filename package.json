@@ -9,7 +9,6 @@
     "build": "next build",
     "start": "cross-env NODE_ENV=production next start",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "create-indices": "npx babel-node ./indices/createIndices.js",
     "postbuild": "next-on-netlify"
   },
   "keywords": [

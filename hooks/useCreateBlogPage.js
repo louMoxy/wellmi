@@ -30,7 +30,7 @@ const useCreateBlogPage = (allBlogs) => {
           name: "date",
           label: "Date",
           component: "date",
-          dateFormat: "MMMM DD YYYY",
+          dateFormat: "DD MMMM, YYYY",
           timeFormat: false,
           required: true,
         },

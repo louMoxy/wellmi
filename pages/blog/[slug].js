@@ -1,27 +1,27 @@
-import Link from "next/link"
+// import Link from "next/link"
 import Error from "next/error"
-import { useRouter } from "next/router"
+// import { useRouter } from "next/router"
 import { InlineForm, InlineBlocks } from "react-tinacms-inline"
 import { useGithubJsonForm } from "react-tinacms-github"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
-import { InlineWysiwyg } from "react-tinacms-editor"
+// import { InlineWysiwyg } from "react-tinacms-editor"
 
 import Head from "@components/head"
 import Layout from "@components/layout"
 import { Banner, banner_template } from "../../components/Banner"
 import { TextContent, textContent_template } from "../../components/TextContent"
-import { config } from "../../utils/globalCMSConfig"
+// import { config } from "../../utils/globalCMSConfig"
 
-import Toc from "@components/Toc"
-import PostFeedback from "@components/post-feedback"
-import DocWrapper from "@components/doc-wrapper"
-import MarkdownWrapper from "@components/markdown-wrapper"
-import { PrimaryAnchor } from "@components/Anchor"
-import { usePlugin, useCMS } from "tinacms"
-import RichText from "@components/rich-text"
-import { createToc, getBlogPosts } from "@utils"
-import useCreateBlogPage from "../../hooks/useCreateBlogPage"
+// import Toc from "@components/Toc"
+// import PostFeedback from "@components/post-feedback"
+// import DocWrapper from "@components/doc-wrapper"
+// import MarkdownWrapper from "@components/markdown-wrapper"
+// import { PrimaryAnchor } from "@components/Anchor"
+// import { usePlugin, useCMS } from "tinacms"
+// import RichText from "@components/rich-text"
+// import { createToc, getBlogPosts } from "@utils"
+// import useCreateBlogPage from "../../hooks/useCreateBlogPage"
 
 const BlogPage = ({ file, global }) => {
   //   const cms = useCMS()
@@ -67,6 +67,7 @@ const PAGE_BLOCKS = {
  */
 export const getStaticProps = async function ({ preview, previewData, params }) {
   const { slug } = params
+  console.log(slug)
   const fileRelativePath = `content/blog/${slug}.json`
   const global = await getGlobalStaticProps(preview, previewData)
   if (preview) {
@@ -107,8 +108,8 @@ export const getStaticPaths = async function () {
   const paths = files
     .filter((file) => !file.endsWith("index.json"))
     .map((file) => {
-      const path = file.substring(contentDir.length + 1, file.length - 3)
-      return { params: { slug: path } }
+      const slug = file.replace(".json", "").replace(contentDir, "").replace("/", "")
+      return { params: { slug } }
     })
   return {
     fallback: true,

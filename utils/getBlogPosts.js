@@ -23,7 +23,7 @@ export default async (preview, previewData, contentDir) => {
           parse: parseMarkdown,
         })
         return {
-          fileName: file.substring(contentDir.length + 1, file.length - 3),
+          fileName: file.replace(".json", "").replace(contentDir, "").replace("/", ""),
           fileRelativePath: file,
           data: previewProps.props.file?.data,
         }

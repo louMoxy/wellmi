@@ -60,10 +60,8 @@ const useCreateBlogPage = (allBlogs) => {
             fileRelativePath,
             null,
             JSON.stringify({
-              fileRelativePath,
-              data: {
-                ...frontMatter,
-              },
+              ...frontMatter,
+              // Todo: add block banner as default
             }),
             "Add new blog page"
           )

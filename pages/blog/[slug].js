@@ -1,6 +1,6 @@
 // import Link from "next/link"
 import Error from "next/error"
-// import { useRouter } from "next/router"
+import { useRouter } from "next/router"
 import { InlineForm, InlineBlocks } from "react-tinacms-inline"
 import { useGithubJsonForm } from "react-tinacms-github"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
@@ -23,18 +23,20 @@ import { TextContent, textContent_template } from "../../components/TextContent"
 // import { createToc, getBlogPosts } from "@utils"
 // import useCreateBlogPage from "../../hooks/useCreateBlogPage"
 
-const BlogPage = ({ file, global }) => {
+const BlogPage = ({ file, global, previewURL }) => {
   //   const cms = useCMS()
-  //   const previewURL = props.previewURL || ""
-  //   const router = useRouter()
+  console.log(previewURL)
+  const router = useRouter()
   if (!file) {
-    return <Error statusCode={404} />
+    ;<Layout global={{}}>
+      <Head title={"Loading"} />
+      <p>This page is currently loading, please check back in a couple of minutes...</p>
+    </Layout>
   }
 
-  //   if (router.isFallback) {
-  //     return <div>Loading...</div>
-  //   }
-  //   useCreateBlogPage(props.posts)
+  if (router.isFallback) {
+    return <p>Loading....</p>
+  }
   const formOptions = {
     label: "Blog page",
     fields: [],
@@ -67,7 +69,6 @@ const PAGE_BLOCKS = {
  */
 export const getStaticProps = async function ({ preview, previewData, params }) {
   const { slug } = params
-  console.log(slug)
   const fileRelativePath = `content/blog/${slug}.json`
   const global = await getGlobalStaticProps(preview, previewData)
   if (preview) {
@@ -79,7 +80,7 @@ export const getStaticProps = async function ({ preview, previewData, params }) 
     return {
       props: {
         ...global,
-        // previewURL: `https://raw.githubusercontent.com/${previewData.working_repo_full_name}/${previewData.head_branch}`,
+        previewURL: `https://raw.githubusercontent.com/${previewData.working_repo_full_name}/${previewData.head_branch}`,
         ...previewProps.props,
       },
     }

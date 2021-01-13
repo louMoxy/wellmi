@@ -1,1 +1,6 @@
-{"fileRelativePath":"content/blog/tester.json","data":{"title":"tester","date":"2020-11-30T00:00:00Z","description":"description"}}
+{
+  "title": "Wellmi supporting educational drive to improve student wellbeing.",
+  "date": "2020-11-30T00:00:00Z",
+  "description": "Did you know that the Wellmi software is being used by education facilities across the UK to help improve student wellbeing. Cirencester College in Gloucestershire, UK was among the first to utilise Wellmi to support students twenty-four hours a day. Providing them with the help, tools and support they need whether at home or on campus.",
+  "featureImg": "images/newsBanner.png"
+}

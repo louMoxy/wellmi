@@ -14,9 +14,9 @@ const LegalBit = ({ year, terms }) => (
     </Text>
     <Box direction="row" gap="small">
       {terms.map(({ name, link }, index) => (
-        <Anchor href={link} key={index}>
+        <a href={link} key={index}>
           <Text size="xsmall"> {name}</Text>
-        </Anchor>
+        </a>
       ))}
     </Box>
   </Box>
@@ -100,11 +100,9 @@ const FooterNav = ({
         </Paragraph>
         <Box margin={{ top: "medium" }} direction="row" gap="small">
           {downloadImgs.map(({ image, alt, link }, index) => (
-            <div style={{ flex: 1 }} key={index}>
-              <a href={link}>
-                <Image src={image} alt={alt} style={{ width: "100%" }} layout="responsive" />
-              </a>
-            </div>
+            <a href={link} style={{ flex: 1 }} key={index}>
+              <Image src={image} alt={alt} style={{ width: "100%" }} layout="responsive" />
+            </a>
           ))}
         </Box>
       </Box>

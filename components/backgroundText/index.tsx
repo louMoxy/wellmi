@@ -34,7 +34,7 @@ const BackgroundText = ({ text, style = {} }: Props) => {
                 <Container style={style}>
                     {(size === "medium" || size === "large") && (
                         <svg viewBox={viewBox}>
-                            <text ref={ref} opacity={0.2} fill={theme.global.colors["text-weak"].dark} fontWeight="bold" textAnchor="middle">
+                            <text ref={ref} opacity={0.2} fill={theme.global.colors["text-weak"].dark} fontWeight="bold" textAnchor="middle" fontSize="16px">
                                 {text}
                             </text>
                         </svg>

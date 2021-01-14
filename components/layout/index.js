@@ -32,6 +32,11 @@ const Container = styled.div`
     &.partners {
       height: 100%;
     }
+    &.partnersDetails {
+      height: 100%;
+      max-width: 140px;
+      margin: 0 auto;
+    }
     &.location {
       width: max-content;
       img {

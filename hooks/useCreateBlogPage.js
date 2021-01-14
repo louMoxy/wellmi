@@ -61,7 +61,16 @@ const useCreateBlogPage = (allBlogs) => {
             null,
             JSON.stringify({
               ...frontMatter,
-              // Todo: add block banner as default
+              bgColor: "#02DB9A",
+              blocks: [
+                {
+                  bannerText: "",
+                  bannerText1: frontMatter.title,
+                  bannerText2: "",
+                  bannerImg: frontMatter.featureImg,
+                  _template: "banner",
+                },
+              ],
             }),
             "Add new blog page"
           )

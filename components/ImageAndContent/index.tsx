@@ -7,11 +7,13 @@ export const ImageAndContent = ({index, data}) => {
         <BlocksControls index={index} insetControls>
             <Box align="center" margin={{ top: "medium", bottom: "medium" }}>
                 <Box width="xlarge" pad="medium">
-                    <Box direction={data.side === "Left" ? "row" : "row-reverse"} wrap>
-                        <Box pad="small" basis="45%">
+                    <Box direction={data.side === "Left" ? "row" : "row-reverse"} wrap style={{position: 'relative'}}>
+                        <Box background={data.background ? "linear-gradient(transparent 20%, white 20.1%);" : 'transparent'} width="100%" height="100%" style={{position: 'absolute', zIndex: 1, top: 0, right: 0, maxWidth: 800}}></Box>
+                        <Box pad="small" basis="45%" margin={{bottom: data.background ? "medium" : "none"}} style={{zIndex: 1}} width={{min: "300px"}} flex>
                             <ImageComponent name="image" />
                         </Box>
-                        <Box pad={{ left: "medium", right: "medium", top: "medium", bottom: "large" }} basis="55%" align="start" justify="end">
+                        <Box pad={{ left: "medium", right: "medium", top: "medium", bottom: "large" }} basis="55%" align="start" justify="end" style={{zIndex: 1}} flex>
+                            <Text size="xxlarge" margin={{bottom: "medium"}}><InlineTextarea name="header" /></Text>
                             <Text style={{ marginBottom: 40 }}>
                                 <InlineTextarea name="text" />
                             </Text>
@@ -39,6 +41,11 @@ export const imageAndContent_template = {
             component: "textarea",
         },
         {
+            name: "header",
+            label: "Header",
+            component: "textarea",
+        },
+        {
             name: "buttonText",
             label: "Button Text",
             component: "text",
@@ -54,6 +61,12 @@ export const imageAndContent_template = {
             label: 'Side',
             description: 'Select which side the image should be',
             options: ['Left', 'Right'],
+          },
+          {
+            component: 'toggle',
+            name: 'background',
+            label: 'Whtie Background',
+            default: false,
           },
         {
             label: 'Image',

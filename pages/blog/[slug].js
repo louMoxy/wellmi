@@ -1,31 +1,17 @@
-// import Link from "next/link"
-import Error from "next/error"
 import { useRouter } from "next/router"
 import { InlineForm, InlineBlocks } from "react-tinacms-inline"
 import { useGithubJsonForm } from "react-tinacms-github"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
-// import { InlineWysiwyg } from "react-tinacms-editor"
-
+import { WYSIWYG, WYSIWYG_template } from "../../components/WYSIWYG"
+import { ImageBlock, image_template } from "../../components/ImageBlock"
 import Head from "@components/head"
 import Layout from "@components/layout"
 import { Banner, banner_template } from "../../components/Banner"
 import { TextContent, textContent_template } from "../../components/TextContent"
-// import { config } from "../../utils/globalCMSConfig"
-
-// import Toc from "@components/Toc"
-// import PostFeedback from "@components/post-feedback"
-// import DocWrapper from "@components/doc-wrapper"
-// import MarkdownWrapper from "@components/markdown-wrapper"
-// import { PrimaryAnchor } from "@components/Anchor"
-// import { usePlugin, useCMS } from "tinacms"
-// import RichText from "@components/rich-text"
-// import { createToc, getBlogPosts } from "@utils"
-// import useCreateBlogPage from "../../hooks/useCreateBlogPage"
+import { config } from "../../utils/globalCMSConfig"
 
 const BlogPage = ({ file, global, previewURL }) => {
-  //   const cms = useCMS()
-  console.log(previewURL)
   const router = useRouter()
   if (!file) {
     ;<Layout global={{}}>
@@ -37,15 +23,16 @@ const BlogPage = ({ file, global, previewURL }) => {
   if (router.isFallback) {
     return <p>Loading....</p>
   }
+
   const formOptions = {
     label: "Blog page",
-    fields: [],
+    fields: config,
   }
 
   const [data, form] = useGithubJsonForm(file, formOptions)
   return (
     <InlineForm form={form}>
-      <Layout bg={data.bgColor} global={global}>
+      <Layout bg={data.bgColor} dark={true} global={global}>
         <Head title={data.title} />
         <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} itemProps={{ bgColor: data.bgColor }} />
       </Layout>
@@ -61,6 +48,14 @@ const PAGE_BLOCKS = {
   textContent: {
     Component: TextContent,
     template: textContent_template,
+  },
+  wysiwyg: {
+    Component: WYSIWYG,
+    template: WYSIWYG_template,
+  },
+  image: {
+    Component: ImageBlock,
+    template: image_template,
   },
 }
 

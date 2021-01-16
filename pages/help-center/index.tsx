@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import { useGithubJsonForm, useGithubToolbarPlugins } from "react-tinacms-github"
+import { useGithubJsonForm } from "react-tinacms-github"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { InlineForm, InlineBlocks, InlineTextarea } from 'react-tinacms-inline'
 import { usePlugin } from "tinacms"
+import { InlineWysiwyg } from "react-tinacms-editor"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps";
-import { Box, Heading, Text, Accordion, Form, FormField, TextInput, Button, TextArea, Select } from "grommet"
+import { Box, Heading, Text, Accordion, Form, FormField, TextInput, Button, TextArea, Select, AccordionPanel } from "grommet"
 import Layout from "../../components/layout";
 import theme from '../../components/layout/theme';
 import Head from "../../components/head";
-import { Panel, panel_template } from '../../components/Accordion';
+import { Header } from '../../components/Accordion';
 import { Banner, banner_template } from "../../components/Banner";
 
 import countries from '../../components/DemoForm/countries.json';
@@ -36,12 +37,41 @@ const formConfig = {
             component: "number",
             step: 1
         },
+        {
+            label: 'FAQ',
+            name: 'accordionPanels',
+            component: 'group-list',
+            itemProps: item => ({
+                key: item.id,
+                label: item.question,
+            }),
+            defaultItem: {
+                question: "Add question here",
+                text: "...",
+                id: Math.random()
+                    .toString(36)
+                    .substr(2, 9),
+            },
+            fields: [
+                {
+                    label: 'Question',
+                    name: 'question',
+                    component: 'text'
+                },
+                {
+                    label: 'text',
+                    name: 'text',
+                    component: 'html'
+                },
+            ],
+        },
     ],
     initialValues: {
         "title": "Help Center",
         "bgColor": theme.global.colors["accent-3"],
     }
 }
+
 
 const HelpPage = ({ file, preview, global }) => {
     const [data, form, loading] = useGithubJsonForm(file, formConfig)
@@ -51,6 +81,7 @@ const HelpPage = ({ file, preview, global }) => {
     usePlugin(form)
     const { title } = data;
     const [active, setActive] = useState([0]);
+    console.log(data)
     return (
         <InlineForm form={form}>
             <Layout bg={data.bgColor} dark={true} global={global}>
@@ -65,7 +96,27 @@ const HelpPage = ({ file, preview, global }) => {
                             <Text color="text-weak"><InlineTextarea name="text" /></Text>
                         </Box>
                         <Accordion margin={{ top: "medium", bottom: "medium" }} pad="medium" gap="medium" activeIndex={active} onActive={setActive} multiple={true}>
-                        <InlineBlocks name="accordion" blocks={ACCORDION_BLOCKS} />
+                            {data.accordionPanels.map(({ question, id }, index) => (
+                                <AccordionPanel label={question} header={Header(`accordionPanels[${index}].question`)} key={id}>
+                                    <Box pad="medium" background="white" style={{ paddingTop: 0 }}>
+                                        <InlineWysiwyg
+                                            name={`accordionPanels[${index}].text`}
+                                            format="html"
+                                            imageProps={{
+                                                parse: media => `/images/${media.filename}`,
+                                                uploadDir: () => 'public/images/',
+                                                previewSrc: fullSrc => fullSrc.replace('/public', ''),
+                                            }}
+                                        >
+                                            <Box
+                                                dangerouslySetInnerHTML={{
+                                                    __html: data.accordionPanels[index].text,
+                                                }}
+                                            />
+                                        </InlineWysiwyg>
+                                    </Box>
+                                </AccordionPanel>
+                            ))}
                         </Accordion>
                     </Box>
                 </Box>
@@ -76,7 +127,7 @@ const HelpPage = ({ file, preview, global }) => {
                         </Box>
                         <Box>
                             <Form method="POST" data-netlify="true" name="help">
-                            <input type="hidden" name="form-name" value="Help form"/>
+                                <input type="hidden" name="form-name" value="Help form" />
                                 <Box direction="row" wrap={true}>
                                     <Box basis="1/2" flex pad="small">
                                         <FormField name="name" label="Your Name" style={{ background: 'white' }}>
@@ -111,13 +162,6 @@ const PAGE_BLOCKS = {
     banner: {
         Component: Banner,
         template: banner_template,
-    }
-}
-
-const ACCORDION_BLOCKS = {
-    panel: {
-        Component: Panel,
-        template: panel_template,
     }
 }
 

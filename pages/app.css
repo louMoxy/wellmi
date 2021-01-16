@@ -65,3 +65,7 @@ body {
 .icon-confused:before {
   content: "\e908";
 }
+
+li::marker {
+  color: #00E9A3;
+}

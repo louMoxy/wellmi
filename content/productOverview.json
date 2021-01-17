@@ -36,6 +36,58 @@
       "justify1": "center",
       "justify2": "center",
       "justify3": "center"
+    },
+    {
+      "_template": "cols",
+      "cols": "2",
+      "html1": "<h3>Financial and Legal Topics</h3><ul><li><p>Budgeting</p></li><li><p>Investments</p></li><li><p>Retirement planning</p></li><li><p>Managing loans and mortgages</p></li><li><p>Managing debt</p></li><li><p>Retirement planning</p></li><li><p>Financial concerns</p></li><li><p>Tax issues</p></li></ul>",
+      "html2": "<h3>Work-Related Issues</h3><ul><li><p>Workplace stress</p></li><li><p>Workplace conflict</p></li><li><p>Job burnout</p></li><li><p>Coping with change</p></li><li><p>Career development</p></li><li><p>General work-related issues</p></li></ul>",
+      "html3": "Add Content here",
+      "justify1": "center",
+      "justify2": "center",
+      "justify3": "center"
+    },
+    {
+      "_template": "cols",
+      "cols": "1",
+      "html1": "<h3>Work-Related Issues</h3><ul><li><p>Relationship issues</p></li><li><p>Separation and divorce</p></li><li><p>Childcare and parenting issues</p></li><li><p>Eldercare/care giving issues</p></li><li><p>Education concerns and student life</p></li><li><p>Adoption</p></li><li><p>Relatives with disabilities</p></li></ul>",
+      "html2": "Add Content here",
+      "html3": "Add Content here",
+      "justify1": "center",
+      "justify2": "center",
+      "justify3": "center"
+    },
+    {
+      "_template": "textContent",
+      "headingText": "Reporting & Insights",
+      "text": "Unlock the health and potential of your people. ",
+      "alignment": "Right",
+      "num": 1
+    },
+    {
+      "_template": "cols",
+      "cols": "2",
+      "html1": "<p></p><p><img src=\"/images/survery concrete.png\"></p>",
+      "html2": "<h3>Why analytics and insights matter</h3><p>As an employer, it’s important you meet your business goals and build productive and engaged teams. That’s why Wellmi provides feedback, analytics and insights to help you track trends and utilisation across your organisation.</p><h3>Tailor your HR approach to pinpoint what matters most.</h3><p>Wellmi is here to help you understand what’s happening within your business. Discover which team’s doing great, what topics everyone is focused on and what topics are making a positive difference for your people with in-depth, real-time feedback and analytics.</p><h3>Measure the engagement of every department, role or job type within your business.</h3><p>With our analytics and insights, we measure your employees’ engagement and help you identify all the positive trends that are keeping your workforce dialled in and productive. While helping to highlight areas of improvement ahead of time.</p>",
+      "html3": "Add Content here",
+      "justify1": "center",
+      "justify2": "center",
+      "justify3": "center"
+    },
+    {
+      "_template": "textContent",
+      "text": "What’s included: ",
+      "textSize": "xxlarge"
+    },
+    {
+      "_template": "cols",
+      "cols": 3,
+      "html1": "<h4>Utilisation and engagement reports</h4><p>Emerging issues, user demographics, outcomes.</p><h4>Additional reporting metric</h4><p>Workforce demographic and client satisfaction data.</p>",
+      "html2": "<h4>Annual insights reports</h4><p>Usage trends and top wellbeing issues, risk management, workforce productivity, comments and programme recommendations.</p>",
+      "html3": "<h4>Dashboard data</h4><p>Usage statistics, key issues, hot trends, and data broken down all the way to individual job role types.</p>",
+      "justify1": "center",
+      "justify2": "center",
+      "justify3": "center"
     }
   ]
 }

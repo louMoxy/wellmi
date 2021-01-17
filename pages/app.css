@@ -82,3 +82,11 @@ img {
 .content p {
   font-size: 14px;
 }
+.content ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 17px;
+}
+.content ul li {
+  margin-right: 30px;
+}

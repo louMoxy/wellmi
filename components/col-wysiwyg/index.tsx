@@ -51,7 +51,7 @@ export const ColWysiwyg_template = {
             name: "cols",
             label: "Number of Columns",
             component: "select",
-            options: [2, 3],
+            options: [1, 2, 3],
             default: 3
         },
         {

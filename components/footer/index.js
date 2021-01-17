@@ -1,4 +1,4 @@
-import { Box, Text, Paragraph, Heading, Button, Anchor, Image } from "grommet"
+import { Box, Text, Paragraph, Heading, Button, Image } from "grommet"
 import { FacebookOption, Twitter, Instagram, LinkedinOption } from "grommet-icons"
 import { StyledFooter, StyledIcon } from "./styles"
 import { NewsletterCard } from "./newsletter-card"
@@ -6,12 +6,15 @@ import { useCMS } from "tinacms"
 
 const LegalBit = ({ year, terms }) => (
   <Box direction="row" justify="between" pad="small" width="xlarge">
-    <Text size="xsmall">
-      Copyright © wellmi {year} All rights reserved. | Developed by{" "}
-      <a href="https://louisemoxhay.co.uk/" size="xsmall">
-        Louise Moxhay
-      </a>
-    </Text>
+    <Box direction="row">
+      <EditLink />
+      <Text size="xsmall">
+        Copyright © wellmi {year} All rights reserved. | Developed by{" "}
+        <a href="https://louisemoxhay.co.uk/" size="xsmall">
+          Louise Moxhay
+        </a>
+      </Text>
+    </Box>
     <Box direction="row" gap="small">
       {terms.map(({ name, link }, index) => (
         <a href={link} key={index}>
@@ -21,6 +24,19 @@ const LegalBit = ({ year, terms }) => (
     </Box>
   </Box>
 )
+
+const EditLink = () => {
+  const cms = useCMS()
+  return (
+    <Button
+      onClick={() => cms.toggle()}
+      style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", paddingRight: 8 }}
+    >
+      <i className="icon-edit" />
+      {cms.enabled ? "Exit Edit Mode" : ""}
+    </Button>
+  )
+}
 
 const FooterNav = ({
   logoImg,
@@ -122,18 +138,8 @@ const FooterComponent = ({ data }) => {
       <Box border="top" width="100%" align="center">
         <LegalBit year={year} terms={terms} />
       </Box>
-      <EditLink />
     </StyledFooter>
   )
 }
 
-export const EditLink = () => {
-  const cms = useCMS()
-  return (
-    <Button onClick={() => cms.toggle()}>
-      <i className="icon-edit" />
-      {cms.enabled ? "Exit Edit Mode" : "Edit This Site With TinaCMS"}
-    </Button>
-  )
-}
 export default FooterComponent

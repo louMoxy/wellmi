@@ -12,7 +12,7 @@ import { TextContent, textContent_template } from "../../components/TextContent"
 import { ColWysiwyg, ColWysiwyg_template } from "../../components/col-wysiwyg"
 import { config } from "../../utils/globalCMSConfig"
 
-const BlogPage = ({ file, global, previewURL }) => {
+const BlogPage = ({ file, global }) => {
   const router = useRouter()
   if (!file) {
     ;<Layout global={{}}>
@@ -25,12 +25,25 @@ const BlogPage = ({ file, global, previewURL }) => {
     return <p>Loading....</p>
   }
 
-  const formOptions = {
-    label: "Blog page",
-    fields: config,
+  const formConfig = {
+    id: file.fileRelativePath,
+    label: "New post",
+    fields: [
+      ...config,
+      {
+        name: "publish",
+        label: "Publish the blog to go live?",
+        component: "toggle",
+        default: false,
+      },
+    ],
   }
 
-  const [data, form] = useGithubJsonForm(file, formOptions)
+  const [data = file.data, form, loading] = useGithubJsonForm(file, formConfig)
+
+  if (loading) {
+    return <p>Loading</p>
+  }
   return (
     <InlineForm form={form}>
       <Layout bg={data.bgColor} dark={true} global={global}>

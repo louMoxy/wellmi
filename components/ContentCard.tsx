@@ -10,11 +10,12 @@ interface Props {
     showButton?: boolean;
     margin?: object;
     secondaryButton?: boolean;
+    link?: string
 }
 
 const brandColor = theme.global.colors.brand.dark;
 
-export const ContentCard = ({header, text, img, showButton=true, secondaryButton=false, ...args}: Props) => {
+export const ContentCard = ({header, text, img, showButton=true, secondaryButton=false, link, ...args}: Props) => {
     const buttonStyle = secondaryButton ? {background: brandColor, color: theme.global.colors.text.dark, borderColor: brandColor} : {}
     return (
         <Card round="medium" {...args} width={{max: "340px"}} style={{ border: 'solid 12px #F8FBFF', background: '#fff' }}>
@@ -22,7 +23,7 @@ export const ContentCard = ({header, text, img, showButton=true, secondaryButton
                 <Image src={img} fill="horizontal"/>
                 <Heading margin={{top: "medium", left: "small", right: "small", bottom: "small"}} level="3">{header}</Heading>
                 <Text margin="small">{text}</Text>
-                {showButton && <Button label="View more" primary margin="small" style={buttonStyle}/>}
+                {showButton && <Button href={link} label="View more" primary margin="small" style={buttonStyle}/>}
             </CardBody>
         </Card>
     )

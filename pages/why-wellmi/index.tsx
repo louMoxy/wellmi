@@ -18,7 +18,7 @@ const formConfig = {
     fields: config,
     initialValues: {
         "title": "Why Wellmi",
-        "bgColor": "#02DB9A",
+        "bgColor": "#00E9A3",
     }
   }
 

@@ -9,6 +9,6 @@ export const config = [
     name: "bgColor",
     label: "Background color for the header and banner",
     default: "white",
-    colors: ["#02DB9A"],
+    colors: ["#00E9A3", "#009bdc"],
   },
 ]

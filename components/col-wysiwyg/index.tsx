@@ -3,7 +3,6 @@ import { BlocksControls } from 'react-tinacms-inline'
 import { InlineWysiwyg } from "react-tinacms-editor"
 
 export const ColWysiwyg = ({ index, data }) => {
-    console.log(data)
     const cols = Array.from(Array(+data.cols).keys())
     return (
         <BlocksControls index={index} insetControls>

@@ -8,6 +8,7 @@ import { ImageAndText, imageAndText_template } from "../components/ImageAndTextC
 import { latestInsights_template, LatestInsights } from "../components/LastestInsights"
 import { supporting_template, Supporting } from "../components/Supporting"
 import { usePlugin } from "tinacms"
+import { getBlogPosts } from "@utils"
 import getGlobalStaticProps from "../utils/getGlobalStaticProps"
 import { config } from "../utils/globalCMSConfig"
 import { ImageCard, imageCard_template } from "../components/largeImageCard"
@@ -22,11 +23,11 @@ const formConfig = {
   fields: config,
   initialValues: {
     title: "Wellmi",
-    bgColor: "#02DB9A",
+    bgColor: "#00E9A3",
   },
 }
 
-const Page = ({ file, preview, global }) => {
+const Page = ({ file, preview, global, posts }) => {
   const [data, form, loading] = useGithubJsonForm(file, formConfig)
   if (loading) {
     return <p>Loading</p>
@@ -37,7 +38,7 @@ const Page = ({ file, preview, global }) => {
     <InlineForm form={form}>
       <Layout bg={data.bgColor} dark={false} global={global}>
         <Head title={title} />
-        <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} itemProps={{ bgColor }} />
+        <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} itemProps={{ bgColor, posts }} />
       </Layout>
     </InlineForm>
   )
@@ -87,6 +88,8 @@ const PAGE_BLOCKS = {
  */
 export const getStaticProps = async function ({ preview, previewData }) {
   const global = await getGlobalStaticProps(preview, previewData)
+  const posts = await getBlogPosts(preview, previewData, "content/blog")
+  const publishedPosts = posts.filter((p) => p.data.publish).slice(0, 3) || []
 
   if (preview) {
     // get data from github
@@ -100,6 +103,7 @@ export const getStaticProps = async function ({ preview, previewData }) {
 
     return {
       props: {
+        posts: publishedPosts,
         ...file,
         ...global,
       },
@@ -111,6 +115,7 @@ export const getStaticProps = async function ({ preview, previewData }) {
       sourceProvider: null,
       error: null,
       preview: false,
+      posts: publishedPosts,
       file: {
         fileRelativePath: "content/home.json",
         data: (await import("../content/home.json")).default,

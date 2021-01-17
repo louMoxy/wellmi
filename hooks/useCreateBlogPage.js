@@ -38,7 +38,7 @@ const useCreateBlogPage = (allBlogs) => {
           name: "description",
           label: "Description",
           component: "textarea",
-          required: false,
+          required: true,
         },
         {
           label: "Feature Image",
@@ -48,6 +48,12 @@ const useCreateBlogPage = (allBlogs) => {
           uploadDir: () => "public/images/",
           previewSrc: (fullSrc) => fullSrc.replace("/public", ""),
           required: true,
+        },
+        {
+          name: "publish",
+          label: "Publish the blog to go live?",
+          component: "toggle",
+          default: false,
         },
       ],
       onSubmit: async (frontMatter) => {
@@ -61,7 +67,8 @@ const useCreateBlogPage = (allBlogs) => {
             null,
             JSON.stringify({
               ...frontMatter,
-              bgColor: "#02DB9A",
+              bgColor: "#00E9A3",
+              publish: false,
               blocks: [
                 {
                   bannerText: "",

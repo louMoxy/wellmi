@@ -2,6 +2,7 @@ import { useGithubJsonForm } from "react-tinacms-github"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { InlineForm, InlineBlocks } from 'react-tinacms-inline'
 import { usePlugin } from "tinacms"
+import { getBlogPosts } from "../../utils";
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps";
 import Layout from "../../components/layout";
 import theme from '../../components/layout/theme';
@@ -30,7 +31,6 @@ const Page = ({ file, preview, global }) => {
     if (loading) {
         return <p>Loading</p>
     }
-    console.log(data);
     usePlugin(form)
     const { title } = data;
     return (
@@ -67,7 +67,6 @@ const PAGE_BLOCKS = {
  */
 export const getStaticProps = async function ({ preview, previewData }) {
     const global = await getGlobalStaticProps(preview, previewData)
-
     if (preview) {
         // get data from github
         const file = (

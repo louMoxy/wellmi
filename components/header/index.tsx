@@ -21,7 +21,7 @@ const NavLink = styled.a`
   padding-right: 15px;
   transition: color 0.4s;
   &:hover {
-    color: ${theme.global.colors.brand.light};
+    color: ${props => props.bg === theme.global.colors.brand.light ? theme.global.colors.text.light : theme.global.colors.brand.light};
   }
 `
 
@@ -78,7 +78,7 @@ const HeaderComponent = ({ bg, dark, global }: Props) => {
             ) : (
                 <Box justify="end" direction="row" gap="small">
                   {global.navigation.map(({name, link}) => (
-                    <NavLink href={link} dark={dark} key={link}>
+                    <NavLink href={link} dark={dark} key={link} bg={bg}>
                       {name}
                     </NavLink>
                   ))}

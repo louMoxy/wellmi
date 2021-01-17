@@ -38,7 +38,7 @@ const Blog = ({ posts = [], file, preview, global }) => {
       setFeaturedBlog(posts.shift())
     }
     if (posts.length > 0) {
-      setBlogs(posts)
+      setBlogs(posts.filter((p) => p.publish))
     }
   }, [posts])
   usePlugin(form)
@@ -149,7 +149,7 @@ export const getStaticProps = async function ({ preview, previewData }) {
           ...global,
           ...file,
           preview,
-          posts,
+          posts: posts,
         },
       }
     }
@@ -172,6 +172,7 @@ export const getStaticProps = async function ({ preview, previewData }) {
         sourceProvider: null,
         error: null,
         preview: false,
+        posts: [],
         file: {
           fileRelativePath: "content/blog.json",
           data: (await import("../../content/blog.json")).default,

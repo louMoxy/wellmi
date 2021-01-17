@@ -4,7 +4,7 @@ import { InlineForm, InlineBlocks } from "react-tinacms-inline"
 import Head from "../components/head"
 import Layout from "../components/layout"
 import { WelcomeBanner, banner_template } from "../components/WelcomeBanner"
-import { WorldClassComponent, worldclass_template } from "../components/WorldClassComponent"
+import { ImageAndText, imageAndText_template } from "../components/ImageAndTextComponent"
 import { latestInsights_template, LatestInsights } from "../components/LastestInsights"
 import { supporting_template, Supporting } from "../components/Supporting"
 import { usePlugin } from "tinacms"
@@ -68,9 +68,9 @@ const PAGE_BLOCKS = {
     Component: Partners,
     template: partners_template,
   },
-  worldclass: {
-    Component: WorldClassComponent,
-    template: worldclass_template,
+  imageAndText: {
+    Component: ImageAndText,
+    template: imageAndText_template,
   },
   latestInsights: {
     Component: LatestInsights,

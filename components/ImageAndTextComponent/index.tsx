@@ -7,14 +7,14 @@ import { StyledButton, IconButton } from "./style";
 import BackgroundText from '../backgroundText';
 import {HeaderText} from '../HeaderText';
 
-export const WorldClassComponent = ({ index, data }) => {
+export const ImageAndText = ({ index, data }) => {
     return (
         <BlocksControls index={index} insetControls>
             <ResponsiveContext.Consumer>
                 {size =>
                     <Box style={{ position: 'relative' }} align="center">
                         {(size === "medium" || size === "large") && (
-                            <BackgroundText text="WorldClass" style={{ width: '60%', left: 0 }} />
+                            <BackgroundText text={data.backgroundText} style={{ width: '60%', left: 0 }} />
                         )}
                         <Box direction="row" justify="center" align="center" style={{ zIndex: 2 }} width="xlarge">
                             {(size === "medium" || size === "large") && (
@@ -26,7 +26,7 @@ export const WorldClassComponent = ({ index, data }) => {
                                 <Box pad="large">
                                     <HeaderText data={data}/>
                                     <Text><InlineTextarea name="text"/></Text>
-                                    <Box direction="row" margin={{ top: 'large' }} gap="large">
+                                    {data.buttons === false ? null : <Box direction="row" margin={{ top: 'large' }} gap="large">
                                         <Link href={data.link1 || '/'}>
                                             <StyledButton primary>
                                                 <InlineText name="button1" />
@@ -38,9 +38,8 @@ export const WorldClassComponent = ({ index, data }) => {
                                                 <Text><InlineText name="button2" /></Text>
                                             </IconButton>
                                         </Link>
-                                    </Box>
+                                    </Box>}
                                 </Box>
-
                             </Box>
                         </Box>
                     </Box>
@@ -50,8 +49,11 @@ export const WorldClassComponent = ({ index, data }) => {
     )
 }
 
-export const worldclass_template = {
-    label: 'World class section',
+export const imageAndText_template = {
+    label: 'Image and Text section',
+    defaultItem: {
+        buttons: true
+    },
     fields: [
         {
             component: 'select',
@@ -59,6 +61,18 @@ export const worldclass_template = {
             label: 'Alignment',
             description: 'Card alignment',
             options: ['left', 'right'],
+        },
+        {
+            name: 'buttons',
+            component: 'toggle',
+            label: 'Show buttons',
+            description: 'Check to show the buttons',
+            default: true,
+          },
+        {
+            component: 'text',
+            name: 'backgroundText',
+            label: 'Background Text'
         },
         {
             component: "text",

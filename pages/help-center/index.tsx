@@ -81,7 +81,7 @@ const HelpPage = ({ file, preview, global }) => {
     usePlugin(form)
     const { title } = data;
     const [active, setActive] = useState([0]);
-    console.log(data)
+
     return (
         <InlineForm form={form}>
             <Layout bg={data.bgColor} dark={true} global={global}>

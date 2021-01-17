@@ -1,0 +1,41 @@
+{
+  "title": "Product Overview",
+  "bgColor": "#009bdc",
+  "num": 1,
+  "headingText": "Partner with Wellmi",
+  "formText": "Join the businesses making use of one of the worlds leading proactive employee support tools.",
+  "blocks": [
+    {
+      "bannerText": "",
+      "bannerText1": "Why Choose",
+      "bannerText2": "Wellmi?",
+      "bannerImg": "images/productOveriview.png",
+      "_template": "banner",
+      "largeSecond": true,
+      "imageWidth": "600px"
+    },
+    {
+      "_template": "imageAndText",
+      "image": "/images/worldimage.png",
+      "num": 3,
+      "backgroundText": "Product",
+      "headingText": "Total Well-being support from a proactive and intelligent Employee Assistance Programme.",
+      "text": "With the Wellmi Employee Assistance Programme (EAP) you can proactively support the well-being of your entire workforce. Providing your staff with the tools they need to take on any challenges they face in the modern world. Both at home, and at work.",
+      "buttons": false
+    },
+    {
+      "_template": "textContent",
+      "headingText": " Wellmi, listening to and supporting the needs of your workforce. 24/7"
+    },
+    {
+      "_template": "cols",
+      "cols": "2",
+      "html1": "<p>Wellmi utilises modern AI and data learning tools to actively provide employees with the support that will help them the most. Constantly adapting to the requests, mood and job role of each employee, and then tailoring the material provided to maximise the positive effect it has on both their mental and physical wellbeing.</p><p>With content that is created by qualified industry leading experts in every field. You can be sure that the help and support you are providing to your employees through Wellmi is the absolute best available.</p><h2>What does Wellmi help with?</h2><h3>Health and Safety Concerns</h3><ul><li><p>Stress</p></li><li><p>Depression and anxiety</p></li><li><p>Addictions, including gambling</p></li><li><p>Substance abuse, or concern about someone else's</p></li><li><p>Domestic abuse</p></li><li><p>Grief and loss</p></li><li><p>Critical incidents</p></li><li><p>Trauma</p></li></ul>",
+      "html2": "<p></p><p><img src=\"/images/productimg.png\"></p>",
+      "html3": "Add Content here",
+      "justify1": "center",
+      "justify2": "center",
+      "justify3": "center"
+    }
+  ]
+}

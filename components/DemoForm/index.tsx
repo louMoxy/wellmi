@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import { Box, Heading, Text, Form, FormField, TextInput, Button, Select } from "grommet";
 import {FormNextLink} from 'grommet-icons';
-import styled from 'styled-components';
 import theme from '../layout/theme';
 import countries from './countries.json';
-import { BlocksControls, InlineTextarea, InlineText } from 'react-tinacms-inline'
+import { InlineTextarea, InlineText } from 'react-tinacms-inline'
 
 const employeeOptions = [
     "1-20",

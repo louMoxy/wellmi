@@ -9,6 +9,7 @@ import Head from "@components/head"
 import Layout from "@components/layout"
 import { Banner, banner_template } from "../../components/Banner"
 import { TextContent, textContent_template } from "../../components/TextContent"
+import { ColWysiwyg, ColWysiwyg_template } from "../../components/col-wysiwyg"
 import { config } from "../../utils/globalCMSConfig"
 
 const BlogPage = ({ file, global, previewURL }) => {
@@ -56,6 +57,10 @@ const PAGE_BLOCKS = {
   image: {
     Component: ImageBlock,
     template: image_template,
+  },
+  col: {
+    Component: ColWysiwyg,
+    template: ColWysiwyg_template,
   },
 }
 

@@ -22,9 +22,11 @@
       "image4": "/images/ncs-ltd.png"
     },
     {
-      "_template": "worldclass",
+      "_template": "imageAndText",
       "image": "/images/worldimage.png",
       "num": 3,
+      "buttons": true,
+      "backgroundText": "WorldClass",
       "headingText": "The first unified total well-being platform",
       "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. LifeWorks by Morneau Shepell combines modern employee assistance, wellness, recognition and incentive programs into a unified total well-being solution that engages with 100% of your",
       "button1": "REVIEW PRODUCTS",

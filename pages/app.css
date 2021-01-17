@@ -65,7 +65,20 @@ body {
 .icon-confused:before {
   content: "\e908";
 }
-
 li::marker {
   color: #00E9A3;
+}
+img {
+  max-width: 100%;
+}
+.content h1,
+.content h2, 
+.content h3, 
+.content h4, 
+.content h5 {
+  font-weight: normal;
+}
+
+.content p {
+  font-size: 14px;
 }

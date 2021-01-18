@@ -1,3 +1,5 @@
+import { getRandID } from "@utils"
+
 export const headerForm = {
   label: "Header settings",
   fields: [
@@ -23,12 +25,13 @@ export const headerForm = {
       component: "group-list",
       description: "Navigation List",
       itemProps: (item) => ({
-        key: item.name,
+        key: item.id,
         label: item.name,
       }),
       defaultItem: () => ({
         name: "New Link",
         link: "/",
+        id: getRandID(),
       }),
       fields: [
         {
@@ -49,12 +52,13 @@ export const headerForm = {
       component: "group-list",
       description: "Button List",
       itemProps: (item) => ({
-        key: item.name,
+        key: item.id,
         label: item.name,
       }),
       defaultItem: () => ({
         name: "New Link",
         link: "/",
+        id: getRandID(),
       }),
       fields: [
         {
@@ -134,12 +138,13 @@ export const footerForm = {
       component: "group-list",
       description: "Navigation List",
       itemProps: (item) => ({
-        key: item.name,
+        key: item.id,
         label: item.name,
       }),
       defaultItem: () => ({
         name: "New Link",
         link: "/",
+        id: getRandID(),
       }),
       fields: [
         {
@@ -160,12 +165,13 @@ export const footerForm = {
       component: "group-list",
       description: "Navigation List",
       itemProps: (item) => ({
-        key: item.name,
+        key: item.id,
         label: item.name,
       }),
       defaultItem: () => ({
         name: "New Link",
         link: "/",
+        id: getRandID(),
       }),
       fields: [
         {
@@ -186,12 +192,13 @@ export const footerForm = {
       component: "group-list",
       description: "Navigation List",
       itemProps: (item) => ({
-        key: item.name,
+        key: item.id,
         label: item.name,
       }),
       defaultItem: () => ({
         name: "New Link",
         link: "/",
+        id: getRandID(),
       }),
       fields: [
         {
@@ -217,12 +224,13 @@ export const footerForm = {
       component: "group-list",
       description: "Images List",
       itemProps: (item) => ({
-        key: item.link,
+        key: item.id,
         label: item.link,
       }),
       defaultItem: () => ({
         alt: "Image description",
         link: "/",
+        id: getRandID(),
       }),
       fields: [
         {
@@ -251,12 +259,13 @@ export const footerForm = {
       component: "group-list",
       description: "Navigation List",
       itemProps: (item) => ({
-        key: item.name,
+        key: item.id,
         label: item.name,
       }),
       defaultItem: () => ({
         name: "New Link",
         link: "/",
+        id: getRandID(),
       }),
       fields: [
         {

@@ -41,7 +41,6 @@ const Page = ({ file, preview, global }) => {
                         <HeaderText data={data} />
                         <Text margin={{bottom: "large"}}><InlineTextarea name="formText" /></Text>
                         <Form method="POST" data-netlify="true" name="help">
-                            <input type="hidden" name="form-name" value="Partnership form"/>
                                 <Box direction="row" wrap={true}>
                                     <Box basis="1/2" flex pad="small">
                                         <FormField name="name" label="Your Name" style={{ background: 'white' }}>

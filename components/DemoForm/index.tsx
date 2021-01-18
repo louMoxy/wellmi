@@ -27,7 +27,6 @@ export const DemoForm = () => {
                 </Box>
                 <Box basis="1/2" flex={true} pad="medium" width={{ min: "medium" }}>
                     <Form method="POST" data-netlify="true" name="contact">
-                        <input type="hidden" name="form-name" value="Contact form"/>
                         <FormField name="firstName" label="First Name" style={{ background: 'white' }}>
                             <TextInput id="firstName" name="First Name" placeholder="Jahid" required/>
                         </FormField>

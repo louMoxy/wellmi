@@ -81,8 +81,8 @@ const FooterNav = ({
         <Heading level="4" margin={{ bottom: "medium", top: "none" }}>
           {header1}
         </Heading>
-        {navigation1.map(({ name, link }, i) => (
-          <a key={i} href={link}>
+        {navigation1.map(({ name, link, id }) => (
+          <a key={id} href={link}>
             <Text size="small">{name}</Text>
           </a>
         ))}
@@ -91,8 +91,8 @@ const FooterNav = ({
         <Heading level="4" margin={{ bottom: "medium", top: "none" }}>
           {header2}
         </Heading>
-        {navigation2.map(({ name, link }, i) => (
-          <a key={i} href={link}>
+        {navigation2.map(({ name, link, id }) => (
+          <a key={id} href={link}>
             <Text size="small">{name}</Text>
           </a>
         ))}
@@ -101,8 +101,8 @@ const FooterNav = ({
         <Heading level="4" margin={{ bottom: "medium", top: "none" }}>
           {header3}
         </Heading>
-        {navigation3.map(({ name, link }, i) => (
-          <a key={i} href={link}>
+        {navigation3.map(({ name, link, id }) => (
+          <a key={id} href={link}>
             <Text size="small">{name}</Text>
           </a>
         ))}

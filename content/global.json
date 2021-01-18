@@ -46,8 +46,33 @@
       "twitter": "/",
       "navigation1": [
         {
-          "name": "Solution",
-          "link": "/"
+          "name": "Partnership",
+          "link": "/partnership",
+          "id": "5wmuccd0l"
+        },
+        {
+          "name": "Product overview",
+          "link": "/product-overview",
+          "id": "9pn9h9ela"
+        },
+        {
+          "name": "Help Center",
+          "link": "/help-center",
+          "id": "sf89aod2s"
+        },
+        {
+          "name": "Careers",
+          "link": "/careers",
+          "id": "h784w91vk"
+        },
+        {
+          "name": "News",
+          "link": "/blog",
+          "id": "mkocfo4a6"
+        },
+        {
+          "name": "About Us",
+          "link": "/about-us"
         }
       ],
       "header2": "Company",

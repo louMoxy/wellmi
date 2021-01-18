@@ -1,6 +1,7 @@
 import { useRouter } from "next/router"
+import { usePlugin } from "tinacms"
 import { InlineForm, InlineBlocks } from "react-tinacms-inline"
-import { useGithubJsonForm } from "react-tinacms-github"
+import { useGithubJsonForm, createGithubDeleteAction } from "react-tinacms-github"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps"
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { WYSIWYG, WYSIWYG_template } from "../../components/WYSIWYG"
@@ -14,20 +15,21 @@ import { config } from "../../utils/globalCMSConfig"
 
 const BlogPage = ({ file, global }) => {
   const router = useRouter()
+  if (router.isFallback) {
+    return <p>Loading....</p>
+  }
+
   if (!file) {
     ;<Layout global={{}}>
       <Head title={"Loading"} />
       <p>This page is currently loading, please check back in a couple of minutes...</p>
     </Layout>
   }
-
-  if (router.isFallback) {
-    return <p>Loading....</p>
-  }
+  const deleteAction = createGithubDeleteAction()
 
   const formConfig = {
-    id: file.fileRelativePath,
     label: "New post",
+    actions: [deleteAction],
     fields: [
       ...config,
       {
@@ -44,6 +46,7 @@ const BlogPage = ({ file, global }) => {
   if (loading) {
     return <p>Loading</p>
   }
+  usePlugin(form)
   return (
     <InlineForm form={form}>
       <Layout bg={data.bgColor} dark={true} global={global}>

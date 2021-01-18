@@ -40,7 +40,7 @@ const Page = ({ file, preview, global }) => {
                     <Box width="xlarge" pad="medium">
                         <HeaderText data={data} />
                         <Text margin={{bottom: "large"}}><InlineTextarea name="formText" /></Text>
-                        <Form method="POST" data-netlify="true" name="help">
+                        <Form method="POST" data-netlify="true" name="partnership">
                                 <Box direction="row" wrap={true}>
                                     <Box basis="1/2" flex pad="small">
                                         <FormField name="name" label="Your Name" style={{ background: 'white' }}>

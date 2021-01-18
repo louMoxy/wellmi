@@ -21,7 +21,7 @@
       },
       {
         "name": "Get a Demo",
-        "link": "/"
+        "link": "/demo"
       }
     ]
   },
@@ -46,33 +46,8 @@
       "twitter": "/",
       "navigation1": [
         {
-          "name": "Partnership",
-          "link": "/partnership",
-          "id": "sqtprqpp8"
-        },
-        {
-          "name": "Help center",
-          "link": "/help-center",
-          "id": "0tvi5l4mh"
-        },
-        {
-          "name": "Product Overview",
-          "link": "/product-overview",
-          "id": "eg380hlql"
-        },
-        {
-          "name": "Careers",
-          "link": "/careers",
-          "id": "22cwrsa0w"
-        },
-        {
-          "name": "About us",
-          "link": "/about-us",
-          "id": "ihfg4itr8"
-        },
-        {
-          "name": "News",
-          "link": "/blog"
+          "name": "Solution",
+          "link": "/"
         }
       ],
       "header2": "Company",

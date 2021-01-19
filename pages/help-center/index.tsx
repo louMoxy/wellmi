@@ -127,6 +127,7 @@ const HelpPage = ({ file, preview, global }) => {
                         </Box>
                         <Box>
                             <Form method="POST" data-netlify="true" name="help">
+                                <input type='hidden' name='form-name' value='help' />
                                 <Box direction="row" wrap={true}>
                                     <Box basis="1/2" flex pad="small">
                                         <FormField name="name" label="Your Name" style={{ background: 'white' }}>

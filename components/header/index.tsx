@@ -82,8 +82,12 @@ const HeaderComponent = ({ bg, dark, global }: Props) => {
                       {name}
                     </NavLink>
                   ))}
-                  <SecondaryButton label={global.buttons[0].name} dark={dark}/>
-                  <Button primary label={global.buttons[1].name}  />
+                  <a href={global.buttons[0].link}>
+                    <SecondaryButton label={global.buttons[0].name} dark={dark}/>
+                  </a>
+                  <a href={global.buttons[1].link}>
+                    <Button primary label={global.buttons[1].name}  />
+                  </a>
                 </Box>
               )
           }

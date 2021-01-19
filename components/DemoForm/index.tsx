@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Box, Heading, Text, Form, FormField, TextInput, Button, Select } from "grommet";
+import { Box, Heading, Text, FormField, TextInput, Button, Select } from "grommet";
 import {FormNextLink} from 'grommet-icons';
 import theme from '../layout/theme';
 import countries from './countries.json';
@@ -26,7 +26,7 @@ export const DemoForm = () => {
                     <Text margin={{ top: "medium", bottom: "medium" }}><InlineTextarea name="text"/></Text>
                 </Box>
                 <Box basis="1/2" flex={true} pad="medium" width={{ min: "medium" }}>
-                    <Form method="POST" data-netlify="true" name="demo">
+                    <form method="POST" data-netlify="true" name="demo">
                         <input type='hidden' name='form-name' value='demo' />
                         <FormField name="firstName" label="First Name" style={{ background: 'white' }}>
                             <TextInput id="firstName" name="First Name" placeholder="Jahid" required/>
@@ -68,7 +68,7 @@ export const DemoForm = () => {
                                 <Button type="submit" primary label="Submit" gap="large" icon={<FormNextLink color="white"/>} reverse={true}/>
                             </Box>
                         </Box>
-                    </Form>
+                    </form>
                 </Box>
             </Box>
         </Box>

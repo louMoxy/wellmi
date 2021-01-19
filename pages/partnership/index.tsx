@@ -2,7 +2,7 @@ import { getGithubPreviewProps, parseJson } from "next-tinacms-github"
 import { useGithubJsonForm } from "react-tinacms-github"
 import { InlineForm, InlineBlocks, InlineTextarea } from 'react-tinacms-inline'
 import { usePlugin } from "tinacms"
-import { Text, Box, Form, FormField, TextInput, TextArea, Button } from 'grommet';
+import { Text, Box, FormField, TextInput, TextArea, Button } from 'grommet';
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps";
 import Head from "../../components/head";
 import Layout from "../../components/layout";
@@ -40,20 +40,20 @@ const Page = ({ file, preview, global }) => {
                     <Box width="xlarge" pad="medium">
                         <HeaderText data={data} />
                         <Text margin={{bottom: "large"}}><InlineTextarea name="formText" /></Text>
-                        <Form method="POST" data-netlify="true" name="partnership">
+                        <form method="POST" data-netlify="true" name="partnership" >
                             <input type='hidden' name='form-name' value='partnership' />
                                 <Box direction="row" wrap={true}>
                                     <Box basis="1/2" flex pad="small">
-                                        <FormField name="name" label="Your Name" style={{ background: 'white' }}>
+                                        <FormField label="Your Name" style={{ background: 'white' }}>
                                             <TextInput name="name" placeholder="Jahid Jaykar" required />
                                         </FormField>
-                                        <FormField name="number" label="Phone Number" style={{ background: 'white' }}>
+                                        <FormField label="Phone Number" style={{ background: 'white' }}>
                                             <TextInput type="tel" name="number" placeholder="+880 1745639584" required />
                                         </FormField>
-                                        <FormField name="email" label="Your Email" style={{ background: 'white' }}>
+                                        <FormField label="Your Email" style={{ background: 'white' }}>
                                             <TextInput type="email" name="email" placeholder="jahid.jaykar@gmail.com" required />
                                         </FormField>
-                                        <FormField name="company" label="Your Company" style={{ background: 'white' }}>
+                                        <FormField label="Your Company" style={{ background: 'white' }}>
                                             <TextInput name="company" placeholder="Dgpro Studio" required />
                                         </FormField>
                                     </Box>
@@ -66,7 +66,7 @@ const Page = ({ file, preview, global }) => {
                                 <Box align="end" margin="small">
                                     <Button type="submit" primary label="Submit" style={{ width: "30%", minWidth: 200 }} />
                                 </Box>
-                            </Form>
+                            </form>
                     </Box>
                 </Box>
             </Layout>

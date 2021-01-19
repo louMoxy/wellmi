@@ -5,7 +5,7 @@ import { InlineForm, InlineBlocks, InlineTextarea } from 'react-tinacms-inline'
 import { usePlugin } from "tinacms"
 import { InlineWysiwyg } from "react-tinacms-editor"
 import getGlobalStaticProps from "../../utils/getGlobalStaticProps";
-import { Box, Heading, Text, Accordion, Form, FormField, TextInput, Button, TextArea, Select, AccordionPanel } from "grommet"
+import { Box, Heading, Text, Accordion, FormField, TextInput, Button, TextArea, Select, AccordionPanel } from "grommet"
 import Layout from "../../components/layout";
 import theme from '../../components/layout/theme';
 import Head from "../../components/head";
@@ -126,7 +126,7 @@ const HelpPage = ({ file, preview, global }) => {
                             <Heading size="3rem" textAlign="end"><span style={{ color: theme.global.colors.brand.light }}>Still need </span>help? <br></br>Contact us.</Heading>
                         </Box>
                         <Box>
-                            <Form method="POST" data-netlify="true" name="help">
+                            <form method="POST" data-netlify="true" name="help">
                                 <input type='hidden' name='form-name' value='help' />
                                 <Box direction="row" wrap={true}>
                                     <Box basis="1/2" flex pad="small">
@@ -149,7 +149,7 @@ const HelpPage = ({ file, preview, global }) => {
                                 <Box align="end" margin="small">
                                     <Button type="submit" primary label="Submit" style={{ width: "30%", minWidth: 200 }} />
                                 </Box>
-                            </Form>
+                            </form>
                         </Box>
                     </Box>
                 </Box>

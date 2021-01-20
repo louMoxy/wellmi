@@ -50,29 +50,29 @@
         },
         {
           "_template": "employeeCard",
-          "name": "Ben Caton",
-          "title": "Founder & CEO",
+          "name": "TBA",
+          "image": "images/employee1.png",
+          "locationImg": "images/united-kingdom.png",
+          "title": "Non-executive Director"
+        },
+        {
+          "_template": "employeeCard",
+          "name": "TBA",
+          "title": "CTO",
           "image": "images/employee1.png",
           "locationImg": "images/united-kingdom.png"
         },
         {
           "_template": "employeeCard",
-          "name": "Ben Caton",
-          "title": "Founder & CEO",
+          "name": "TBA",
+          "title": "CFD",
           "image": "images/employee1.png",
           "locationImg": "images/united-kingdom.png"
         },
         {
           "_template": "employeeCard",
-          "name": "Ben Caton",
-          "title": "Founder & CEO",
-          "image": "images/employee1.png",
-          "locationImg": "images/united-kingdom.png"
-        },
-        {
-          "_template": "employeeCard",
-          "name": "Ben Caton",
-          "title": "Founder & CEO",
+          "name": "TBA",
+          "title": "Marketing Director",
           "image": "images/employee1.png",
           "locationImg": "images/united-kingdom.png"
         },

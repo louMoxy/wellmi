@@ -4,13 +4,13 @@
   "blocks": [
     {
       "_template": "banner",
-      "smallText": "WELL",
-      "headingText": "World-class cloud wellbeing resources that scale to any number of employees",
-      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
+      "smallText": "WELLMI",
+      "headingText": "World-class wellbeing resources that scale to any number of employees.",
       "buttonText1": "JOIN US",
       "buttonText2": "GET A DEMO",
       "link1": "/",
-      "link2": "/"
+      "link2": "/",
+      "text": "Find out how Wellmi can support the wellbeing of your employees and the success if your business."
     },
     {
       "_template": "partners",
@@ -27,12 +27,12 @@
       "num": 3,
       "buttons": true,
       "backgroundText": "WorldClass",
-      "headingText": "The first unified total well-being platform",
-      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. LifeWorks by Morneau Shepell combines modern employee assistance, wellness, recognition and incentive programs into a unified total well-being solution that engages with 100% of your",
+      "headingText": "The first wellbeing platform of it's kind is here.",
       "button1": "REVIEW PRODUCTS",
       "button2": "GET A DEMO",
       "link1": "/",
-      "link2": "/"
+      "link2": "/",
+      "text": "The first cloud wellbeing product of its kind. Supporting employee physical and mental wellbeing on smartphones, desktops and smart watches. Nothing is quite like Wellmi."
     },
     {
       "_template": "latestInsights",
@@ -40,9 +40,8 @@
     },
     {
       "_template": "supporting",
-      "headingText": "Supporting Millons of employees around the world",
+      "headingText": "Supporting thousands of employees around the world",
       "num": 1,
-      "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. LifeWorks by Morneau Shepell combines modern employee assistance, wellness, recognition and incentive programs into a unified total well-being solution that engages with 100% of your",
       "button1": "JOIN US",
       "button2": "GET A DEMO",
       "link1": "/",
@@ -62,7 +61,8 @@
         "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
         "heading": "Dr. Martens",
         "image": "/images/group-of-people-sitting-indoors.png"
-      }
+      },
+      "text": "Mental and physical wellbeing support that isn't defined by time zone, nationality or industry.\n\nSupport your employees anytime, anyplace with Wellmi."
     }
   ]
 }

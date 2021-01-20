@@ -15,7 +15,7 @@
       "_template": "titleAndContent",
       "smallText": "Our Story",
       "headingText": "How it all started in 2017?",
-      "text": "Add text"
+      "text": "Created in 2017 with the purpose of bringing wellbeing to everyone who needs it.\nWe share the belief that both physical and mental wellbeing are equally\nimportant, so we set out to create a place where employees can enjoy both,\nwhenever and wherever they need it."
     },
     {
       "_template": "offices",
@@ -32,7 +32,7 @@
     {
       "_template": "team",
       "smallText": "Our Team",
-      "headingText": "The People Behind Wellmi",
+      "headingText": "A Few People Behind Wellmi",
       "cards": [
         {
           "_template": "employeeCard",
@@ -50,31 +50,31 @@
         },
         {
           "_template": "employeeCard",
+          "name": "Ben Caton",
+          "title": "Founder & CEO",
           "image": "images/employee1.png",
-          "locationImg": "images/united-kingdom.png",
-          "title": "Chief Technology Officer",
-          "name": "TBA"
+          "locationImg": "images/united-kingdom.png"
         },
         {
           "_template": "employeeCard",
+          "name": "Ben Caton",
+          "title": "Founder & CEO",
           "image": "images/employee1.png",
-          "locationImg": "images/united-kingdom.png",
-          "name": "TBA",
-          "title": "Non-executive Director"
+          "locationImg": "images/united-kingdom.png"
         },
         {
           "_template": "employeeCard",
+          "name": "Ben Caton",
+          "title": "Founder & CEO",
           "image": "images/employee1.png",
-          "locationImg": "images/united-kingdom.png",
-          "title": "Non-executive Director",
-          "name": "TBA"
+          "locationImg": "images/united-kingdom.png"
         },
         {
           "_template": "employeeCard",
+          "name": "Ben Caton",
+          "title": "Founder & CEO",
           "image": "images/employee1.png",
-          "locationImg": "images/united-kingdom.png",
-          "title": "Non-executive Director",
-          "name": "TBA"
+          "locationImg": "images/united-kingdom.png"
         },
         {
           "_template": "LinkBox",

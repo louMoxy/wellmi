@@ -37,23 +37,23 @@
         {
           "_template": "employeeCard",
           "name": "Ben Caton",
-          "title": "Founder & CEO",
+          "title": "Founder & MD",
           "image": "/images/SC2_8426.JPG",
           "locationImg": "images/united-kingdom.png"
         },
         {
           "_template": "employeeCard",
-          "name": "Ben Caton",
-          "title": "Founder & CEO",
           "image": "images/employee1.png",
-          "locationImg": "images/united-kingdom.png"
+          "locationImg": "images/united-kingdom.png",
+          "title": "Finance Director",
+          "name": "Nick Adkins"
         },
         {
           "_template": "employeeCard",
-          "name": "Ben Caton",
-          "title": "Founder & CEO",
           "image": "images/employee1.png",
-          "locationImg": "images/united-kingdom.png"
+          "locationImg": "images/united-kingdom.png",
+          "name": "Mark Devereux",
+          "title": "Non-executive director"
         },
         {
           "_template": "employeeCard",

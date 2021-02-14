@@ -1,12 +1,12 @@
-import { node, bool, string, object } from "prop-types"
-import { useGithubJsonForm } from "react-tinacms-github"
-import { useFormScreenPlugin } from "tinacms"
-import styled from "styled-components"
-import Footer from "@components/footer"
-import Header from "@components/header"
-import { Grommet } from "grommet"
-import theme from "./theme"
-import { headerForm, footerForm } from "./globalForm"
+import { node, bool, string, object } from 'prop-types'
+import { useGithubJsonForm } from 'react-tinacms-github'
+import { useFormScreenPlugin } from 'tinacms'
+import styled from 'styled-components'
+import Footer from '../footer'
+import Header from '../header'
+import { Grommet } from 'grommet'
+import theme from './theme'
+import { globalForm } from './globalForm'
 
 const Container = styled.div`
   background: #f3f9ff;
@@ -51,35 +51,17 @@ const Container = styled.div`
   }
 `
 
-export const LayoutBodyStyled = styled.main`
-  min-height: calc(100vh - 250px);
-  max-width: calc(1048px + 40px);
-  margin: 0 auto;
-  padding: 0 20px;
-  padding-bottom: 1px;
-  padding-top: 6px;
-  ${({ splitView }) =>
-    splitView &&
-    css`
-      @media all and (min-width: 768px) {
-        display: flex;
-        padding-top: 24px;
-      }
-    `}
-`
-
-const Layout = ({ children, bg = "#fff", dark = false, global }) => {
-  const [_, hForm] = useGithubJsonForm(global, headerForm)
-  const [__, fForm] = useGithubJsonForm(global, footerForm)
-
+const Layout = ({ children, bg = '#fff', dark = false, global }) => {
+  // Add to the form options
+  const [globalData, hForm] = useGithubJsonForm(global.file, globalForm)
   useFormScreenPlugin(hForm)
-  useFormScreenPlugin(fForm)
+  const { header, footer } = globalData
   return (
     <Grommet theme={theme}>
       <Container>
-        <Header bg={bg} dark={dark} global={global.data.header} />
+        <Header bg={bg} dark={dark} data={header} />
         {children}
-        <Footer data={global.data.footer} />
+        <Footer data={footer} />
       </Container>
     </Grommet>
   )
@@ -91,7 +73,7 @@ Layout.propTypes = {
   searchText: string,
   bg: string,
   dark: bool,
-  form: object,
+  form: object
 }
 
 export default Layout

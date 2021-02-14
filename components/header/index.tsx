@@ -1,9 +1,9 @@
-import { Header, Box, ResponsiveContext, Menu, Button, Image } from 'grommet';
-import { Menu as MenuIcon } from 'grommet-icons';
-import theme from '../layout/theme';
-import styled from 'styled-components';
+import { Header, Box, ResponsiveContext, Menu, Button, Image } from 'grommet'
+import { Menu as MenuIcon } from 'grommet-icons'
+import theme from '../layout/theme'
+import styled from 'styled-components'
 
-const secondaryColor = theme.global.colors["accent-1"].light;
+const secondaryColor = theme.global.colors['accent-1'].light
 
 const SecondaryButton = styled(Button)`
   background-color: ${props => props.dark ? 'transparent' : secondaryColor};
@@ -12,7 +12,7 @@ const SecondaryButton = styled(Button)`
   &:hover {
     box-shadow: 0px 0px 0px 2px ${secondaryColor};
   }
-`;
+`
 
 const NavLink = styled.a`
   text-decoration: none;
@@ -28,7 +28,7 @@ const NavLink = styled.a`
 interface Props {
   bg: string;
   dark: boolean;
-  global: {
+  data: {
     logo: {
       light: string;
       dark: string;
@@ -41,17 +41,19 @@ interface Props {
       name: string;
       link: string;
     }[],
-    
+
   }
 }
 
-
-const HeaderComponent = ({ bg, dark, global }: Props) => {
-  const logo = dark ? global.logo.dark : global.logo.light;
-  const menuItems = [...global.navigation, ...global.buttons].map(({name, link}) => (
+const HeaderComponent = ({ bg, dark, data }: Props) => {
+  if (!data) {
+    return null
+  }
+  const logo = dark ? data.logo.dark : data.logo.light
+  const menuItems = [...data.navigation, ...data.buttons].map(({ name, link }) => (
     {
       label: <Box pad="small">{name}</Box>,
-      href: link,
+      href: link
     }
   ))
   return (
@@ -66,30 +68,32 @@ const HeaderComponent = ({ bg, dark, global }: Props) => {
         </a>
         <ResponsiveContext.Consumer>
           {size =>
-            size === 'small' ? (
+            size === 'small'
+              ? (
               <Box justify="end">
                 <Menu
                   a11yTitle="Navigation Menu"
                   dropProps={{ align: { top: 'bottom', right: 'right' } }}
-                  icon={<MenuIcon color={dark ? "white" : "brand"} />}
+                  icon={<MenuIcon color={dark ? 'white' : 'brand'} />}
                   items={menuItems}
                 />
               </Box>
-            ) : (
+                )
+              : (
                 <Box justify="end" direction="row" gap="small">
-                  {global.navigation.map(({name, link}) => (
+                  {data.navigation.map(({ name, link }) => (
                     <NavLink href={link} dark={dark} key={link} bg={bg}>
                       {name}
                     </NavLink>
                   ))}
-                  <a href={global.buttons[0].link}>
-                    <SecondaryButton label={global.buttons[0].name} dark={dark}/>
+                  <a href={data.buttons[0].link}>
+                    <SecondaryButton label={data.buttons[0].name} dark={dark}/>
                   </a>
-                  <a href={global.buttons[1].link}>
-                    <Button primary label={global.buttons[1].name}  />
+                  <a href={data.buttons[1].link}>
+                    <Button primary label={data.buttons[1].name} />
                   </a>
                 </Box>
-              )
+                )
           }
         </ResponsiveContext.Consumer>
       </Box>
@@ -97,4 +101,4 @@ const HeaderComponent = ({ bg, dark, global }: Props) => {
   )
 }
 
-export default HeaderComponent;
+export default HeaderComponent

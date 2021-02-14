@@ -1,0 +1,68 @@
+{
+  "title": "Wellmi",
+  "bgColor": "transparent",
+  "blocks": [
+    {
+      "_template": "welcomeBanner",
+      "smallText": "WELLMI",
+      "headingText": "World-class wellbeing resources that scale to any number of employees.",
+      "buttonText1": "JOIN US",
+      "buttonText2": "GET A DEMO",
+      "link1": "/",
+      "link2": "/",
+      "text": "Find out how Wellmi can support the wellbeing of your employees and the success if your business."
+    },
+    {
+      "_template": "partners",
+      "backgroundText": "Partners",
+      "text": "Organizations already enjoying Wellmi",
+      "image1": "/images/Heart-Heroes-Logo-colour.png",
+      "image2": "/images/Cirencester-College-Logo.png",
+      "image3": "/images/opp-hub-png.png",
+      "image4": "/images/ncs-ltd.png"
+    },
+    {
+      "_template": "imageAndText",
+      "image": "/images/worldimage.png",
+      "num": 3,
+      "buttons": true,
+      "backgroundText": "WorldClass",
+      "headingText": "The first wellbeing platform of it's kind is here.",
+      "button1": "REVIEW PRODUCTS",
+      "button2": "GET A DEMO",
+      "link1": "/",
+      "link2": "/",
+      "text": "The first cloud wellbeing product of its kind. Supporting employee physical and mental wellbeing on smartphones, desktops and smart watches. Nothing is quite like Wellmi."
+    },
+    {
+      "_template": "latestInsights",
+      "title": "Latest insight"
+    },
+    {
+      "_template": "supporting",
+      "headingText": "Supporting thousands of employees around the world",
+      "num": 1,
+      "button1": "JOIN US",
+      "button2": "GET A DEMO",
+      "link1": "/",
+      "link2": "/",
+      "contentCard1": {
+        "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "heading": "London City Airport",
+        "image": "/images/pexels-pixabay.png",
+        "buttonLink": "/"
+      },
+      "contentCard2": {
+        "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "heading": "Nestlé",
+        "image": "/images/woman-in-blue-suit-jacket.png"
+      },
+      "contentCard3": {
+        "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "heading": "Dr. Martens",
+        "image": "/images/group-of-people-sitting-indoors.png"
+      },
+      "text": "Mental and physical wellbeing support that isn't defined by time zone, nationality or industry.\n\nSupport your employees anytime, anyplace with Wellmi."
+    }
+  ]
+}

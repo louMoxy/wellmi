@@ -14,13 +14,13 @@
       "largeSecond": true
     },
     {
-      "headingText": "Wellmi ↵Trusted by organisations worldwide.",
+      "headingText": "Wellmi\nTrusted by organisations worldwide.",
       "num": 1,
       "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       "_template": "textContent"
     },
     {
-      "_template": "partners",
+      "_template": "partnersDetails",
       "text1": "NCS Ltd – A leading UK based retail distribution company.",
       "text2": "Cirencester College – One of the first educational institutions in the UK to proactively support student wellbeing with our service.",
       "text3": "Heart Heroes – An incredible charity supporting the lives of families and children living with serious heart conditions.",

@@ -81,6 +81,9 @@
           "link": "/",
           "image": "images/logo-white.png",
           "text": "Join us"
+        },
+        {
+          "_template": "instagram"
         }
       ]
     }

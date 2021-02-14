@@ -1,9 +1,9 @@
-import theme from '../layout/theme';
-import styled from 'styled-components';
-const color = theme.global.colors.brand.light;
+import theme from '../layout/theme'
+import styled from 'styled-components'
+const color = theme.global.colors.brand.light
 
-export const UnderLine  = styled.div`
-    width: ${props => props.width ? props.width : "60%"};
+export const UnderLine = styled.div`
+    width: ${props => props.width ? props.width : '60%'};
     height: 30px;
     margin: 20px auto;
     position: relative;
@@ -26,5 +26,4 @@ export const UnderLine  = styled.div`
         transform: rotate(45deg);
         border-radius: 4px;
     }
-`;
-
+`

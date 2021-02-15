@@ -22,7 +22,7 @@
     },
     {
       "question": "How do I change my password?",
-      "text": "<p>...</p>",
+      "text": "<p>If you have forgotten your password, you can click ‘Forgotten Password’ next to the password field on the login page. You will then be asked to enter the email address that you registered to your Wellmi account. We will then send you an email with a link to reset your password. When you click on this, it will open a new window where you can enter a new password.</p><p>If you have forgotten your username, please contact our Support Team.</p><p>Have more questions? Submit a request</p>",
       "id": 2
     },
     {

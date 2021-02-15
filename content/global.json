@@ -18,7 +18,7 @@
     "buttons": [
       {
         "name": "Login",
-        "link": "/"
+        "link": "https://app.wellmi.io/"
       },
       {
         "name": "Get a Demo",
@@ -34,13 +34,13 @@
       },
       {
         "name": "Privacy policy",
-        "link": "/"
+        "link": "https://wellmi.netlify.app/privacy-policy"
       }
     ],
     "footerNav": {
       "logoImg": "/images/wellmi-w.png",
-      "p1": "It is a long established fact that a reader will be distracted by the readable content of a",
-      "header1": "Solution",
+      "p1": "Wellmi, the EAP built for wellbeing, anytime, anywhere.",
+      "header1": "Our Solution",
       "facebook": "https://www.facebook.com/Wellmi.io",
       "instagram": "https://www.instagram.com/wellmi.io/",
       "linkedin": "https://www.linkedin.com/company/wearewellmi",
@@ -82,9 +82,9 @@
       "header4": "Get Started",
       "navigation2": [
         {
-          "name": "Solution",
+          "name": "Investers",
           "link": "/",
-          "id": "ddolp"
+          "id": "jbum24ral"
         }
       ],
       "navigation3": [
@@ -94,7 +94,7 @@
           "id": "dkwiu0"
         }
       ],
-      "p2": "tester",
+      "p2": "",
       "downloadImgs": [
         {
           "image": "/images/android-store.png",

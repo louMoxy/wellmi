@@ -20,17 +20,14 @@
       "_template": "careerImages",
       "image1": {
         "title": "Respect",
-        "text": "We respect human being, opinions and choices.",
         "image": "images/career1.png"
       },
       "image2": {
         "title": "Trust",
-        "text": "We trust ourselves and each other",
         "image": "images/career2.png"
       },
       "image3": {
         "title": "Transparency",
-        "text": "We value transparency to take the best decisions as a team.",
         "image": "images/career3.png"
       }
     },
@@ -45,23 +42,23 @@
       },
       "point2": {
         "title": "Breathe",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since"
+        "text": "Life is for living and enjoying. "
       },
       "point3": {
         "title": "Meet Great People",
-        "text": "We approach life in a positive and optimistic way"
+        "text": "The tapestry of life is rich with diversity."
       },
       "point4": {
         "title": "Start Doing",
-        "text": "We approach life in a positive and optimistic way"
+        "text": "Leave no dream unchallenged."
       },
       "point5": {
         "title": "Work Smarter",
-        "text": "We approach life in a positive and optimistic way"
+        "text": "Not longer."
       },
       "point6": {
         "title": "Become a Better You",
-        "text": "We approach life in a positive and optimistic way"
+        "text": "Your growth is our success."
       }
     },
     {
@@ -78,7 +75,7 @@
     },
     {
       "_template": "textContent",
-      "headingText": "Want to become one of us?",
+      "headingText": "Want to become part of the family?",
       "text": "See a range of available positions below. Use the Arrows to select one before submitting a CV. We can’t wait to hear from you.",
       "alignment": "Center",
       "textSize": "xsmall"
@@ -86,35 +83,35 @@
     {
       "_template": "jobCard",
       "title": "Product Designer",
-      "location": "Glouscester, UK",
-      "price": "2500",
-      "type": "Full Time"
+      "location": "UK",
+      "type": "Full Time",
+      "price": "Competitive."
     },
     {
       "_template": "jobCard",
       "title": "Digital Marketer",
       "location": "Remote",
-      "price": "2500",
-      "type": "Contractual"
+      "type": "Contractual",
+      "price": "Competitive."
     },
     {
       "_template": "jobCard",
       "title": "Social Media Manager",
-      "location": "Glouscester, UK",
-      "price": "1800",
-      "type": "Full Time"
+      "type": "Full Time",
+      "price": "Competitive.",
+      "location": "Asia."
     },
     {
       "_template": "jobCard",
       "title": "Software Engineer",
-      "location": "Glouscester, UK",
-      "price": "2500",
-      "type": "Full Time"
+      "location": "UK",
+      "type": "Full Time",
+      "price": "Competitive."
     },
     {
       "_template": "textAndButton",
       "link": "mailto:info@wellmi.io?subject=CV&body=Hi%2C%20I%20am%20interested%20in%20a%20position%20at%20Wellmi%2C%20please%20find%20attatched%20my%20CV",
-      "text": "Did not find a position that suits you? Don't worry you can send us your CV and we will review it.",
+      "text": "Did not find a position that suits you? \nWe would still love to hear from you! Perhaps the right role for you is just around the corner.",
       "buttonText": "Send CV"
     }
   ]

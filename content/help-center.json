@@ -16,18 +16,18 @@
   ],
   "accordionPanels": [
     {
-      "text": "<p>There are two different ways to sign up for Wellmi. <br> Email invitation: <br>If you have received an email invitation, follow the link in the email to create your Wellmi account.<br>Auto Enrolment:<br>If your company has completed the auto enrolment process for you, you can simply download the free Wellmi mobile app from the Apple App Store or Google Play Store on your smartphone and enter details provided to you by your company representative on the “login” section.<br>If you haven't received an email invitation or login details, please contact your HR/Benefits department or Wellmi administrator to find out how to sign up.<br>Have more questions? Submit a request.</p>",
-      "question": "How do I sign up for Wellmi?",
+      "text": "<p><strong>There are two different ways to sign up for Wellmi.</strong></p><p><br>Email invitation: If you have received an email invitation, follow the link in the email to create your Wellmi account.<br>Auto Enrolment: If your company has completed the auto enrolment process for you, you can simply download the free Wellmi mobile app from the Apple App Store or Google Play Store on your smartphone and enter details provided to you by your company representative on the “login” section.</p><p><br>If you haven't received an email invitation or login details, please contact your HR/Benefits department or Wellmi administrator to find out how to sign up.</p><p><br><strong>How do I access Wellmi?</strong></p><p>To log into Wellmi, you will first need to be invited by your company or organisation. They will either provide you with a username and password, or will send you an individual invite to register with your email address.</p><p>If you have already registered, you can download the free Wellmi mobile app from the Apple App Store or Google Play Store on your smartphone and press 'Log In'.</p><p>If you haven't been provided with login details or an invite yet, please contact your HR/Benefits department or Wellmi admin to find out how to sign up.</p>",
+      "question": "How do I sign up for and access Wellmi?",
       "id": 1
     },
     {
       "question": "How do I change my password?",
-      "text": "<p>...</p>",
+      "text": "<p>If you have forgotten your password, you can click ‘Forgotten Password’ next to the password field on the login page. You will then be asked to enter the email address that you registered to your Wellmi account. We will then send you an email with a link to reset your password. When you click on this, it will open a new window where you can enter a new password.</p><p>If you have forgotten your username, please contact our Support Team.</p><p>Have more questions? Submit a request</p>",
       "id": 2
     },
     {
       "question": "What of my invitation/sign up link doesn’t work?",
-      "text": "<p>...</p>",
+      "text": "<p>What of my invitation/sign up link doesn’t work?</p><p>If you are using an invitation link, check that it matches and try again.</p><p>If it still does not work it may be that the link has ceased to be active and you need a new one. Please contact us if this is the case.</p><p>If you haven't received an email or link, please contact your HR/Benefits department or Wellmi administrator to find out how to sign up.</p><p>Have more questions? Submit a request</p>",
       "id": 3
     }
   ]

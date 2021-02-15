@@ -14,7 +14,7 @@
     {
       "_template": "titleAndContent",
       "smallText": "Our Story",
-      "headingText": "How it all started in 2017?",
+      "headingText": "How it all started.",
       "text": "Created in 2017 with the purpose of bringing wellbeing to everyone who needs it.\nWe share the belief that both physical and mental wellbeing are equally\nimportant, so we set out to create a place where employees can enjoy both,\nwhenever and wherever they need it."
     },
     {
@@ -32,7 +32,7 @@
     {
       "_template": "team",
       "smallText": "Our Team",
-      "headingText": "A Few People Behind Wellmi",
+      "headingText": "A Few Of The People Behind Wellmi.",
       "cards": [
         {
           "_template": "employeeCard",
@@ -50,7 +50,7 @@
         },
         {
           "_template": "employeeCard",
-          "name": "TBA",
+          "name": "Mark Devereux",
           "image": "images/employee1.png",
           "locationImg": "images/united-kingdom.png",
           "title": "Non-executive Director"

@@ -86,30 +86,30 @@
     {
       "_template": "jobCard",
       "title": "Product Designer",
-      "location": "Glouscester, UK",
-      "price": "2500",
-      "type": "Full Time"
+      "location": "UK",
+      "type": "Full Time",
+      "price": "Competitive."
     },
     {
       "_template": "jobCard",
       "title": "Digital Marketer",
       "location": "Remote",
-      "price": "2500",
-      "type": "Contractual"
+      "type": "Contractual",
+      "price": "Competitive."
     },
     {
       "_template": "jobCard",
       "title": "Social Media Manager",
-      "location": "Glouscester, UK",
-      "price": "1800",
-      "type": "Full Time"
+      "type": "Full Time",
+      "price": "Competitive.",
+      "location": "Asia."
     },
     {
       "_template": "jobCard",
       "title": "Software Engineer",
-      "location": "Glouscester, UK",
-      "price": "2500",
-      "type": "Full Time"
+      "location": "UK",
+      "type": "Full Time",
+      "price": "Competitive."
     },
     {
       "_template": "textAndButton",

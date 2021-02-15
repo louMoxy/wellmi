@@ -34,7 +34,7 @@
       },
       {
         "name": "Privacy policy",
-        "link": "/privacypolicy"
+        "link": "https://wellmi.netlify.app/privacy-policy"
       }
     ],
     "footerNav": {

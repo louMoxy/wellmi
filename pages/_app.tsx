@@ -3,9 +3,9 @@ import App from 'next/app'
 import { TinaCMS, TinaProvider } from 'tinacms'
 import {
   GithubClient,
-  TinacmsGithubProvider
+  TinacmsGithubProvider,
+  GithubMediaStore
 } from 'react-tinacms-github'
-import { NextGithubMediaStore } from 'next-tinacms-github'
 import { DateFieldPlugin } from 'react-tinacms-date'
 import './app.css'
 
@@ -49,7 +49,7 @@ export default class Site extends App {
       apis: {
         github
       },
-      media: new NextGithubMediaStore(github),
+      media: new GithubMediaStore(github),
       sidebar: props.pageProps.preview,
       toolbar: props.pageProps.preview
     })

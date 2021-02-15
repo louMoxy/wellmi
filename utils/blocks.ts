@@ -21,7 +21,7 @@ import { demo_template, DemoForm } from '../components/DemoForm'
 import { PartnersDetails, PartnersDetails_template } from '../components/PartnersDetails'
 import { ColWysiwyg, ColWysiwyg_template } from '../components/col-wysiwyg'
 import { WYSIWYG, WYSIWYG_template } from '../components/WYSIWYG'
-import {Instagram, instagram_template} from '../components/Instagram'
+import { Instagram, instagram_template } from '../components/Instagram'
 
 export const PAGE_BLOCKS = {
   welcomeBanner: {

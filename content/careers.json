@@ -20,17 +20,14 @@
       "_template": "careerImages",
       "image1": {
         "title": "Respect",
-        "text": "We respect human being, opinions and choices.",
         "image": "images/career1.png"
       },
       "image2": {
         "title": "Trust",
-        "text": "We trust ourselves and each other",
         "image": "images/career2.png"
       },
       "image3": {
         "title": "Transparency",
-        "text": "We value transparency to take the best decisions as a team.",
         "image": "images/career3.png"
       }
     },

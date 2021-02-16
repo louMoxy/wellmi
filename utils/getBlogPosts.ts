@@ -1,14 +1,14 @@
-import {getFiles as getGithubFiles, getGithubPreviewProps, parseMarkdown} from 'next-tinacms-github'
+import { getFiles as getGithubFiles, getGithubPreviewProps, parseJson } from 'next-tinacms-github'
 
 export default async (preview, previewData, contentDir) => {
   const fs = require('fs')
   const files = preview
     ? await getGithubFiles(
-        contentDir,
-        previewData.working_repo_full_name,
-        previewData.head_branch,
-        previewData.github_access_token
-      )
+      contentDir,
+      previewData.working_repo_full_name,
+      previewData.head_branch,
+      previewData.github_access_token
+    )
     : await getLocalFiles(contentDir)
   const posts = await Promise.all(
     files.map(async (file) => {
@@ -16,7 +16,7 @@ export default async (preview, previewData, contentDir) => {
         const previewProps = await getGithubPreviewProps({
           ...previewData,
           fileRelativePath: file,
-          parse: parseMarkdown
+          parse: parseJson
         })
         return {
           fileName: file.replace('.json', '').replace(contentDir, '').replace('/', ''),

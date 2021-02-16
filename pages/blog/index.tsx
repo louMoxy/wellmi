@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import Layout from '../../components/layout'
 import { getGithubPreviewProps, parseJson } from 'next-tinacms-github'
 import { usePlugin, ModalProvider } from 'tinacms'
@@ -34,28 +33,18 @@ interface Post {
 }
 
 interface Props { file: GitFile, posts: Post[], global: any, allPages,
-  allBlogs }
+  allBlogs, featuredBlog?: Post }
 
 export default function Page ({
   file, global, posts, allPages,
-  allBlogs
+  allBlogs, featuredBlog
 }: Props) {
   useCreateBlogPage(allBlogs)
   useCreatePage(allPages)
+  console.log(featuredBlog)
   const [data, form] = useGithubJsonForm(file, formOptions)
   usePlugin(form)
   const { title, bgColor } = data
-  const [featuredBlog, setFeaturedBlog] = useState<Post | undefined>()
-  const [blogs, setBlogs] = useState<Post[]>([])
-  useEffect(() => {
-    if (posts.length > 0) {
-      setFeaturedBlog(posts[0])
-    }
-    if (posts.length > 1) {
-      const otherPosts = posts.slice(1)
-      setBlogs(otherPosts.filter((p) => p.data.publish))
-    }
-  }, [posts])
   return (
     <Layout bg={data.bgColor} dark={true} global={global?.props}>
       <Head>
@@ -107,14 +96,14 @@ export default function Page ({
                 </Box>
               )}
               <Box direction="row" wrap>
-                {blogs.map(({ data, fileName }) => (
+                {posts.map(({ data, fileName }) => (
                   <Box
                     basis="1/2"
                     flex
                     key={fileName}
                     pad="medium"
                     margin={{ bottom: 'medium' }}
-                    width={{ min: '300px' }}
+                    width={{ min: '300px', max: '500px' }}
                   >
                     <Image src={data.featureImg} fill="horizontal" />
                     <Text size="small" margin={{ top: 'medium', bottom: 'small' }}>
@@ -145,6 +134,8 @@ export const getStaticProps = async function ({ preview, previewData }) {
   const global = await getGlobalStaticProps(preview, previewData)
   const posts = await getBlogPosts(preview, previewData, 'content/blog')
   const fileRelativePath = 'content/blog.json'
+  const featuredBlog = posts.length > 0 ? posts[0] : undefined
+  const blogPosts = posts.length > 1 ? posts.splice(1) : []
   if (preview) {
     try {
       const previewProps = await getGithubPreviewProps({
@@ -154,10 +145,11 @@ export const getStaticProps = async function ({ preview, previewData }) {
       })
       return {
         props: {
+          featuredBlog,
           global,
           allPages,
           allBlogs,
-          posts,
+          posts: blogPosts,
           previewURL: `https://raw.githubusercontent.com/${previewData.working_repo_full_name}/${previewData.head_branch}`,
           ...previewProps.props
         }
@@ -165,9 +157,11 @@ export const getStaticProps = async function ({ preview, previewData }) {
     } catch (e) {
       return {
         props: {
+          featuredBlog,
           global,
           allPages,
           allBlogs,
+          posts: blogPosts,
           previewURL: `https://raw.githubusercontent.com/${previewData.working_repo_full_name}/${previewData.head_branch}`,
           file: {
             fileRelativePath,
@@ -182,8 +176,9 @@ export const getStaticProps = async function ({ preview, previewData }) {
 
   return {
     props: {
+      featuredBlog,
       global,
-      posts,
+      posts: blogPosts,
       allPages,
       allBlogs,
       sourceProvider: null,

@@ -1,10 +1,10 @@
-import { Box, Text, Paragraph } from "grommet";
+import { Box, Text, Paragraph } from 'grommet'
 import { InlineText, InlineTextarea, BlocksControls } from 'react-tinacms-inline'
-import { HeaderText } from '../HeaderText';
-import { UnderLine } from '../title/underline';
+import { HeaderText } from '../HeaderText'
+import { UnderLine } from '../title/underline'
 
 export const TitleAndContent = ({ index, data }) => {
-    return (
+  return (
         <BlocksControls index={index} insetControls>
             <Box align="center">
                 <Box width="xlarge" direction="row" wrap={true} pad="small">
@@ -15,7 +15,7 @@ export const TitleAndContent = ({ index, data }) => {
                             <UnderLine width="100%" />
                         </Box>
                     </Box>
-                    <Box pad="small" flex={true} width={{ min: "400px" }}>
+                    <Box pad="small" flex={true} width={{ min: '400px' }}>
                         <Paragraph fill={true} color="text-light">
                             <InlineTextarea name="text" />
                         </Paragraph>
@@ -23,37 +23,36 @@ export const TitleAndContent = ({ index, data }) => {
                 </Box>
             </Box>
         </BlocksControls>
-    )
+  )
 }
 
-
 export const titleAndContent_template = {
-    label: 'Title and Content',
-    defaultItem: {
-        headingText: 'Add your Heading text here',
-        text: 'Add text here ',
+  label: 'Title and Content',
+  defaultItem: {
+    headingText: 'Add your Heading text here',
+    text: 'Add text here '
+  },
+  fields: [
+    {
+      name: 'smallText',
+      label: 'Small title text',
+      component: 'text'
     },
-    fields: [
-        {
-            name: "smallText",
-            label: "Small title text",
-            component: "text",
-        },
-        {
-            name: "headingText",
-            label: "Title text",
-            component: "text",
-        },
-        {
-            name: "num",
-            label: "Number of words in accent color for title text",
-            component: "number",
-            step: 1
-        },
-        {
-            name: "text",
-            label: "Text",
-            component: "textarea",
-        }
-    ],
+    {
+      name: 'headingText',
+      label: 'Title text',
+      component: 'text'
+    },
+    {
+      name: 'num',
+      label: 'Number of words in accent color for title text',
+      component: 'number',
+      step: 1
+    },
+    {
+      name: 'text',
+      label: 'Text',
+      component: 'textarea'
+    }
+  ]
 }

@@ -85,6 +85,12 @@
       ]
     },
     {
+      "_template": "title",
+      "title": "A Powerful \nCommunity of Wellbeing",
+      "text": "Our Community",
+      "alignment": "Right"
+    },
+    {
       "_template": "instagram",
       "instagramId": "9153844721"
     }

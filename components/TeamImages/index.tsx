@@ -57,7 +57,7 @@ const linkBox_template = {
     defaultItem: {
         "_template": "LinkBox",
         "link": "/",
-        "image": "images/logo-white.png",
+        "image": "/logo-white.png",
         "text": "Join us"
     },
     fields: [
@@ -103,7 +103,7 @@ const employee_template = {
         "_template": "employeeCard",
         "name": "Name",
         "title": "Title",
-        "locationImg": "images/united-kingdom.png"
+        "locationImg": "/united-kingdom.png"
     },
     fields: [
         {

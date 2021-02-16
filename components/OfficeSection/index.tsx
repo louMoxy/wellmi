@@ -67,33 +67,29 @@ export const office_template = {
       label: 'Image 1',
       name: 'img1',
       component: 'image',
-      parse: media => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
+      parse: (media) => `/${media.filename}`,
+      uploadDir: () => '/'
     },
     {
       label: 'Image 2',
       name: 'img2',
       component: 'image',
-      parse: media => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
+      parse: (media) => `/${media.filename}`,
+      uploadDir: () => '/'
     },
     {
       label: 'Image 3',
       name: 'img3',
       component: 'image',
-      parse: media => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
+      parse: (media) => `/${media.filename}`,
+      uploadDir: () => '/'
     },
     {
       label: 'Image 4',
       name: 'img4',
       component: 'image',
-      parse: media => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
+      parse: (media) => `/${media.filename}`,
+      uploadDir: () => '/'
     },
     {
       label: 'Location text',

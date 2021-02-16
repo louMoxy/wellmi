@@ -49,9 +49,8 @@ export const imageCard_template = {
       label: 'Image',
       name: 'image',
       component: 'image',
-      parse: media => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
+      parse: (media) => `/${media.filename}`,
+      uploadDir: () => '/'
     }
   ]
 }

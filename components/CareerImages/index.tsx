@@ -54,9 +54,8 @@ export const careerImages_template = {
       label: 'Image 1 Image',
       name: 'image1.image',
       component: 'image',
-      parse: media => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
+      parse: (media) => `/${media.filename}`,
+      uploadDir: () => '/'
     },
     {
       name: 'image2.title',
@@ -72,9 +71,8 @@ export const careerImages_template = {
       label: 'Image 2 Image',
       name: 'image2.image',
       component: 'image',
-      parse: media => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
+      parse: (media) => `/${media.filename}`,
+      uploadDir: () => '/'
     },
     {
       name: 'image3.title',
@@ -90,9 +88,8 @@ export const careerImages_template = {
       label: 'Image 3 Image',
       name: 'image3.image',
       component: 'image',
-      parse: media => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
+      parse: (media) => `/${media.filename}`,
+      uploadDir: () => '/'
     }
   ]
 }

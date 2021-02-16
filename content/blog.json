@@ -6,7 +6,7 @@
       "bannerText1": "Wellmi",
       "largeSecond": true,
       "bannerText2": "Press",
-      "bannerImg": "images/newsBanner.png",
+      "bannerImg": "/newsBanner.png",
       "_template": "banner",
       "contact": {
         "email": "Info@wellmi.io",

@@ -9,7 +9,7 @@
       "bannerText": "Simply fill out some details below and we’ll take care of the rest.",
       "bannerText1": "Wellmi",
       "bannerText2": "Help Centre",
-      "bannerImg": "images/helpBanner.png",
+      "bannerImg": "/helpBanner.png",
       "_template": "banner",
       "largeSecond": true
     }

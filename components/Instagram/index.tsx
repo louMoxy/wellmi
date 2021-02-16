@@ -68,7 +68,7 @@ export const Instagram = ({ index, data }) => {
   )
 }
 export const instagram_template = {
-  label: 'Image',
+  label: 'Instagram',
   defaultItem: {
     instagramId: '9153844721'
   },

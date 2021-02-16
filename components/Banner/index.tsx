@@ -160,9 +160,8 @@ export const banner_template = {
       label: 'Banner Image',
       name: 'bannerImg',
       component: 'image',
-      parse: media => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
+      parse: (media) => `/${media.filename}`,
+      uploadDir: () => '/'
     }
   ]
 }

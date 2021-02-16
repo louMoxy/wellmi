@@ -6,7 +6,7 @@
       "bannerText": "Simply fill out some details below and we’ll take care of the rest.",
       "bannerText1": "Get a",
       "bannerText2": "Demo!",
-      "bannerImg": "images/demo1.png",
+      "bannerImg": "/demo1.png",
       "_template": "banner",
       "largeSecond": true,
       "imageWidth": "600px"

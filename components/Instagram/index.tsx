@@ -23,7 +23,12 @@ export const Instagram = ({ index, data }) => {
     try {
       // Hack from https://stackoverflow.com/a/47243409/2217533
       const response = await fetch(
-        `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${id}","first":${PHOTO_COUNT},"after":null}`
+        `https://www.instagram.com/graphql/query?query_id=17888483320059182&variables={"id":"${id}","first":${PHOTO_COUNT},"after":null}`,
+        {
+          headers: {
+            'Access-Control-Allow-Origin': '*'
+          }
+        }
       )
       const { data } = await response.json()
       const photos = data.user.edge_owner_to_timeline_media.edges.map(

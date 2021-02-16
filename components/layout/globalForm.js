@@ -7,17 +7,15 @@ export const globalForm = {
       label: 'Header Logo for light background',
       name: 'header.logo.light',
       component: 'image',
-      parse: (media) => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: (fullSrc) => fullSrc.replace('/public', '')
+      parse: media => `/${media.filename}`,
+      uploadDir: () => '/images/'
     },
     {
       label: 'Header Logo for dark background',
       name: 'header.logo.dark',
       component: 'image',
-      parse: (media) => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: (fullSrc) => fullSrc.replace('/public', '')
+      parse: media => `/${media.filename}`,
+      uploadDir: () => '/images/'
     },
     {
       label: 'Header Navigation',
@@ -102,9 +100,8 @@ export const globalForm = {
       label: 'Footer Logo',
       name: 'footer.footerNav.logoImg',
       component: 'image',
-      parse: (media) => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: (fullSrc) => fullSrc.replace('/public', '')
+      parse: media => `/${media.filename}`,
+      uploadDir: () => '/images/'
     },
     {
       label: 'Facebook link',
@@ -241,9 +238,8 @@ export const globalForm = {
           label: 'Image',
           name: 'image',
           component: 'image',
-          parse: (media) => `/images/${media.filename}`,
-          uploadDir: () => 'public/images/',
-          previewSrc: (fullSrc) => fullSrc.replace('/public', '')
+          parse: media => `/${media.filename}`,
+          uploadDir: () => '/images/'
         }
       ]
     },

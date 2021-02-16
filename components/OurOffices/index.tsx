@@ -68,17 +68,15 @@ export const offices_template = {
       label: 'Image 1',
       name: 'img1',
       component: 'image',
-      parse: media => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
+      parse: (media) => `/${media.filename}`,
+      uploadDir: () => '/images/'
     },
     {
       label: 'Image 2',
       name: 'img2',
       component: 'image',
-      parse: media => `/images/${media.filename}`,
-      uploadDir: () => 'public/images/',
-      previewSrc: fullSrc => fullSrc.replace('/public', '')
+      parse: (media) => `/${media.filename}`,
+      uploadDir: () => '/images/'
     }
   ]
 }

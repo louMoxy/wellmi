@@ -46,9 +46,8 @@ export const useCreateBlogPage = (allBlogs = []) => {
           label: 'Feature Image',
           name: 'featureImg',
           component: 'image',
-          parse: media => `/images/${media.filename}`,
-          uploadDir: () => 'public/images/',
-          previewSrc: fullSrc => fullSrc.replace('/public', ''),
+          parse: media => `/${media.filename}`,
+          uploadDir: () => '/images/',
           required: true
         },
         {

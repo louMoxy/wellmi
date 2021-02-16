@@ -6,7 +6,7 @@
       "bannerText": "Want to Join The Wellmi family? ↵ Looking for a career that let's you make a difference?",
       "bannerText1": "Careers",
       "bannerText2": "at Wellmi",
-      "bannerImg": "images/carreer1.png",
+      "bannerImg": "/images/carreer1.png",
       "_template": "banner"
     },
     {
@@ -20,15 +20,15 @@
       "_template": "careerImages",
       "image1": {
         "title": "Respect",
-        "image": "images/career1.png"
+        "image": "/images/career1.png"
       },
       "image2": {
         "title": "Trust",
-        "image": "images/career2.png"
+        "image": "/images/career2.png"
       },
       "image3": {
         "title": "Transparency",
-        "image": "images/career3.png"
+        "image": "/images/career3.png"
       }
     },
     {
@@ -67,10 +67,10 @@
       "locationImg": "/images/united-kingdom.png",
       "headingText": "Office In Glouscester",
       "text": "A few snaps from our base in Gloucester, UK",
-      "img1": "images/office-1.png",
-      "img2": "images/office-2.png",
-      "img3": "images/office-3.png",
-      "img4": "images/office-4.png",
+      "img1": "/images/office-1.png",
+      "img2": "/images/office-2.png",
+      "img3": "/images/office-3.png",
+      "img4": "/images/office-4.png",
       "locationText": "Bizspace House, Bristol Road, Glouscester GL1 5RZ"
     },
     {

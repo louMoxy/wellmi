@@ -9,7 +9,7 @@
       "bannerText": "",
       "bannerText1": "Why Choose",
       "bannerText2": "Wellmi?",
-      "bannerImg": "images/productOveriview.png",
+      "bannerImg": "/images/productOveriview.png",
       "_template": "banner",
       "largeSecond": true,
       "imageWidth": "600px"

@@ -14,9 +14,8 @@ export const ColWysiwyg = ({ index, data }) => {
                                 name={`html${index + 1}`}
                                 format="html"
                                 imageProps={{
-                                    parse: media => `/images/${media.filename}`,
-                                    uploadDir: () => 'public/images/',
-                                    previewSrc: fullSrc => fullSrc.replace('/public', ''),
+                                    parse: media => `/${media.filename}`,
+                                    uploadDir: () => '/images/'
                                 }}
                             >
                                 <div

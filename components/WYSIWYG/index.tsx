@@ -11,9 +11,8 @@ export const WYSIWYG = ({ index, data }) => {
                         name="html"
                         format="html"
                         imageProps={{
-                          parse: media => `/images/${media.filename}`,
-                          uploadDir: () => 'public/images/',
-                          previewSrc: fullSrc => fullSrc.replace('/public', '')
+                          parse: media => `/${media.filename}`,
+                          uploadDir: () => '/images/'
                         }}
                     >
                         <div

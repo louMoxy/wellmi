@@ -57,7 +57,7 @@ const linkBox_template = {
     defaultItem: {
         "_template": "LinkBox",
         "link": "/",
-        "image": "images/logo-white.png",
+        "image": "/images/logo-white.png",
         "text": "Join us"
     },
     fields: [
@@ -75,9 +75,8 @@ const linkBox_template = {
             label: 'Image',
             name: 'image',
             component: 'image',
-            parse: media => `/images/${media.filename}`,
-            uploadDir: () => 'public/images/',
-            previewSrc: fullSrc => fullSrc.replace('/public', ''),
+            parse: media => `/${media.filename}`,
+            uploadDir: () => '/images/'
         },
     ]
 }
@@ -103,7 +102,7 @@ const employee_template = {
         "_template": "employeeCard",
         "name": "Name",
         "title": "Title",
-        "locationImg": "images/united-kingdom.png"
+        "locationImg": "/images/united-kingdom.png"
     },
     fields: [
         {
@@ -121,17 +120,15 @@ const employee_template = {
             label: 'Image',
             name: 'image',
             component: 'image',
-            parse: media => `/images/${media.filename}`,
-            uploadDir: () => 'public/images/',
-            previewSrc: fullSrc => fullSrc.replace('/public', ''),
+            parse: media => `/${media.filename}`,
+            uploadDir: () => '/public/'
         },
         {
             label: 'Location Image',
             name: 'locationImg',
             component: 'image',
-            parse: media => `/images/${media.filename}`,
-            uploadDir: () => 'public/images/',
-            previewSrc: fullSrc => fullSrc.replace('/public', ''),
+            parse: media => `/${media.filename}`,
+            uploadDir: () => '/images/'
         }
     ],
 }

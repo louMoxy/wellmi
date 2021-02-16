@@ -83,7 +83,7 @@
       "navigation2": [
         {
           "name": "Investers",
-          "link": "/",
+          "link": "https://wellmi.netlify.app/investers",
           "id": "jbum24ral"
         }
       ],

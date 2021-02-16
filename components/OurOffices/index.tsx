@@ -1,19 +1,18 @@
-import { Box, Heading, Text, Image } from "grommet";
-import { InlineText, InlineTextarea, BlocksControls } from 'react-tinacms-inline'
-import theme from '../layout/theme';
-import { HeaderText } from '../HeaderText';
-import ImageComponent from '../Image';
-import { UnderLine } from '../title/underline';
-import { LocationText } from '../LocationText';
+import { Box, Text } from 'grommet'
+import { InlineText, BlocksControls } from 'react-tinacms-inline'
+import { HeaderText } from '../HeaderText'
+import ImageComponent from '../Image'
+import { UnderLine } from '../title/underline'
+import { LocationText } from '../LocationText'
 
 export const Offices = ({ index, data }) => {
-    return (
+  return (
         <BlocksControls index={index} insetControls>
             <Box align="center">
                 <Box width="xlarge" direction="row" wrap={true} pad="medium">
-                    <Box basis="60%" width={{min: "300px"}} pad="small" round="medium" margin={{ top: "95px" }} justify="end" flex="grow" >
+                    <Box basis="60%" width={{ min: '300px' }} pad="small" round="medium" margin={{ top: '95px' }} justify="end" flex="grow" >
                         <ImageComponent name="img1" className="border"/>
-                        <Box width={{ max: "380px" }}>
+                        <Box width={{ max: '380px' }}>
                             <LocationText name="locationText1" imgName="locationImg1"/>
                         </Box>
                     </Box>
@@ -29,57 +28,57 @@ export const Offices = ({ index, data }) => {
                 </Box>
             </Box>
         </BlocksControls>
-    )
+  )
 }
 
 export const offices_template = {
-    label: 'Our Offices',
-    defaultItem: {
-        headingText: 'Add your Heading text here',
-        text: 'Add text here ',
+  label: 'Our Offices',
+  defaultItem: {
+    headingText: 'Add your Heading text here',
+    text: 'Add text here '
+  },
+  fields: [
+    {
+      name: 'smallText',
+      label: 'Small title text',
+      component: 'text'
     },
-    fields: [
-        {
-            name: "smallText",
-            label: "Small title text",
-            component: "text",
-        },
-        {
-            name: "headingText",
-            label: "Title text",
-            component: "text",
-        },
-        {
-            name: "num",
-            label: "Number of words in accent color for title text",
-            component: "number",
-            step: 1
-        },
-        {
-            name: "locationText1",
-            label: "Location 1 text",
-            component: "text",
-        },
-        {
-            name: "locationText2",
-            label: "Location 1 text",
-            component: "text",
-        },
-        {
-            label: 'Image 1',
-            name: 'img1',
-            component: 'image',
-            parse: media => `/images/${media.filename}`,
-            uploadDir: () => 'public/images/',
-            previewSrc: fullSrc => fullSrc.replace('/public', ''),
-        },
-        {
-            label: 'Image 2',
-            name: 'img2',
-            component: 'image',
-            parse: media => `/images/${media.filename}`,
-            uploadDir: () => 'public/images/',
-            previewSrc: fullSrc => fullSrc.replace('/public', ''),
-        }
-    ],
+    {
+      name: 'headingText',
+      label: 'Title text',
+      component: 'text'
+    },
+    {
+      name: 'num',
+      label: 'Number of words in accent color for title text',
+      component: 'number',
+      step: 1
+    },
+    {
+      name: 'locationText1',
+      label: 'Location 1 text',
+      component: 'text'
+    },
+    {
+      name: 'locationText2',
+      label: 'Location 1 text',
+      component: 'text'
+    },
+    {
+      label: 'Image 1',
+      name: 'img1',
+      component: 'image',
+      parse: media => `/images/${media.filename}`,
+      uploadDir: () => 'public/images/',
+      previewSrc: fullSrc => fullSrc.replace('/public', '')
+    },
+    {
+      label: 'Image 2',
+      name: 'img2',
+      component: 'image',
+      parse: media => `/images/${media.filename}`,
+      uploadDir: () => 'public/images/',
+      previewSrc: fullSrc => fullSrc.replace('/public', '')
+    }
+  ]
 }

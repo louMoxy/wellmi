@@ -1,6 +1,6 @@
 import { Box, Text } from 'grommet'
 import { InlineTextarea, BlocksControls } from 'react-tinacms-inline'
-import { HeaderText } from '../../components/HeaderText'
+import { HeaderText } from '../HeaderText'
 
 export const TextContent = ({ index, data }) => {
   const alignment = data.alignment === 'Right' ? 'end' : data.alignment === 'Center' ? 'center' : 'start'

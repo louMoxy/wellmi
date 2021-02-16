@@ -22,6 +22,7 @@ import { PartnersDetails, PartnersDetails_template } from '../components/Partner
 import { ColWysiwyg, ColWysiwyg_template } from '../components/col-wysiwyg'
 import { WYSIWYG, WYSIWYG_template } from '../components/WYSIWYG'
 import { Instagram, instagram_template } from '../components/Instagram'
+import { title_template, TitleBlock } from '../components/title/titleBlock'
 
 export const PAGE_BLOCKS = {
   welcomeBanner: {
@@ -127,5 +128,9 @@ export const PAGE_BLOCKS = {
   instagram: {
     Component: Instagram,
     template: instagram_template
+  },
+  title: {
+    Component: TitleBlock,
+    template: title_template
   }
 }

@@ -15,7 +15,7 @@ export const LatestInsights = ({ posts }) => {
                 <Title name="title" />
                 <Box direction="row" gap="medium" align="start" wrap justify="center">
                     {posts.map(({ fileName, data }, index) => (
-                        <ContentCard header={data.title} text={data.description} img={data.featureImg} margin={{ top: (scatter && index == 1) ? 'xlarge' : 'none' } } key={fileName} link={`/blog/${fileName}`}/>
+                        <ContentCard header={data.title} text={data.description} img={data.featureImg} margin={{ top: (scatter && index === 1) ? 'xlarge' : 'none' } } key={fileName} link={`/blog/${fileName}`}/>
                     ))}
                 </Box>
             </Box>
@@ -24,7 +24,7 @@ export const LatestInsights = ({ posts }) => {
 }
 
 export const latestInsights_template = {
-  label: 'Latest Insights',
+  label: 'Title',
   fields: [
     {
       name: 'title',

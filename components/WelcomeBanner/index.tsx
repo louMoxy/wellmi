@@ -48,7 +48,7 @@ export const WelcomeBanner = ({ index, data }) => {
 }
 
 export const welcome_banner_template = {
-  label: 'Banner',
+  label: 'Homepage Banner',
   fields: [
     {
       component: 'text',

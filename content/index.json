@@ -47,20 +47,20 @@
       "link1": "/",
       "link2": "/",
       "contentCard1": {
-        "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "heading": "London City Airport",
         "image": "/images/pexels-pixabay.png",
-        "buttonLink": "/"
+        "buttonLink": "/",
+        "heading": "Cirencester College",
+        "text": "One of the first educational institutions in the UK to support the physical & mental wellbeing of students and staff with the Wellmi app."
       },
       "contentCard2": {
         "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "heading": "Nestlé",
-        "image": "/images/woman-in-blue-suit-jacket.png"
+        "image": "/images/woman-in-blue-suit-jacket.png",
+        "heading": "Opportunity Hub UK"
       },
       "contentCard3": {
         "text": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-        "heading": "Dr. Martens",
-        "image": "/images/group-of-people-sitting-indoors.png"
+        "image": "/images/group-of-people-sitting-indoors.png",
+        "heading": "NCS"
       },
       "text": "Mental and physical wellbeing support that isn't defined by time zone, nationality or industry.\n\nSupport your employees anytime, anyplace with Wellmi."
     }

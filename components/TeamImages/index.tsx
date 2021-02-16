@@ -1,14 +1,14 @@
-import { Box, Text, Image, Anchor } from "grommet";
-import { InlineText, InlineTextarea, BlocksControls, InlineBlocks } from 'react-tinacms-inline'
-import theme from '../layout/theme';
-import { HeaderText } from '../HeaderText';
-import { UnderLine } from '../title/underline';
-import styled from 'styled-components';
-import ImageComponent from "../Image";
+import { Box, Text, Anchor } from 'grommet'
+import { InlineText, BlocksControls, InlineBlocks } from 'react-tinacms-inline'
+import theme from '../layout/theme'
+import { HeaderText } from '../HeaderText'
+import { UnderLine } from '../title/underline'
+import styled from 'styled-components'
+import ImageComponent from '../Image'
 
 const StyledBox = styled(Box)`
     background: ${theme.global.colors.brand.light};
-    trasition: background 0.4s;
+    transition: background 0.4s;
     &:hover {
         background: ${theme.global.colors.brand.dark};
     }
@@ -21,7 +21,7 @@ const StyledInlineBlocks = styled(InlineBlocks)`
 `
 
 export const TeamImages = ({ index, data }) => {
-    return (
+  return (
         <BlocksControls index={index} insetControls>
             <Box align="center">
                 <Box width="xlarge" direction="column" wrap={true} pad="medium">
@@ -38,14 +38,14 @@ export const TeamImages = ({ index, data }) => {
                 </Box>
             </Box>
         </BlocksControls>
-    )
+  )
 }
 
-const LinkBox = ({ index, data}) => (
+const LinkBox = ({ index, data }) => (
     <BlocksControls index={index} insetControls>
         <Anchor href={data.link} alignSelf="center">
             <StyledBox height="200px" width="200px" justify="center" align="center" margin="medium">
-                <ImageComponent name="image"  className="link"/>
+                <ImageComponent name="image" className="link"/>
                 <Text color="white" weight="normal"><InlineText name="text" /></Text>
             </StyledBox>
         </Anchor>
@@ -53,36 +53,36 @@ const LinkBox = ({ index, data}) => (
 )
 
 const linkBox_template = {
-    label: "Link Box",
-    defaultItem: {
-        "_template": "LinkBox",
-        "link": "/",
-        "image": "/images/logo-white.png",
-        "text": "Join us"
+  label: 'Link Box',
+  defaultItem: {
+    _template: 'LinkBox',
+    link: '/',
+    parse: (media) => `/${media.filename}`,
+    uploadDir: () => '/images/'
+  },
+  fields: [
+    {
+      name: 'link',
+      label: 'Link',
+      component: 'text'
     },
-    fields: [
-        {
-            name: "link",
-            label: "Link",
-            component: "text"
-        },
-        {
-            name: "text",
-            label: "Text",
-            component: "text"
-        },
-        {
-            label: 'Image',
-            name: 'image',
-            component: 'image',
-            parse: media => `/${media.filename}`,
-            uploadDir: () => '/images/'
-        },
-    ]
+    {
+      name: 'text',
+      label: 'Text',
+      component: 'text'
+    },
+    {
+      label: 'Image',
+      name: 'image',
+      component: 'image',
+      parse: media => `/${media.filename}`,
+      uploadDir: () => '/images/'
+    }
+  ]
 }
 
 const EmployeeCard = ({ index }) => {
-    return (
+  return (
         <BlocksControls index={index} insetControls>
             <Box pad="large">
                 <Box align="end">
@@ -93,76 +93,76 @@ const EmployeeCard = ({ index }) => {
                 <Text color="text-light" size="small" textAlign="center"><InlineText name="title" /></Text>
             </Box>
         </BlocksControls>
-    )
+  )
 }
 
 const employee_template = {
-    label: 'Employee Card',
-    defaultItem: {
-        "_template": "employeeCard",
-        "name": "Name",
-        "title": "Title",
-        "locationImg": "/images/united-kingdom.png"
+  label: 'Employee Card',
+  defaultItem: {
+    _template: 'employeeCard',
+    name: 'Name',
+    title: 'Title',
+    parse: (media) => `/${media.filename}`,
+    uploadDir: () => '/images/'
+  },
+  fields: [
+    {
+      name: 'name',
+      label: 'Name',
+      component: 'text',
+      default: 'Name'
     },
-    fields: [
-        {
-            name: "name",
-            label: "Name",
-            component: "text",
-            default: "Name"
-        },
-        {
-            name: "title",
-            label: "Title",
-            component: "text"
-        },
-        {
-            label: 'Image',
-            name: 'image',
-            component: 'image',
-            parse: media => `/${media.filename}`,
-            uploadDir: () => '/public/'
-        },
-        {
-            label: 'Location Image',
-            name: 'locationImg',
-            component: 'image',
-            parse: media => `/${media.filename}`,
-            uploadDir: () => '/images/'
-        }
-    ],
+    {
+      name: 'title',
+      label: 'Title',
+      component: 'text'
+    },
+    {
+      label: 'Image',
+      name: 'image',
+      component: 'image',
+      parse: media => `/${media.filename}`,
+      uploadDir: () => '/public/'
+    },
+    {
+      label: 'Location Image',
+      name: 'locationImg',
+      component: 'image',
+      parse: media => `/${media.filename}`,
+      uploadDir: () => '/images/'
+    }
+  ]
 }
 
 export const EMPLOYEE_BLOCKS = {
-    employeeCard: {
-        Component: EmployeeCard,
-        template: employee_template,
-    },
-    LinkBox: {
-        Component: LinkBox,
-        template: linkBox_template
-    }
+  employeeCard: {
+    Component: EmployeeCard,
+    template: employee_template
+  },
+  LinkBox: {
+    Component: LinkBox,
+    template: linkBox_template
+  }
 }
 
-
 export const team_template = {
-    label: 'Team section',
-    fields: [
-        {
-            name: "headingText",
-            label: "Title",
-            component: "text"
-        },
-        {
-            name: "smallText",
-            label: "Title",
-            component: "text"
-        },
-        {
-            name: "num",
-            label: "Number of words in accent color for title text",
-            component: "number",
-            step: 1
-        }
-    ],
+  label: 'Team section',
+  fields: [
+    {
+      name: 'headingText',
+      label: 'Title',
+      component: 'text'
+    },
+    {
+      name: 'smallText',
+      label: 'Title',
+      component: 'text'
+    },
+    {
+      name: 'num',
+      label: 'Number of words in accent color for title text',
+      component: 'number',
+      step: 1
+    }
+  ]
 }

@@ -24,10 +24,7 @@
       "smallText": "Our Offices",
       "locationImg1": "/images/united-kingdom.png",
       "locationImg2": "/images/united-kingdom.png",
-      "headingText": "Offices in United Kingdom",
-      "num": 1,
-      "img1": "/images/about-us-2.png",
-      "img2": "/images/about-us-3.png"
+      "num": 1
     },
     {
       "_template": "team",

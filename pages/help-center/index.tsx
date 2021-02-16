@@ -26,8 +26,7 @@ import { Banner, banner_template } from '../../components/Banner'
 import countries from '../../components/DemoForm/countries.json'
 import { config } from '../../utils/globalCMSConfig'
 import { HeaderText } from '../../components/HeaderText'
-import { getLocalFiles } from '../../utils/getLocalFiles'
-import getBlogPosts from "../../utils/getBlogPosts";
+import getBlogPosts from '../../utils/getBlogPosts'
 
 const formConfig = {
   id: 'HelpCenter',

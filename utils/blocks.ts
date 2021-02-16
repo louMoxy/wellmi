@@ -121,10 +121,6 @@ export const PAGE_BLOCKS = {
     Component: ImageBlock,
     template: image_template
   },
-  col: {
-    Component: ColWysiwyg,
-    template: ColWysiwyg_template
-  },
   instagram: {
     Component: Instagram,
     template: instagram_template

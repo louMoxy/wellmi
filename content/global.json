@@ -30,7 +30,7 @@
     "terms": [
       {
         "name": "Terms and conditions",
-        "link": "https://wellmi.netlify.app/termsandconditions"
+        "link": "/termsandconditions"
       },
       {
         "name": "Privacy policy",

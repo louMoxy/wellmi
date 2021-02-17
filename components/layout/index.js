@@ -51,7 +51,7 @@ const Container = styled.div`
   }
 `
 
-const Layout = ({ children, bg = '#fff', dark = false, global }) => {
+const Layout = ({ children, bg = 'rgb(0, 155, 220)', dark = false, global }) => {
   // Add to the form options
   const [globalData, hForm] = useGithubJsonForm(global.file, globalForm)
   useFormScreenPlugin(hForm)

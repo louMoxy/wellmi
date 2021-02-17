@@ -5,9 +5,11 @@ import {
   GithubClient,
   TinacmsGithubProvider
 } from 'react-tinacms-github'
-import { NextGithubMediaStore } from 'next-tinacms-github'
+// import { NextGithubMediaStore } from 'next-tinacms-github'
 import { DateFieldPlugin } from 'react-tinacms-date'
 import './app.css'
+import { NextGithubMediaStore } from '../components/MediaStore'
+
 
 const onLogin = async () => {
   const token = localStorage.getItem('tinacms-github-token') || null
@@ -49,6 +51,7 @@ export default class Site extends App {
       apis: {
         github
       },
+      // @ts-ignore
       media: new NextGithubMediaStore(github),
       sidebar: props.pageProps.preview,
       toolbar: props.pageProps.preview

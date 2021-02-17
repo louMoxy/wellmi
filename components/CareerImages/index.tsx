@@ -54,7 +54,7 @@ export const careerImages_template = {
       label: 'Image 1 Image',
       name: 'image1.image',
       component: 'image',
-      parse: (media) => `/${media.filename}`,
+      parse: (media) => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
@@ -71,7 +71,7 @@ export const careerImages_template = {
       label: 'Image 2 Image',
       name: 'image2.image',
       component: 'image',
-      parse: (media) => `/${media.filename}`,
+      parse: (media) => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
@@ -88,7 +88,7 @@ export const careerImages_template = {
       label: 'Image 3 Image',
       name: 'image3.image',
       component: 'image',
-      parse: (media) => `/${media.filename}`,
+      parse: (media) => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     }
   ]

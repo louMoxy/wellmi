@@ -121,7 +121,7 @@ const HelpPage = ({ file, global }) => {
                       name={`accordionPanels[${index}].text`}
                       format="html"
                       imageProps={{
-                        parse: media => `/${media.filename}`,
+                        parse: media => `/images/${media.filename}`,
                         uploadDir: () => '/images/'
                       }}
                     >

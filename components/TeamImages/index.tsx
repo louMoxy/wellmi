@@ -57,7 +57,7 @@ const linkBox_template = {
   defaultItem: {
     _template: 'LinkBox',
     link: '/',
-    parse: (media) => `/${media.filename}`,
+    parse: (media) => `/images/${media.filename}`,
     uploadDir: () => '/images/'
   },
   fields: [
@@ -75,7 +75,7 @@ const linkBox_template = {
       label: 'Image',
       name: 'image',
       component: 'image',
-      parse: media => `/${media.filename}`,
+      parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     }
   ]
@@ -102,7 +102,7 @@ const employee_template = {
     _template: 'employeeCard',
     name: 'Name',
     title: 'Title',
-    parse: (media) => `/${media.filename}`,
+    parse: (media) => `/images/${media.filename}`,
     uploadDir: () => '/images/'
   },
   fields: [
@@ -121,14 +121,14 @@ const employee_template = {
       label: 'Image',
       name: 'image',
       component: 'image',
-      parse: media => `/${media.filename}`,
-      uploadDir: () => '/public/'
+      parse: media => `/images/${media.filename}`,
+      uploadDir: () => '/images/'
     },
     {
       label: 'Location Image',
       name: 'locationImg',
       component: 'image',
-      parse: media => `/${media.filename}`,
+      parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     }
   ]

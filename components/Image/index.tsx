@@ -10,7 +10,7 @@ const ImageComponent = ({ name, className }: Props) => {
         <InlineImage
             name={name}
             previewSrc={fieldValue => `${fieldValue}`}
-            parse={media => `/${media.filename}`}
+            parse={media => `/images/${media.filename}`}
             uploadDir={() => '/images/'}
             focusRing={false}
             className={`imageComponent ${className}`}

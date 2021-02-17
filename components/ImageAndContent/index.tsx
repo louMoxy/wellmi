@@ -72,7 +72,7 @@ export const imageAndContent_template = {
       label: 'Image',
       name: 'image',
       component: 'image',
-      parse: (media) => `/${media.filename}`,
+      parse: (media) => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     }
   ]

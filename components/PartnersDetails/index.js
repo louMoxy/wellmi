@@ -63,28 +63,28 @@ export const PartnersDetails_template = {
       label: "Image 1",
       name: "image1",
       component: "image",
-      parse: media => `/${media.filename}`,
+      parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
       label: "Image 2",
       name: "image2",
       component: "image",
-      parse: media => `/${media.filename}`,
+      parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
       label: "Image 3",
       name: "image4",
       component: "image",
-      parse: media => `/${media.filename}`,
+      parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
       label: "Image 4",
       name: "image4",
       component: "image",
-      parse: media => `/${media.filename}`,
+      parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
   ],

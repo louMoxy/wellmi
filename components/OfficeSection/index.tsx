@@ -67,28 +67,28 @@ export const office_template = {
       label: 'Image 1',
       name: 'img1',
       component: 'image',
-      parse: (media) => `/${media.filename}`,
+      parse: (media) => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
       label: 'Image 2',
       name: 'img2',
       component: 'image',
-      parse: (media) => `/${media.filename}`,
+      parse: (media) => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
       label: 'Image 3',
       name: 'img3',
       component: 'image',
-      parse: (media) => `/${media.filename}`,
+      parse: (media) => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
       label: 'Image 4',
       name: 'img4',
       component: 'image',
-      parse: (media) => `/${media.filename}`,
+      parse: (media) => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {

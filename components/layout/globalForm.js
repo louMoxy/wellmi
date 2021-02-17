@@ -7,14 +7,14 @@ export const globalForm = {
       label: 'Header Logo for light background',
       name: 'header.logo.light',
       component: 'image',
-      parse: media => `/${media.filename}`,
+      parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
       label: 'Header Logo for dark background',
       name: 'header.logo.dark',
       component: 'image',
-      parse: media => `/${media.filename}`,
+      parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
@@ -100,7 +100,7 @@ export const globalForm = {
       label: 'Footer Logo',
       name: 'footer.footerNav.logoImg',
       component: 'image',
-      parse: media => `/${media.filename}`,
+      parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
@@ -238,7 +238,7 @@ export const globalForm = {
           label: 'Image',
           name: 'image',
           component: 'image',
-          parse: media => `/${media.filename}`,
+          parse: media => `/images/${media.filename}`,
           uploadDir: () => '/images/'
         }
       ]

@@ -1,17 +1,16 @@
 {
   "title": "Help Center",
   "bgColor": "#009bdc",
-  "text": "Help, support and guidance that adapts and changes for your entire workforce.",
   "headingText": "Wellmi Frequently asked questions",
   "num": 1,
   "blocks": [
     {
-      "bannerText": "Simply fill out some details below and we’ll take care of the rest.",
       "bannerText1": "Wellmi",
       "bannerText2": "Help Centre",
       "bannerImg": "/images/helpBanner.png",
       "_template": "banner",
-      "largeSecond": true
+      "largeSecond": true,
+      "bannerText": "Find answers to frequently asked questions about the Wellmi platform."
     }
   ],
   "accordionPanels": [

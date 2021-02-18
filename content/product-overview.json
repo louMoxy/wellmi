@@ -92,6 +92,11 @@
       "justify2": "center",
       "justify3": "center",
       "padding": false
+    },
+    {
+      "_template": "image",
+      "size": "xlarge",
+      "image": "/images/coffee survey computer web size.jpg"
     }
   ]
 }

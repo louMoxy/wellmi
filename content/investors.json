@@ -3,7 +3,8 @@
   "blocks": [
     {
       "_template": "imageContent",
-      "size": "xlarge"
+      "size": "xlarge",
+      "image": "/images/laptop 2 web size.jpg"
     }
   ]
 }

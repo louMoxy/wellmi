@@ -1,1 +1,9 @@
-{"title":"Investors"}
+{
+  "title": "Investors",
+  "blocks": [
+    {
+      "_template": "imageContent",
+      "size": "xlarge"
+    }
+  ]
+}

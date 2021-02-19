@@ -8,8 +8,8 @@
       "headingText": "World-class wellbeing resources that scale to any number of employees.",
       "buttonText1": "JOIN US",
       "buttonText2": "GET A DEMO",
-      "link1": "/",
-      "link2": "/",
+      "link1": "https://wellmi.netlify.app/why-wellmi",
+      "link2": "https://wellmi.netlify.app/demo",
       "text": "Find out how Wellmi can support the wellbeing of your employees and the success of your business."
     },
     {

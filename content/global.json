@@ -70,11 +70,6 @@
           "name": "About us",
           "link": "/about-us",
           "id": "mkocfo4a8"
-        },
-        {
-          "name": "Careers",
-          "link": "/careers",
-          "id": "h784w91vk"
         }
       ],
       "header2": "Company",
@@ -83,7 +78,7 @@
       "navigation2": [
         {
           "name": "Careers",
-          "link": "/",
+          "link": "/careers",
           "id": "ui956agg5"
         },
         {

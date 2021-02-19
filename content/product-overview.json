@@ -39,7 +39,7 @@
     },
     {
       "_template": "textContent",
-      "headingText": "Reporting & Insights",
+      "headingText": "Reporting & Insights.",
       "text": "Unlock the health and potential of your people. ",
       "alignment": "Left",
       "num": 1
@@ -47,7 +47,7 @@
     {
       "_template": "cols",
       "cols": "2",
-      "html1": "<p></p><p><img src=\"/images/survery concrete.png\"></p>",
+      "html1": "<p></p><p><img src=\"/images/concrete desk promo web size.jpg\"></p>",
       "html2": "<h3>Why analytics and insights matter</h3><p>As an employer, it’s important you meet your business goals and build productive and engaged teams. That’s why Wellmi provides feedback, analytics and insights to help you track trends and utilisation across your organisation.</p><h3>Tailor your HR approach to pinpoint what matters most.</h3><p>Wellmi is here to help you understand what’s happening within your business. Discover which team’s doing great, what topics everyone is focused on and what topics are making a positive difference for your people with in-depth, real-time feedback and analytics.</p><h3>Measure the engagement of every department, role or job type within your business.</h3><p>With our analytics and insights, we measure your employees’ engagement and help you identify all the positive trends that are keeping your workforce dialled in and productive. While helping to highlight areas of improvement ahead of time.</p>",
       "html3": "Add Content here",
       "justify1": "center",

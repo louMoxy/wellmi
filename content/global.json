@@ -47,11 +47,6 @@
       "twitter": "https://twitter.com/wearewellmi",
       "navigation1": [
         {
-          "name": "Partnership",
-          "link": "/partnership",
-          "id": "5wmuccd0l"
-        },
-        {
           "name": "Product overview",
           "link": "/product-overview",
           "id": "9pn9h9ela"
@@ -76,6 +71,11 @@
       "header3": "Community",
       "header4": "Get Started",
       "navigation2": [
+        {
+          "name": "Partnership",
+          "link": "/partnership",
+          "id": "c5uzwi50h"
+        },
         {
           "name": "Careers",
           "link": "/careers",

@@ -30,8 +30,8 @@
       "headingText": "The first wellbeing platform of it's kind is here.",
       "button1": "REVIEW PRODUCTS",
       "button2": "GET A DEMO",
-      "link1": "/",
-      "link2": "/",
+      "link1": "https://wellmi.netlify.app/product-overview",
+      "link2": "https://wellmi.netlify.app/demo",
       "text": "The first cloud wellbeing product of its kind. Supporting employee physical and mental wellbeing on smartphones, desktops and smart watches. Nothing is quite like Wellmi."
     },
     {

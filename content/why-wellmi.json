@@ -14,7 +14,7 @@
       "buttonText": "Know More",
       "image": "/images/Clay 1 (web size).jpg",
       "side": "Left",
-      "link": "/",
+      "link": "https://wellmi.netlify.app/product-overview",
       "_template": "imageAndContent"
     },
     {

@@ -62,11 +62,6 @@
           "id": "sf89aod2s"
         },
         {
-          "name": "Careers",
-          "link": "/careers",
-          "id": "h784w91vk"
-        },
-        {
           "name": "News",
           "link": "/blog",
           "id": "mkocfo4a6"
@@ -75,12 +70,22 @@
           "name": "About us",
           "link": "/about-us",
           "id": "mkocfo4a8"
+        },
+        {
+          "name": "Careers",
+          "link": "/careers",
+          "id": "h784w91vk"
         }
       ],
       "header2": "Company",
       "header3": "Community",
       "header4": "Get Started",
       "navigation2": [
+        {
+          "name": "Careers",
+          "link": "/",
+          "id": "ui956agg5"
+        },
         {
           "name": "Investors",
           "link": "https://wellmi.netlify.app/investors",

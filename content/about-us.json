@@ -20,10 +20,12 @@
       "_template": "offices",
       "locationText1": "37 Basepoint business center, Oakfield close, tewksbury, united kingdom, GL20 8SD",
       "locationText2": "Bizspace House, Bristol Road, Glouscester GL1 5RZ",
-      "smallText": "Our Offices",
+      "smallText": "Our UK Offices",
       "locationImg1": "/images/united-kingdom.png",
       "locationImg2": "/images/united-kingdom.png",
-      "num": 1
+      "num": 1,
+      "img1": "/images/banner.jpg",
+      "img2": "/images/_48289630_morelands.jpg"
     },
     {
       "_template": "team",

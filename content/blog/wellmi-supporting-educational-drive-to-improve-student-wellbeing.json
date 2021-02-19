@@ -1,1 +1,19 @@
-{"title":"Wellmi supporting educational drive to improve student wellbeing.","description":"Cirencester College recently became one of the first educational institutions in the UK to support the physical & mental wellbeing of students and staff with the Wellmi app.","publish":true,"date":"2021-02-01T00:00:00Z","featureImg":"/images/ciren well.png"}
+{
+  "title": "Wellmi supporting educational drive to improve student wellbeing.",
+  "description": "Cirencester College recently became one of the first educational institutions in the UK to support the physical & mental wellbeing of students and staff with the Wellmi app.",
+  "publish": true,
+  "date": "2021-02-01T00:00:00Z",
+  "featureImg": "/images/ciren well.png",
+  "blocks": [
+    {
+      "_template": "textContent",
+      "headingText": "Wellmi supporting educational drive to improve student wellbeing.",
+      "text": "Cirencester College (UK) recently became one of the first educational institutions in the UK to support the physical & mental wellbeing of students and staff with the Wellmi app."
+    },
+    {
+      "_template": "imageContent",
+      "size": "xlarge",
+      "image": "/images/ciren well.png"
+    }
+  ]
+}

@@ -44,8 +44,8 @@
       "num": 1,
       "button1": "JOIN US",
       "button2": "GET A DEMO",
-      "link1": "/",
-      "link2": "/",
+      "link1": "https://wellmi.netlify.app/product-overview",
+      "link2": "https://wellmi.netlify.app/demo",
       "contentCard1": {
         "image": "/images/ciren well.png",
         "buttonLink": "/",

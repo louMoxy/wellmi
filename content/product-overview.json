@@ -62,7 +62,7 @@
     },
     {
       "_template": "cols",
-      "cols": "1",
+      "cols": "2",
       "html1": "<h4>Utilisation and engagement reports</h4><p>Emerging issues, user demographics, outcomes.</p><h4>Additional reporting metric</h4><p>Workforce demographic and client satisfaction data.</p><h4>Annual insights reports</h4><p>Usage trends and top wellbeing issues, risk management, workforce productivity, comments and programme recommendations.</p><h4>Dashboard data</h4><p>Usage statistics, key issues, hot trends, and data broken down all the way to individual job role types</p>",
       "html2": "<p></p>",
       "html3": "<p></p>",

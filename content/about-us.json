@@ -88,6 +88,20 @@
       "alignment": "right"
     },
     {
+      "_template": "cols",
+      "cols": 3,
+      "html1": "Add Content here",
+      "html2": "Add Content here",
+      "html3": "Add Content here",
+      "justify1": "center",
+      "justify2": "center",
+      "justify3": "center",
+      "textAlign1": "left",
+      "textAlign2": "left",
+      "textAlign3": "left",
+      "padding": false
+    },
+    {
       "_template": "instagram",
       "instagramId": "9153844721"
     }

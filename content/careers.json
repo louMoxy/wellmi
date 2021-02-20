@@ -64,14 +64,14 @@
     {
       "_template": "office",
       "num": 1,
-      "locationImg": "/images/united-kingdom.png",
-      "headingText": "Office In Glouscester",
-      "text": "A few snaps from our base in Gloucester, UK",
+      "locationImg": "/images/homepage-bg1.png",
+      "headingText": "We Believe In Flexible Work Lives.",
+      "text": "A few snaps from some of our amazing Wellmi Family.",
       "img1": "/images/office-1.png",
       "img2": "/images/office-2.png",
       "img3": "/images/office-3.png",
       "img4": "/images/office-4.png",
-      "locationText": "Bizspace House, Bristol Road, Glouscester GL1 5RZ"
+      "locationText": ""
     },
     {
       "_template": "textContent",

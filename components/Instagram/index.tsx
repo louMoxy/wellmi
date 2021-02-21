@@ -1,6 +1,7 @@
 import { Box, Grid, Carousel, Image } from 'grommet'
 import { BlocksControls } from 'react-tinacms-inline'
 import { useEffect, useState } from 'react'
+import { useCMS } from 'tinacms'
 
 const PHOTO_COUNT = 30
 const ARRAY = Array.from(Array(6).keys())
@@ -13,9 +14,13 @@ interface InstagramPost {
 }
 
 export const Instagram = ({ index, data }) => {
+  const cms = useCMS()
   const [photos, setPhotos] = useState<InstagramPost[] | undefined>()
   // @ts-ignore
   useEffect(async () => {
+    if (cms.enabled) {
+      return
+    }
     const id = data.instagramId
     if (!id) {
       setPhotos(undefined)

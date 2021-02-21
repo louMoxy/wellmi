@@ -1,6 +1,6 @@
 [[redirects]]
-  from = "/instagram"
-  to = "https://www.instagram.com"
+  from = "/instagram/*"
+  to = "https://www.instagram.com/:splat"
   status = 200
   force = true
 [build]

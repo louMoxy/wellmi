@@ -1,3 +1,8 @@
+[[redirects]]
+  from = "/instagram"
+  to = "https://www.instagram.com"
+  status = 200
+  force = true
 [build]
   command   = "npm run build"
   functions = "out_functions"

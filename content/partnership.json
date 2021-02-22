@@ -6,12 +6,12 @@
   "formText": "Join the businesses making use of one of the worlds leading proactive employee support tools.",
   "blocks": [
     {
-      "bannerText": "Developing world class Wellbeing, together!",
       "bannerText1": "Partnership",
       "bannerText2": "With Wellmi",
       "bannerImg": "/images/car park poster web size.jpg",
       "_template": "banner",
-      "largeSecond": true
+      "largeSecond": true,
+      "bannerText": "Insurance Broker, Medical EAP Specialist or Healthcare Provider? \nWe want to hear from you."
     },
     {
       "headingText": "Wellmi,\ntrusted by organisations worldwide.",
@@ -32,13 +32,16 @@
     },
     {
       "background": true,
-      "buttonText": "Be a Partner",
+      "buttonText": "Become a Partner",
       "header": "Partnering with Wellmi",
       "image": "/images/partnership1.png",
       "link": "/",
       "side": "Left",
       "text": "Wellmi provides a unique opportunity for brokers and businesses alike you to offer more than just a library of wellness-related benefits options, but an entire cloud solution focused on employees’ total well-being.",
       "_template": "imageAndContent"
+    },
+    {
+      "_template": "demo"
     }
   ]
 }

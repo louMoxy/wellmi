@@ -31,6 +31,20 @@
       "text": "Employee support in the modern world should be proactive, genuine, and accessible.  Giving your valued workforce the tools they deserve to prevent poor mental and physical health & wellbeing."
     },
     {
+      "_template": "cols",
+      "cols": "2",
+      "html1": "Add Content here",
+      "html2": "Add Content here",
+      "html3": "Add Content here",
+      "justify1": "center",
+      "justify2": "center",
+      "justify3": "center",
+      "textAlign1": "left",
+      "textAlign2": "left",
+      "textAlign3": "left",
+      "padding": false
+    },
+    {
       "image": "/images/whywellmi-chart.png",
       "size": "xlarge",
       "_template": "imageContent"

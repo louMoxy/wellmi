@@ -43,11 +43,6 @@
       "textAlign2": "left",
       "textAlign3": "left",
       "padding": false
-    },
-    {
-      "image": "/images/whywellmi-chart.png",
-      "size": "xlarge",
-      "_template": "imageContent"
     }
   ]
 }

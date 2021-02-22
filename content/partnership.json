@@ -31,6 +31,12 @@
       "image4": "/images/opp-hub-png.png"
     },
     {
+      "_template": "demo",
+      "title1": "Contact our team today",
+      "title2": "to find out more.",
+      "text": "We are always keen to speak to brokers, EAP specialists and medical businesses that are looking to connect their clients with the future of employee wellbeing support.\n\nSimply fill out some details and a member of our team will contact you as soon as possible to answer all your questions."
+    },
+    {
       "background": true,
       "buttonText": "Become a Partner",
       "header": "Partnering with Wellmi",
@@ -39,9 +45,6 @@
       "side": "Left",
       "text": "Wellmi provides a unique opportunity for brokers, EAP specialists and medical businesses alike you to offer more than just a library of wellness-related benefits options, but an entire cloud solution focused on employees’ total well-being.",
       "_template": "imageAndContent"
-    },
-    {
-      "_template": "demo"
     }
   ]
 }

@@ -41,7 +41,7 @@
       "buttonText": "Become a Partner",
       "header": "Partnering with Wellmi",
       "image": "/images/partnership1.png",
-      "link": "/",
+      "link": "https://wellmi.netlify.app/partnership",
       "side": "Left",
       "text": "Wellmi provides a unique opportunity for brokers, EAP specialists and medical businesses alike you to offer more than just a library of wellness-related benefits options, but an entire cloud solution focused on employees’ total well-being.",
       "_template": "imageAndContent"

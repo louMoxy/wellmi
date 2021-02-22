@@ -43,6 +43,20 @@
       "textAlign2": "left",
       "textAlign3": "left",
       "padding": false
+    },
+    {
+      "_template": "cols",
+      "cols": "1",
+      "html1": "<h1><a href=\"https://wellmi.netlify.app/product-overview\">Product Overview</a></h1>",
+      "html2": "Add Content here",
+      "html3": "Add Content here",
+      "justify1": "center",
+      "justify2": "center",
+      "justify3": "center",
+      "textAlign1": "center",
+      "textAlign2": "left",
+      "textAlign3": "left",
+      "padding": false
     }
   ]
 }

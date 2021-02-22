@@ -97,7 +97,7 @@
         },
         {
           "image": "/images/ios-store.png",
-          "link": "/",
+          "link": "https://play.google.com/store/apps/details?id=cn.swse",
           "alt": "Download for IOS"
         }
       ]

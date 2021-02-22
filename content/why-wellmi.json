@@ -43,11 +43,6 @@
       "textAlign2": "left",
       "textAlign3": "left",
       "padding": false
-    },
-    {
-      "_template": "textAndButton",
-      "buttonText": "                 Find out",
-      "text": "How does Wellmi work?"
     }
   ]
 }

@@ -7,6 +7,11 @@
     },
     "navigation": [
       {
+        "name": "Product Overview",
+        "link": "https://wellmi.netlify.app/product-overview",
+        "id": "26afdrs0h"
+      },
+      {
         "name": "Why Wellmi",
         "link": "/why-wellmi"
       },

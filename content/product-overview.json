@@ -72,14 +72,18 @@
       "padding": false
     },
     {
-      "_template": "image",
-      "size": "large",
-      "image": "/images/coffee survey computer web size.jpg"
-    },
-    {
-      "_template": "textContent",
-      "headingText": "Add your Heading text here",
-      "text": "Add text here "
+      "_template": "cols",
+      "cols": "2",
+      "html1": "<p></p><p><img src=\"/images/coffee survey computer web size.jpg\"></p>",
+      "html2": "<p>Wellmi allows HR and company admins to create and publish custom employee surveys in seconds.</p><p>Gaining valuable insight into the thoughts, feelings and engagement of your workforce from within an environment they feel comfortable with.</p><p>All the information gathered can be viewed from within the admin dashboard and  GDPR compliant reports generated as required.</p>",
+      "html3": "Add Content here",
+      "justify1": "center",
+      "justify2": "center",
+      "justify3": "center",
+      "textAlign1": "left",
+      "textAlign2": "left",
+      "textAlign3": "left",
+      "padding": true
     },
     {
       "_template": "cols",

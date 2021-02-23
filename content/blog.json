@@ -4,7 +4,7 @@
     {
       "bannerText": "Global press contact:",
       "bannerText1": "Wellmi",
-      "largeSecond": true,
+      "largeSecond": false,
       "bannerText2": "Press",
       "bannerImg": "/images/sign on path 1 web size.jpg",
       "_template": "banner",

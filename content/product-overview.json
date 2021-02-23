@@ -73,8 +73,13 @@
     },
     {
       "_template": "image",
-      "size": "xlarge",
+      "size": "large",
       "image": "/images/coffee survey computer web size.jpg"
+    },
+    {
+      "_template": "textContent",
+      "headingText": "Add your Heading text here",
+      "text": "Add text here "
     },
     {
       "_template": "cols",

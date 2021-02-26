@@ -8,7 +8,7 @@
     "navigation": [
       {
         "name": "Product Overview",
-        "link": "https://wellmi.netlify.app/product-overview",
+        "link": "/product-overview",
         "id": "26afdrs0h"
       },
       {

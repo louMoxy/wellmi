@@ -10,7 +10,7 @@ export const ImageAndContent = ({ index, data }) => {
                     <Box direction={data.side === 'Left' ? 'row' : 'row-reverse'} wrap style={{ position: 'relative' }}>
                         <Box background={data.background ? 'linear-gradient(transparent 20%, white 20.1%);' : 'transparent'} width="100%" height="100%" style={{ position: 'absolute', zIndex: 1, top: 0, right: 0, maxWidth: 800 }}></Box>
                         <Box pad="small" basis="45%" margin={{ bottom: data.background ? 'medium' : 'none' }} style={{ zIndex: 1 }} width={{ min: '300px' }} flex>
-                            <ImageComponent name="image" />
+                            <ImageComponent name="image" border={data.border}/>
                         </Box>
                         <Box pad={{ left: 'medium', right: 'medium', top: 'medium', bottom: 'large' }} basis="55%" align="start" justify="end" style={{ zIndex: 1 }} flex>
                             <Text size="xxlarge" margin={{ bottom: 'medium' }}><InlineTextarea name="header" /></Text>
@@ -74,6 +74,12 @@ export const imageAndContent_template = {
       component: 'image',
       parse: (media) => `/images/${media.filename}`,
       uploadDir: () => '/images/'
+    },
+    {
+      name: 'border',
+      label: 'Round corners on the images?',
+      component: 'toggle',
+      default: false
     }
   ]
 }

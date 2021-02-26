@@ -1,12 +1,15 @@
 import { InlineImage } from 'react-tinacms-inline'
+import { Box } from 'grommet'
 
 interface Props {
     name: string;
     className?: string
+    border?: boolean
 }
 
-const ImageComponent = ({ name, className }: Props) => {
-    return (
+const ImageComponent = ({ name, className, border = false }: Props) => {
+  return (
+    <Box round={border} overflow='hidden'>
         <InlineImage
             name={name}
             previewSrc={fieldValue => `${fieldValue}`}
@@ -15,7 +18,8 @@ const ImageComponent = ({ name, className }: Props) => {
             focusRing={false}
             className={`imageComponent ${className}`}
         />
-    )
+    </Box>
+  )
 }
 
-export default ImageComponent;
+export default ImageComponent

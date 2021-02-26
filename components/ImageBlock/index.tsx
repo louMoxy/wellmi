@@ -8,7 +8,7 @@ export const ImageBlock = ({ index, data }) => {
             <Box align="center" margin={{ top: 'medium', bottom: 'medium' }}>
                 <Box width={data.size} pad="medium">
                     <Box pad="medium" margin={{ top: data.size, bottom: data.size }}>
-                        <ImageComponent name="image" />
+                        <ImageComponent name="image" border={data.border}/>
                     </Box>
                 </Box>
             </Box>
@@ -35,6 +35,12 @@ export const image_template = {
       component: 'image',
       parse: (media) => `/images/${media.filename}`,
       uploadDir: () => '/images/'
+    },
+    {
+      name: 'border',
+      label: 'Round corners on the images?',
+      component: 'toggle',
+      default: false
     }
   ]
 }

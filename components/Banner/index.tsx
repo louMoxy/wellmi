@@ -81,7 +81,7 @@ const getDescription = (link, contact, bgColor) => {
 
 export const Banner = ({ index, data, ...args }) => {
   const { bgColor } = args
-  const { largeSecond = false, imageWidth = 'medium', link, contact } = data
+  const { largeSecond = false, imageWidth = 'medium', link, contact, border } = data
   const Description = getDescription(link, contact, bgColor)
   return (
         <BlocksControls index={index} insetControls>
@@ -102,10 +102,10 @@ export const Banner = ({ index, data, ...args }) => {
                             {link
                               ? (
                                     <Anchor href={link}>
-                                        <ImageComponent name="bannerImg" />
+                                        <ImageComponent name="bannerImg" border={border} />
                                     </Anchor>
                                 )
-                              : <ImageComponent name="bannerImg" />
+                              : <ImageComponent name="bannerImg" border={border} />
                             }
 
                         </Box>
@@ -162,6 +162,12 @@ export const banner_template = {
       component: 'image',
       parse: (media) => `/images/${media.filename}`,
       uploadDir: () => '/images/'
+    },
+    {
+      name: 'border',
+      label: 'Round corners on the images?',
+      component: 'toggle',
+      default: false
     }
   ]
 }

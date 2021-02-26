@@ -10,7 +10,6 @@ import { DateFieldPlugin } from 'react-tinacms-date'
 import './app.css'
 import { NextGithubMediaStore } from '../components/MediaStore'
 
-
 const onLogin = async () => {
   const token = localStorage.getItem('tinacms-github-token') || null
   const headers = new Headers()

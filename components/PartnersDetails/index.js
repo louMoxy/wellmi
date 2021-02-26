@@ -1,6 +1,6 @@
-import { Box, Text } from "grommet"
-import { InlineTextarea, BlocksControls } from "react-tinacms-inline"
-import ImageComponent from "../Image"
+import { Box, Text } from 'grommet'
+import { InlineTextarea, BlocksControls } from 'react-tinacms-inline'
+import ImageComponent from '../Image'
 
 export const PartnersDetails = ({ index, data }) => {
   const arr = Array.from(Array(4).keys())
@@ -12,7 +12,7 @@ export const PartnersDetails = ({ index, data }) => {
             <Box
               background="linear-gradient(transparent 20%, white 20.1%);"
               pad="medium"
-              style={{ width: "22%", minWidth: 200 }}
+              style={{ width: '22%', minWidth: 200 }}
               key={index}
               margin="small"
             >
@@ -23,9 +23,9 @@ export const PartnersDetails = ({ index, data }) => {
                 elevation="small"
                 height="100px"
               >
-                <ImageComponent name={`image${index + 1}`} className="partnersDetails" />
+                <ImageComponent name={`image${index + 1}`} className="partnersDetails" border={data.border}/>
               </Box>
-              <Text margin={{ top: "medium", bottom: "small" }} size="small">
+              <Text margin={{ top: 'medium', bottom: 'small' }} size="small">
                 <InlineTextarea name={`text${index + 1}`} />
               </Text>
             </Box>
@@ -37,55 +37,61 @@ export const PartnersDetails = ({ index, data }) => {
 }
 
 export const PartnersDetails_template = {
-  label: "Partners Details",
+  label: 'Partners Details',
   fields: [
     {
-      component: "text",
-      name: "text1",
-      label: "Text",
+      component: 'text',
+      name: 'text1',
+      label: 'Text'
     },
     {
-      component: "text",
-      name: "text2",
-      label: "Text",
+      component: 'text',
+      name: 'text2',
+      label: 'Text'
     },
     {
-      component: "text",
-      name: "text3",
-      label: "Text",
+      component: 'text',
+      name: 'text3',
+      label: 'Text'
     },
     {
-      component: "text",
-      name: "text4",
-      label: "Text",
+      component: 'text',
+      name: 'text4',
+      label: 'Text'
     },
     {
-      label: "Image 1",
-      name: "image1",
-      component: "image",
+      label: 'Image 1',
+      name: 'image1',
+      component: 'image',
       parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
-      label: "Image 2",
-      name: "image2",
-      component: "image",
+      label: 'Image 2',
+      name: 'image2',
+      component: 'image',
       parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
-      label: "Image 3",
-      name: "image4",
-      component: "image",
+      label: 'Image 3',
+      name: 'image4',
+      component: 'image',
       parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
     {
-      label: "Image 4",
-      name: "image4",
-      component: "image",
+      label: 'Image 4',
+      name: 'image4',
+      component: 'image',
       parse: media => `/images/${media.filename}`,
       uploadDir: () => '/images/'
     },
-  ],
+    {
+      name: 'border',
+      label: 'Round corners on the images?',
+      component: 'toggle',
+      default: false
+    }
+  ]
 }

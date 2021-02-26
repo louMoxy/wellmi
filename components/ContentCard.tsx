@@ -29,7 +29,7 @@ export const ContentCard = ({ header, text, img, showButton = true, secondaryBut
   )
 }
 
-export const ContentCardBlock = ({ cardName, secondaryButton, buttonLink, ...args }) => {
+export const ContentCardBlock = ({ cardName, secondaryButton, buttonLink, buttonText, ...args }) => {
   const buttonStyle = secondaryButton ? { background: brandColor, color: theme.global.colors.text.dark, borderColor: brandColor } : {}
   return (
         <Card round="medium" {...args} width={{ max: '340px' }} style={{ border: 'solid 12px #F8FBFF', background: '#fff' }}>
@@ -41,7 +41,7 @@ export const ContentCardBlock = ({ cardName, secondaryButton, buttonLink, ...arg
                 <Text margin="small">
                     <InlineTextarea name={`${cardName}.text`}/>
                 </Text>
-                {buttonLink && <Button label='View more' primary margin="small" style={buttonStyle} href={buttonLink}/>}
+                {buttonLink && <Button label={buttonText || 'View more'} primary margin="small" style={buttonStyle} href={buttonLink}/>}
             </CardBody>
         </Card>
   )

@@ -33,11 +33,11 @@ export const Supporting = ({ index, data }) => {
                         </Box>
                         <Box width="large" direction="row" align="center" justify="center" pad="small" wrap={true}>
                             <Box pad="small">
-                                <ContentCardBlock cardName="contentCard1" secondaryButton={true} buttonLink={data.contentCard1.buttonLink}/>
+                                <ContentCardBlock cardName="contentCard1" secondaryButton={true} buttonLink={data.contentCard1.buttonLink} buttonText={data.contentCard1.buttonText}/>
                             </Box>
                             <Box pad="small" gap="medium">
-                                <ContentCardBlock cardName="contentCard2" secondaryButton={true} buttonLink={data.contentCard2.buttonLink}/>
-                                <ContentCardBlock cardName="contentCard3" secondaryButton={true} buttonLink={data.contentCard3.buttonLink}/>
+                                <ContentCardBlock cardName="contentCard2" secondaryButton={true} buttonLink={data.contentCard2.buttonLink} buttonText={data.contentCard2.buttonText} />
+                                <ContentCardBlock cardName="contentCard3" secondaryButton={true} buttonLink={data.contentCard3.buttonLink} buttonText={data.contentCard3.buttonText} />
                             </Box>
                         </Box>
                     </Box>
@@ -88,15 +88,30 @@ export const supporting_template = {
     },
     {
       component: 'text',
+      name: 'contentCard1.buttonText',
+      label: 'Content Card 1 Button text'
+    },
+    {
+      component: 'text',
       name: 'contentCard2.buttonLink',
       label: 'Content Card 2 Button link',
       description: 'If no link, the button will not show'
     },
     {
       component: 'text',
+      name: 'contentCard2.buttonText',
+      label: 'Content Card 2 Button text'
+    },
+    {
+      component: 'text',
       name: 'contentCard3.buttonLink',
       label: 'Content Card 3 Button link',
       description: 'If no link, the button will not show'
+    },
+    {
+      component: 'text',
+      name: 'contentCard2.buttonText',
+      label: 'Content Card 2 Button text'
     }
   ]
 }

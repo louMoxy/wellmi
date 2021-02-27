@@ -12,7 +12,8 @@
       "bannerImg": "/images/wellmi blue room 1 web size.jpg",
       "_template": "banner",
       "largeSecond": true,
-      "imageWidth": "600px"
+      "imageWidth": "600px",
+      "border": true
     },
     {
       "_template": "imageAndText",

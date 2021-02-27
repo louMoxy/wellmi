@@ -48,7 +48,7 @@
       "link2": "https://wellmi.netlify.app/demo",
       "contentCard1": {
         "image": "/images/ciren well.png",
-        "buttonLink": "/",
+        "buttonLink": "https://wellmi.netlify.app/blog/wellmi-supporting-educational-drive-to-improve-student-wellbeing",
         "heading": "Cirencester College",
         "text": "One of the first educational institutions in the UK to support the physical & mental wellbeing of students and staff with the Wellmi app."
       },

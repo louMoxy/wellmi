@@ -1,1 +1,27 @@
-{"title":"Spirax Sarco UK leading by example with employee wellbeing education.","publish":true,"featureImg":"/images/Spirax Sarco Press Release Imagery March 21.jpg","description":"In February Spirax Sarco UK trusted Wellmi to deliver education to it's staff on physical and mental wellbeing as part of it's EMEAconference."}
+{
+  "title": "Spirax Sarco UK leading by example with employee wellbeing education.",
+  "publish": true,
+  "featureImg": "/images/Spirax Sarco Press Release Imagery March 21.jpg",
+  "description": "In February Spirax Sarco UK trusted Wellmi to deliver education to it's staff on physical and mental wellbeing as part of it's EMEAconference.",
+  "blocks": [
+    {
+      "_template": "textContent",
+      "headingText": "Spirax Sarco UK leading by example with employee wellbeing education.",
+      "num": 2
+    },
+    {
+      "_template": "cols",
+      "cols": "2",
+      "html1": "<p>In February Spirax Sarco UK trusted Wellmi to deliver education to it's staff on physical and mental wellbeing as part of it's EMEAconference.</p><p class=\"MsoNormal\">Attendees enjoyed interactive content included Mindfulness techniques like EFT, Physical wellbeing elements such as desk Pilates and nutritional education and discussion.</p><p class=\"MsoNormal\">With some amazing efforts from the team over all three days including their paper airplane creations below (all part of the Physical Wellbeing In The Workplace workshop).</p><p class=\"MsoNormal\">Well done Spirax Sarco UK for taking such a fantastic approach to the welfare of your workforce. We can't wait to work with you and you're amazing team again soon.</p>",
+      "html2": "<p><img src=\"/images/Spirax Sarco Press Release Imagery March 21.jpg\"></p>",
+      "html3": "Add Content here",
+      "justify1": "center",
+      "justify2": "center",
+      "justify3": "center",
+      "textAlign1": "left",
+      "textAlign2": "left",
+      "textAlign3": "left",
+      "padding": true
+    }
+  ]
+}

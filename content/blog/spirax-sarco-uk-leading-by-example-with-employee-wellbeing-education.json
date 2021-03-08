@@ -8,7 +8,21 @@
     {
       "_template": "textContent",
       "headingText": "Spirax Sarco UK leading by example with employee wellbeing education.",
-      "text": "This past week Spirax Sarco UK trusted Wellmi to deliver education to it's staff on physical and mental wellbeing as part of it's EMEAconference. \n\nEveryone attending enjoyed the latest in thought provoking education on physical wellbeing, nutrition and mental wellbeing. \n\nWell done Spirax Sarco UK for taking such a fantastic approach to the welfare of your workforce."
+      "text": "This past week Spirax Sarco UK trusted Wellmi to deliver education to it's staff on physical and mental wellbeing as part of it's EMEAconference. \n\nEveryone attending enjoyed content delivered across the three days included Mindfulness techniques such as EFT, Physical wellbeing elements such as desk Pilates and nutritional education and discussion.\n\nWith some amazing efforts from the team with their paper airplane creations (all part of the Physical Wellbeing In The Workplace workshop).\n\nWell done Spirax Sarco UK for taking such a fantastic approach to the welfare of your workforce. We can't wait to work with you and brilliant team again soon."
+    },
+    {
+      "_template": "cols",
+      "cols": 3,
+      "html1": "<p><img src=\"/images/plane 3.png\"></p>",
+      "html2": "<p><img src=\"/images/plane 1.png\"></p>",
+      "html3": "<p><img src=\"/images/plane 2.png\"></p>",
+      "justify1": "center",
+      "justify2": "center",
+      "justify3": "center",
+      "textAlign1": "left",
+      "textAlign2": "left",
+      "textAlign3": "left",
+      "padding": false
     },
     {
       "_template": "image",

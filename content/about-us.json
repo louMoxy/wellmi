@@ -5,10 +5,11 @@
     {
       "bannerText1": "We Are",
       "bannerText2": "Wellmi",
-      "bannerImg": "/images/about-us-1.png",
+      "bannerImg": "/images/phone in hands web size.jpg",
       "link": "#",
       "_template": "banner",
-      "largeSecond": true
+      "largeSecond": true,
+      "border": true
     },
     {
       "_template": "titleAndContent",
@@ -86,6 +87,10 @@
       "_template": "title",
       "title": "A Powerful \nCommunity Of Wellbeing Professionals At Your Fingertips.",
       "alignment": "right"
+    },
+    {
+      "_template": "imageContent",
+      "size": "xlarge"
     }
   ]
 }

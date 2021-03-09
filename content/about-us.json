@@ -18,6 +18,17 @@
       "text": "Created in 2017 with the purpose of bringing wellbeing to everyone who needs it.\nWe share the belief that both physical and mental wellbeing are equally\nimportant, so we set out to create a place where employees can enjoy both,\nwhenever and wherever they need it."
     },
     {
+      "_template": "title",
+      "title": "A Powerful \nCommunity Of Wellbeing Professionals At Your Fingertips.",
+      "alignment": "right"
+    },
+    {
+      "_template": "imageContent",
+      "size": "xlarge",
+      "image": "/images/Clay 1 (web size).jpg",
+      "border": true
+    },
+    {
       "_template": "offices",
       "locationText1": "37 Basepoint Business Center, Oakfield Close, Tewkesbury, United Kingdom, GL20 8SD",
       "locationText2": "Bizspace House, Bristol Road, Glouscester GL1 5RZ",
@@ -82,15 +93,6 @@
           "text": "Join us"
         }
       ]
-    },
-    {
-      "_template": "title",
-      "title": "A Powerful \nCommunity Of Wellbeing Professionals At Your Fingertips.",
-      "alignment": "right"
-    },
-    {
-      "_template": "imageContent",
-      "size": "xlarge"
     }
   ]
 }

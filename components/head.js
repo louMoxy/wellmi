@@ -1,15 +1,17 @@
-import NextHead from "next/head"
-import { string } from "prop-types"
+import NextHead from 'next/head'
+import { string } from 'prop-types'
 
-const defaultDescription = ""
-const defaultKeywords = ""
-const defaultOGURL = ""
-const defaultOGImage = ""
+const defaultDescription = ''
+const defaultKeywords = ''
+const defaultOGURL = ''
+const defaultOGImage = ''
 
 const Head = (props) => (
+  <>
+  <html lang="en" />
   <NextHead>
     <meta charSet="UTF-8" />
-    <title>{props.title || ""}</title>
+    <title>{props.title || ''}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={props.description || defaultDescription} />
     <meta name="keywords" content={props.keywords || defaultKeywords} />
@@ -19,7 +21,7 @@ const Head = (props) => (
     <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
     <link rel="mask-icon" href="/static/favicon-mask.svg" color="#000000" />
     <meta property="og:url" content={props.url || defaultOGURL} />
-    <meta property="og:title" content={props.title || ""} />
+    <meta property="og:title" content={props.title || ''} />
     <meta property="og:description" content={props.description || defaultDescription} />
     <meta name="twitter:site" content={props.url || defaultOGURL} />
     <meta name="twitter:card" content="summary_large_image" />
@@ -32,6 +34,7 @@ const Head = (props) => (
       rel="stylesheet"
     ></link>
   </NextHead>
+  </>
 )
 
 Head.propTypes = {
@@ -39,7 +42,7 @@ Head.propTypes = {
   description: string,
   keywords: string,
   url: string,
-  ogImage: string,
+  ogImage: string
 }
 
 export default Head

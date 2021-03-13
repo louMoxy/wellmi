@@ -17,7 +17,7 @@ export const ImageAndContent = ({ index, data }) => {
                             <Text style={{ marginBottom: 40 }}>
                                 <InlineTextarea name="text" />
                             </Text>
-                            <Button primary label={<InlineText name="buttonText" />} href={data.link}/>
+                            <Button primary label={<InlineText name="buttonText" />} href={data.link} aria-label={data.buttonText} />
                         </Box>
                     </Box>
                 </Box>

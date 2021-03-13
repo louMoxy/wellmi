@@ -90,7 +90,7 @@ const HeaderComponent = ({ bg, dark, data }: Props) => {
                     <SecondaryButton label={data.buttons[0].name} dark={dark}/>
                   </a>
                   <a href={data.buttons[1].link}>
-                    <Button primary label={data.buttons[1].name} />
+                    <Button primary label={data.buttons[1].name} aria-label={data.buttons[1].name} />
                   </a>
                 </Box>
                 )

@@ -183,6 +183,7 @@ const HelpPage = ({ file, global }) => {
                     type="submit"
                     primary
                     label="Submit"
+                    aria-label={submit}
                     style={{ width: '30%', minWidth: 200 }}
                   />
                 </Box>

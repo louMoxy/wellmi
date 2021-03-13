@@ -36,7 +36,7 @@ export const ImageAndText = ({ index, data }) => {
                                         </Link>
                                         <Link href={data.link2 || '/'}>
                                             <IconButton direction="row" align="center" gap="small">
-                                                <Button icon={<PlayFill color="white" size="small" />} />
+                                                <Button icon={<PlayFill color="white" size="small" />} aria-label={data.buttonText2} />
                                                 <Text><InlineText name="button2" /></Text>
                                             </IconButton>
                                         </Link>

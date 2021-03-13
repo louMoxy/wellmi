@@ -11,7 +11,7 @@ export const TextAndButton = ({ index, data }) => {
                             <InlineTextarea name="text"/>
                         </Text>
                     </Box>
-                    <Button primary style={{ padding: '8px 20px' }} href={data.link || '/'}>
+                    <Button primary style={{ padding: '8px 20px' }} href={data.link || '/'} aria-label={data.buttonText} >
                         <InlineText name="buttonText"/>
                     </Button>
                 </Box>

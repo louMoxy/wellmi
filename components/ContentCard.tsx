@@ -23,7 +23,7 @@ export const ContentCard = ({ header, text, img, showButton = true, secondaryBut
                 <Image src={img} fill="horizontal"/>
                 <Heading margin={{ top: 'medium', left: 'small', right: 'small', bottom: 'small' }} level="3">{header}</Heading>
                 <Text margin="small">{text}</Text>
-                {showButton && <Button href={link} label="View more" primary margin="small" style={buttonStyle}/>}
+                {showButton && <Button href={link} label="View more" primary margin="small" style={buttonStyle} aria-label='View More' />}
             </CardBody>
         </Card>
   )
@@ -41,7 +41,7 @@ export const ContentCardBlock = ({ cardName, secondaryButton, buttonLink, button
                 <Text margin="small">
                     <InlineTextarea name={`${cardName}.text`}/>
                 </Text>
-                {buttonLink && <Button label={buttonText || 'View more'} primary margin="small" style={buttonStyle} href={buttonLink}/>}
+                {buttonLink && <Button label={buttonText || 'View more'} primary margin="small" style={buttonStyle} href={buttonLink} aria-label={buttonText || 'view more'} />}
             </CardBody>
         </Card>
   )

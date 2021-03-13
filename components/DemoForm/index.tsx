@@ -65,7 +65,7 @@ export const DemoForm = () => {
                                 <Text size="xsmall">By registering, I confirm that I have read and agree to the <a href="/privacyPolicy">privacy policy.</a></Text>
                             </Box>
                             <Box direction="row" width="small">
-                                <Button type="submit" primary label="Submit" gap="large" icon={<FormNextLink color="white"/>} reverse={true}/>
+                                <Button type="submit" primary label="Submit" gap="large" icon={<FormNextLink color="white"/>} reverse={true} aria-label='submit' />
                             </Box>
                         </Box>
                     </form>

@@ -1,7 +1,7 @@
-import { Box, Text, Button } from "grommet";
+import { Box, Text, Button } from 'grommet'
 import { InlineText, InlineTextarea, BlocksControls } from 'react-tinacms-inline'
-import styled from 'styled-components';
-import theme from '../layout/theme';
+import styled from 'styled-components'
+import theme from '../layout/theme'
 
 const StyledText = styled(Text)`
     position: relative;
@@ -20,7 +20,7 @@ const StyledText = styled(Text)`
 `
 
 export const CareersIntro = ({ index, data }) => {
-    return (
+  return (
         <BlocksControls index={index} insetControls>
             <Box direction="column" align="center" pad="medium">
                 <Box width="xlarge" justify="start" direction="row">
@@ -30,39 +30,37 @@ export const CareersIntro = ({ index, data }) => {
                 </Box>
                 <Box width="xlarge" justify="between" direction="row" pad={{ top: 'large', bottom: 'large' }} wrap={true}>
                     <StyledText margin={{ bottom: 'medium' }}><InlineText name="text1"/></StyledText>
-                    <Button primary margin={{ left: 'medium', bottom: 'medium' }} href={data.buttonLink || '/'} style={{padding: "8px 20px"}}>
+                    <Button primary margin={{ left: 'medium', bottom: 'medium' }} href={data.buttonLink || '/'} style={{ padding: '8px 20px' }} aria-label={data.buttonText} >
                         <InlineText name="buttonText"/>
                     </Button>
                 </Box>
             </Box>
         </BlocksControls>
-    )
+  )
 }
-
 
 export const careerIntro_template = {
-    label: 'Career Intro',
-    fields: [
-        {
-            name: "text",
-            label: "Text",
-            component: "textarea",
-        },
-        {
-            name: "text1",
-            label: "Left Text",
-            component: "text"
-        },
-        {
-            name: "buttonText",
-            label: "Button Text",
-            component: "text"
-        },
-        {
-            name: "buttonLink",
-            label: "Button Link",
-            component: "text"
-        }
-    ],
+  label: 'Career Intro',
+  fields: [
+    {
+      name: 'text',
+      label: 'Text',
+      component: 'textarea'
+    },
+    {
+      name: 'text1',
+      label: 'Left Text',
+      component: 'text'
+    },
+    {
+      name: 'buttonText',
+      label: 'Button Text',
+      component: 'text'
+    },
+    {
+      name: 'buttonLink',
+      label: 'Button Link',
+      component: 'text'
+    }
+  ]
 }
-

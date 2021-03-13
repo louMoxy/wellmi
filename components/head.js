@@ -7,7 +7,6 @@ const defaultOGImage = ''
 
 const Head = (props) => (
   <>
-  <html lang="en" />
   <NextHead>
     <meta charSet="UTF-8" />
     <title>{props.title || ''}</title>

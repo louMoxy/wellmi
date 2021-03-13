@@ -18,6 +18,16 @@ const StyledInlineBlocks = styled(InlineBlocks)`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 450px) {
+    padding: 40px;
+    grid-template-columns: 1fr;
+  }
 `
 
 export const TeamImages = ({ index, data }) => {
@@ -25,12 +35,12 @@ export const TeamImages = ({ index, data }) => {
         <BlocksControls index={index} insetControls>
             <Box align="center">
                 <Box width="xlarge" direction="column" wrap={true} pad="medium">
-                    <Box width="medium">
+                    <Box width={{ max: 'medium' }}>
                         <Text size="small" color="text-xweak">
                             <InlineText name="smallText" />
                         </Text>
                         <HeaderText data={data} size="medium" margin="none" />
-                        <Box style={{ position: 'relative', transform: 'scale(0.6)', marginLeft: -40 }} width="220px">
+                        <Box style={{ position: 'relative', transform: 'scale(0.6)', marginLeft: -40, maxWidth: 220 }}>
                             <UnderLine width="100%" />
                         </Box>
                     </Box>

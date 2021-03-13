@@ -26,7 +26,7 @@ export const Instagram = ({ index, data }) => {
       setPhotos(undefined)
     }
     try {
-      // Hack from https://stackoverflow.com/a/47243409/2217533
+      // // Hack from https://stackoverflow.com/a/47243409/2217533
       const response = await fetch(
         `/instagram/graphql/query?query_id=17888483320059182&variables={"id":"${id}","first":${PHOTO_COUNT},"after":null}`,
         {
@@ -36,20 +36,22 @@ export const Instagram = ({ index, data }) => {
         }
       )
       const { data } = await response.json()
-      const photos = data.user.edge_owner_to_timeline_media.edges.map(
-        ({ node }) => {
-          const { id } = node
-          const caption = node.edge_media_to_caption.edges[0].node.text
-          const src = node.thumbnail_src
-          const url = `https://www.instagram.com/p/${node.shortcode}`
-          return {
-            id,
-            caption,
-            src,
-            url
+      const photos = data
+        ? data.user.edge_owner_to_timeline_media.edges.map(
+          ({ node }) => {
+            const { id } = node
+            const caption = node.edge_media_to_caption.edges[0].node.text
+            const src = node.thumbnail_src
+            const url = `https://www.instagram.com/p/${node.shortcode}`
+            return {
+              id,
+              caption,
+              src,
+              url
+            }
           }
-        }
-      )
+        )
+        : []
       setPhotos(photos)
     } catch (error) {
       console.error(error)
@@ -127,7 +129,7 @@ const ImageBlock = ({
     <Image
       key={id}
       src={src}
-      alt={caption.substring(0, 40)}
+      alt={caption?.substring(0, 40) || ''}
     />
   )
 }

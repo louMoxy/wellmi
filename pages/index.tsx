@@ -25,12 +25,10 @@ export default function Page ({ file, allPages, global, posts }: Props) {
   useCreateBlogPage(posts)
   const [data, form] = useGithubJsonForm(file, formOptions)
   usePlugin(form)
-  const { title, bgColor } = data
+  const { title, bgColor, description } = data
   return (
     <Layout bg={data.bgColor} dark={false} global={global?.props}>
-      <Head>
-        <title>{title || 'Wellmi'}</title>
-      </Head>
+      <Head description={description} title={title || 'Wellmi'} />
       <ModalProvider>
         <InlineForm form={form}>
           <InlineBlocks name="blocks" blocks={PAGE_BLOCKS as any} itemProps={{ bgColor, posts }} />

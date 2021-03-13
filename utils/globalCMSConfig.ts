@@ -5,6 +5,11 @@ export const config = [
     label: 'Title, used for SEO'
   },
   {
+    component: 'text',
+    name: 'description',
+    label: 'description, used for SEO'
+  },
+  {
     component: 'color',
     name: 'bgColor',
     label: 'Background color for the header and banner',

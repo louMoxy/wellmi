@@ -85,14 +85,12 @@ const formConfig = {
 const HelpPage = ({ file, global }) => {
   const [data, form] = useGithubJsonForm(file, formConfig)
   usePlugin(form)
-  const { title } = data
+  const { title, description } = data
   const [active, setActive] = useState([0])
   return (
     <InlineForm form={form}>
       <Layout bg={data.bgColor} dark={true} global={global?.props}>
-        <Head>
-          <title>{title || 'Wellmi'}</title>
-        </Head>
+        <Head description={description} title={title || 'Wellmi'} />
         <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} itemProps={{ bgColor: data.bgColor }} />
         <Box justify="center" direction="row" margin={{ top: 'medium' }}>
           <Box width="xlarge" pad="medium">

@@ -24,7 +24,8 @@ export default function Page ({ file, allPages, allBlogs, global, posts = [] }: 
     label: 'Page',
     actions: [deleteAction],
     fields: [
-      { name: 'title', component: 'text' }
+      { name: 'title', component: 'text' },
+      { name: 'description', component: 'text' }
     ]
   }
   const router = useRouter()
@@ -47,12 +48,10 @@ export default function Page ({ file, allPages, allBlogs, global, posts = [] }: 
 
   const [data, form] = useGithubJsonForm(file, formOptions)
   usePlugin(form)
-  const { bgColor, title } = data
+  const { bgColor, title, description } = data
   return (
     <>
-    <Head>
-      <title>{title || 'Wellmi'}</title>
-    </Head>
+      <Head description={description} title={title || 'Wellmi'} />
       <ModalProvider>
         <InlineForm form={form}>
           <Layout bg={data.bgColor} dark={true} global={global?.props}>

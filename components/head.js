@@ -1,8 +1,7 @@
 import NextHead from 'next/head'
-import { string } from 'prop-types'
 
-const defaultDescription = ''
-const defaultKeywords = ''
+const defaultDescription = 'World-class wellbeing resources that scale to any number of employees.'
+const defaultKeywords = 'Wellbeing, employees'
 const defaultOGURL = ''
 const defaultOGImage = ''
 
@@ -36,13 +35,5 @@ const Head = (props) => (
   </NextHead>
   </>
 )
-
-Head.propTypes = {
-  title: string,
-  description: string,
-  keywords: string,
-  url: string,
-  ogImage: string
-}
 
 export default Head

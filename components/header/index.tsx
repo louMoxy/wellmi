@@ -67,33 +67,36 @@ const HeaderComponent = ({ bg, dark, data }: Props) => {
           />
         </a>
         <ResponsiveContext.Consumer>
-          {size =>
-            size === 'small'
-              ? (
-              <Box justify="end">
-                <Menu
-                  a11yTitle="Navigation Menu"
-                  dropProps={{ align: { top: 'bottom', right: 'right' } }}
-                  icon={<MenuIcon color={dark ? 'white' : 'brand'} />}
-                  items={menuItems}
-                />
-              </Box>
-                )
-              : (
-                <Box justify="end" direction="row" gap="small">
-                  {data.navigation.map(({ name, link }) => (
-                    <NavLink href={link} dark={dark} key={link} bg={bg}>
-                      {name}
-                    </NavLink>
-                  ))}
-                  <a href={data.buttons[0].link}>
-                    <SecondaryButton label={data.buttons[0].name} dark={dark}/>
-                  </a>
-                  <a href={data.buttons[1].link}>
-                    <Button primary label={data.buttons[1].name} aria-label={data.buttons[1].name} />
-                  </a>
-                </Box>
-                )
+          {size => {
+            return (
+              (size === 'small' || size === 'xsmall' )
+                ? (
+                  <Box justify="end">
+                    <Menu
+                      a11yTitle="Navigation Menu"
+                      dropProps={{ align: { top: 'bottom', right: 'right' } }}
+                      icon={<MenuIcon color={dark ? 'white' : 'brand'} />}
+                      items={menuItems}
+                    />
+                  </Box>
+                  )
+                : (
+                  <Box justify="end" direction="row" gap="small">
+                    {data.navigation.map(({ name, link }) => (
+                      <NavLink href={link} dark={dark} key={link} bg={bg}>
+                        {name}
+                      </NavLink>
+                    ))}
+                    <a href={data.buttons[0].link}>
+                      <SecondaryButton label={data.buttons[0].name} dark={dark}/>
+                    </a>
+                    <a href={data.buttons[1].link}>
+                      <Button primary label={data.buttons[1].name} aria-label={data.buttons[1].name} />
+                    </a>
+                  </Box>
+                  )
+            )
+          }
           }
         </ResponsiveContext.Consumer>
       </Box>

@@ -69,7 +69,7 @@ const HeaderComponent = ({ bg, dark, data }: Props) => {
         <ResponsiveContext.Consumer>
           {size => {
             return (
-              (size === 'small' || size === 'xsmall' )
+              (size === 'small' || size === 'xsmall')
                 ? (
                   <Box justify="end">
                     <Menu

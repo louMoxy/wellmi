@@ -16,6 +16,7 @@ const ImageComponent = ({ name, className, border = false }: Props) => {
             parse={media => `/images/${media.filename}`}
             uploadDir={() => '/images/'}
             focusRing={false}
+            alt={name}
             className={`imageComponent ${className}`}
         />
     </Box>

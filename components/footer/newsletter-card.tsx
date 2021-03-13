@@ -89,6 +89,7 @@ export const NewsletterCard = () => {
                             <Image
                                 src="/images/newsletter-img.png"
                                 fill="horizontal"
+                                alt='newsletter-img'
                             />
                         </OvelayImg>
                     )

@@ -22,17 +22,17 @@ export const JobCard = ({ index, data }) => {
                                     <Text color={color} className="highlight"><InlineText name="title" /></Text>
                                 </Box>
                                 <Box direction="row" gap="small" align="center" basis="1/3" >
-                                    <Image src="/images/locationIcon.png" height="15px" />
+                                    <Image src="/images/locationIcon.png" height="15px" alt={data.location}/>
                                     <Text color={lightText}><InlineText name="location" /></Text>
                                 </Box>
                             </Box>
                             <Box direction="row" justify="between" pad="large" basis="1/2" width={{ min: '300px' }} flex={true} align="center">
                                 <Box direction="row" gap="small" align="center" >
-                                    <Image src="/images/clock.png" height="15px" />
+                                    <Image src="/images/clock.png" height="15px" alt='clock'/>
                                     <Text color={lightText}><InlineText name="type" /></Text>
                                 </Box>
                                 <Box direction="row" gap="small" align="center" >
-                                    <Image src="/images/dollar-symbol.png" height="15px" />
+                                    <Image src="/images/dollar-symbol.png" height="15px" alt='dollar' />
                                     <Text color={lightText}><InlineText name="price" /></Text>
                                 </Box>
                                 <Box className="highlight">

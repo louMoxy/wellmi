@@ -35,6 +35,7 @@ export const WelcomeBanner = ({ index, data }) => {
                                         <Image
                                             src="/images/homepage-1.png"
                                             fill="horizontal"
+                                            alt='banner image'
                                         />
                                     </Box>
                                 )}

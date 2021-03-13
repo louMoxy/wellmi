@@ -20,7 +20,7 @@ export const ContentCard = ({ header, text, img, showButton = true, secondaryBut
   return (
         <Card round="medium" {...args} width={{ max: '340px' }} style={{ border: 'solid 12px #F8FBFF', background: '#fff' }}>
             <CardBody align="start">
-                <Image src={img} fill="horizontal"/>
+                <Image src={img} fill="horizontal" alt={img}/>
                 <Heading margin={{ top: 'medium', left: 'small', right: 'small', bottom: 'small' }} level="3">{header}</Heading>
                 <Text margin="small">{text}</Text>
                 {showButton && <Button href={link} label="View more" primary margin="small" style={buttonStyle} aria-label='View More' />}

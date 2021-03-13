@@ -63,7 +63,7 @@ export default function Page ({
                 >
                   <Box basis="1/2" pad="medium" flex={true}>
                     <Stack anchor="top-left">
-                      <Image src={featuredBlog.data.featureImg} fill="horizontal" />
+                      <Image src={featuredBlog.data.featureImg} fill="horizontal" alt={featuredBlog.data.featureImg}/>
                       <Box
                         background="rgba(2,122, 172, 0.6)"
                         round="xsmall"
@@ -105,7 +105,7 @@ export default function Page ({
                     margin={{ bottom: 'medium' }}
                     width={{ min: '300px', max: '500px' }}
                   >
-                    <Image src={data.featureImg} fill="horizontal" />
+                    <Image src={data.featureImg} fill="horizontal" alt={data.featureImg}/>
                     <Text size="small" margin={{ top: 'medium', bottom: 'small' }}>
                       {new Date(data.date).toLocaleDateString('en-GB', options)}
                     </Text>

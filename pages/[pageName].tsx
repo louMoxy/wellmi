@@ -12,6 +12,7 @@ import { InlineForm, InlineBlocks } from 'react-tinacms-inline'
 import { getGlobalStaticProps } from '../utils/getGlobalStaticProps'
 import { PAGE_BLOCKS } from '../utils/blocks'
 import getBlogPosts from '../utils/getBlogPosts'
+import Head from '../components/head'
 
 interface Props {file: GitFile, allPages: string[], allBlogs: string[], global: any, posts?: []}
 
@@ -46,8 +47,12 @@ export default function Page ({ file, allPages, allBlogs, global, posts = [] }: 
 
   const [data, form] = useGithubJsonForm(file, formOptions)
   usePlugin(form)
-  const { bgColor } = data
+  const { bgColor, title } = data
   return (
+    <>
+    <Head>
+      <title>{title || 'Wellmi'}</title>
+    </Head>
       <ModalProvider>
         <InlineForm form={form}>
           <Layout bg={data.bgColor} dark={true} global={global?.props}>
@@ -55,6 +60,7 @@ export default function Page ({ file, allPages, allBlogs, global, posts = [] }: 
           </Layout>
         </InlineForm>
       </ModalProvider>
+      </>
   )
 }
 

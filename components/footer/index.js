@@ -31,7 +31,7 @@ const EditLink = () => {
     <Button
       onClick={() => cms.toggle()}
       style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', paddingRight: 8 }}
-      aria-label={Edit page}
+      aria-label='Edit page'
     >
       <i className="icon-edit" />
       {cms.enabled ? 'Exit Edit Mode' : ''}

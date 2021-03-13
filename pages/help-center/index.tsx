@@ -90,7 +90,9 @@ const HelpPage = ({ file, global }) => {
   return (
     <InlineForm form={form}>
       <Layout bg={data.bgColor} dark={true} global={global?.props}>
-        <Head title={title} />
+        <Head>
+          <title>{title || 'Wellmi'}</title>
+        </Head>
         <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} itemProps={{ bgColor: data.bgColor }} />
         <Box justify="center" direction="row" margin={{ top: 'medium' }}>
           <Box width="xlarge" pad="medium">
@@ -183,7 +185,7 @@ const HelpPage = ({ file, global }) => {
                     type="submit"
                     primary
                     label="Submit"
-                    aria-label={submit}
+                    aria-label='submit'
                     style={{ width: '30%', minWidth: 200 }}
                   />
                 </Box>

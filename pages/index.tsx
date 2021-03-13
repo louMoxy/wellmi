@@ -29,7 +29,7 @@ export default function Page ({ file, allPages, global, posts }: Props) {
   return (
     <Layout bg={data.bgColor} dark={false} global={global?.props}>
       <Head>
-        <title>{title}</title>
+        <title>{title || 'Wellmi'}</title>
       </Head>
       <ModalProvider>
         <InlineForm form={form}>

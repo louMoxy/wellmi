@@ -48,7 +48,7 @@ export default function Page ({
   return (
     <Layout bg={data.bgColor} dark={true} global={global?.props}>
       <Head>
-        <title>{title}</title>
+        <title>{title || 'Wellmi'}</title>
       </Head>
       <ModalProvider>
         <InlineForm form={form}>

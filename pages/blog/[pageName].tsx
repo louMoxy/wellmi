@@ -33,6 +33,13 @@ export default function Page ({ file, allPages, allBlogs, global, posts = [] }: 
         label: 'Publish the blog to go live?',
         component: 'toggle',
         default: false
+      },
+      {
+        name: 'date',
+        label: 'Created at',
+        component: 'date',
+        dateFormat: 'DD MM YYYY',
+        timeFormat: false
       }
     ]
   }

@@ -6,6 +6,16 @@ import { FORM_ERROR } from 'final-form'
 import { removeInvalidChars } from './removeInvalidChars'
 import { setCachedFormData, getCachedFormData } from './formCache'
 
+function formatDate (d) {
+  let month = '' + (d.getMonth() + 1)
+  let day = '' + d.getDate()
+  const year = d.getFullYear()
+
+  if (month.length < 2) { month = '0' + month }
+  if (day.length < 2) { day = '0' + day }
+  return [day, month, year].join(' ')
+}
+
 export const useCreateBlogPage = (allBlogs = []) => {
   const router = useRouter()
   const cms = useCMS()
@@ -61,6 +71,7 @@ export const useCreateBlogPage = (allBlogs = []) => {
         const github = cms.api.github
         const fileName = removeInvalidChars(slugify(frontMatter.title, { lower: true }))
         const fileRelativePath = `content/blog/${fileName}.json`
+        frontMatter.date = frontMatter.date || formatDate(new Date())
         return await github
           .commit(
             fileRelativePath,
@@ -74,7 +85,7 @@ export const useCreateBlogPage = (allBlogs = []) => {
             setCachedFormData(fileRelativePath, {
               sha: response.content.sha
             })
-            setTimeout(() => router.push(`blog/${fileName}`), 1500)
+            setTimeout(() => router.push(`/blog/${fileName}`), 1500)
           })
           .catch((e) => {
             return { [FORM_ERROR]: e }

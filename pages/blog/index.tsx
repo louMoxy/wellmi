@@ -41,7 +41,6 @@ export default function Page ({
 }: Props) {
   useCreateBlogPage(allBlogs)
   useCreatePage(allPages)
-  console.log(featuredBlog)
   const [data, form] = useGithubJsonForm(file, formOptions)
   usePlugin(form)
   const { title, bgColor } = data

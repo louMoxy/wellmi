@@ -18,6 +18,12 @@
       "num": 2
     },
     {
+      "_template": "imageContent",
+      "size": "xlarge",
+      "image": "/images/pdf.png",
+      "border": true
+    },
+    {
       "_template": "textAndButton",
       "link": "mailto:info@wellmi.io?subject=CV&body=Hi%2C%20I%20am%20interested%20in%20a%20position%20at%20Wellmi%2C%20please%20find%20attatched%20my%20CV",
       "buttonText": "Send CV",

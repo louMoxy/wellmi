@@ -2,9 +2,13 @@
   "title": "Investors",
   "blocks": [
     {
-      "_template": "imageContent",
-      "size": "xlarge",
-      "image": "/images/laptop 2 web size.jpg"
+      "_template": "imageAndText",
+      "buttons": true,
+      "button1": "Contact us to find out more.",
+      "link1": "info@wellmi.io",
+      "image": "/images/laptop 2 web size.jpg",
+      "headingText": "Investors.",
+      "text": "Read our investor presentation; view our most recent results presentation; or see a selection of company brochures for more information about our businesses on this page.\n\nIf you require answers to anything you can't find here, please contact us via the link below."
     }
   ]
 }

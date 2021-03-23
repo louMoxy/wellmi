@@ -12,43 +12,16 @@
     {
       "_template": "textContent",
       "headingText": "Want to become part of the family?",
-      "text": "We can’t wait to hear from you.",
+      "text": "Content creators, physical and mental therapists, IT specialists? \nWe can’t wait to hear from you. All of you.\n\nIf you are a content creator looking to get your material onto the Wellmi platform, download the PDF below to get started.",
       "alignment": "Center",
-      "textSize": "xsmall"
-    },
-    {
-      "_template": "jobCard",
-      "title": "Product Designer",
-      "location": "UK",
-      "type": "Full Time",
-      "price": "Competitive."
-    },
-    {
-      "_template": "jobCard",
-      "title": "Digital Marketer",
-      "location": "Remote",
-      "type": "Contractual",
-      "price": "Competitive."
-    },
-    {
-      "_template": "jobCard",
-      "title": "Social Media Manager",
-      "type": "Full Time",
-      "price": "Competitive.",
-      "location": "Asia."
-    },
-    {
-      "_template": "jobCard",
-      "title": "Software Engineer",
-      "location": "UK",
-      "type": "Full Time",
-      "price": "Competitive."
+      "textSize": "medium",
+      "num": 2
     },
     {
       "_template": "textAndButton",
       "link": "mailto:info@wellmi.io?subject=CV&body=Hi%2C%20I%20am%20interested%20in%20a%20position%20at%20Wellmi%2C%20please%20find%20attatched%20my%20CV",
-      "text": "Didn't find a position that suits you? \nWe would still love to hear from you! Perhaps the right role for you is just around the corner.",
-      "buttonText": "Send CV"
+      "buttonText": "Send CV",
+      "text": "If your looking for a different type of career within Wellmi. Upload your CV below."
     }
   ]
 }

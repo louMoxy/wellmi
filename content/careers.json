@@ -10,73 +10,9 @@
       "_template": "banner"
     },
     {
-      "text": "At Wellmi, we’re all about supporting people when and where they need it the most. If you want to work for one of the fastest growing wellbeing providers in the UK , while growing and developing personally and professionally, then Wellmi is the right place for you.",
-      "text1": "We are currently looking for new people to join us.",
-      "buttonText": "View Open Positions",
-      "buttonLink": "/careers",
-      "_template": "intro"
-    },
-    {
-      "_template": "careerImages",
-      "image1": {
-        "title": "Respect",
-        "image": "/images/career1.png"
-      },
-      "image2": {
-        "title": "Trust",
-        "image": "/images/career2.png"
-      },
-      "image3": {
-        "title": "Transparency",
-        "image": "/images/career3.png"
-      }
-    },
-    {
-      "_template": "lifeAt",
-      "num": 1,
-      "headingText": "Life at Wellmi",
-      "text": "At Wellmi, we love our people and we want everyone to feel loved and make the most of your career here. That’s why we support every aspect of your physical and mental well-being with our core values.",
-      "point1": {
-        "title": "Be Happy",
-        "text": "We approach life in a positive and optimistic way"
-      },
-      "point2": {
-        "title": "Breathe",
-        "text": "Life is for living and enjoying. "
-      },
-      "point3": {
-        "title": "Meet Great People",
-        "text": "The tapestry of life is rich with diversity."
-      },
-      "point4": {
-        "title": "Start Doing",
-        "text": "Leave no dream unchallenged."
-      },
-      "point5": {
-        "title": "Work Smarter",
-        "text": "Not longer."
-      },
-      "point6": {
-        "title": "Become a Better You",
-        "text": "Your growth is our success."
-      }
-    },
-    {
-      "_template": "office",
-      "num": 1,
-      "locationImg": "/images/homepage-bg1.png",
-      "headingText": "We Believe In Flexible Work Lives.",
-      "text": "A few snaps from some of our amazing Wellmi Family.",
-      "img1": "/images/office-1.png",
-      "img2": "/images/office-2.png",
-      "img3": "/images/office-3.png",
-      "img4": "/images/office-4.png",
-      "locationText": ""
-    },
-    {
       "_template": "textContent",
       "headingText": "Want to become part of the family?",
-      "text": "See a range of available positions below. Use the Arrows to select one before submitting a CV. We can’t wait to hear from you.",
+      "text": "We can’t wait to hear from you.",
       "alignment": "Center",
       "textSize": "xsmall"
     },

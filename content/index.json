@@ -13,15 +13,6 @@
       "text": "Find out how Wellmi can support the wellbeing of your employees and the success of your business."
     },
     {
-      "_template": "partners",
-      "backgroundText": "Partners",
-      "text": "Organisations already enjoying Wellmi",
-      "image1": "/images/Heart-Heroes-Logo-colour.png",
-      "image2": "/images/Cirencester-College-Logo.png",
-      "image3": "/images/opp-hub-png.png",
-      "image4": "/images/ncs-ltd.png"
-    },
-    {
       "_template": "imageAndText",
       "image": "/images/worldimage.png",
       "num": 3,
@@ -33,6 +24,15 @@
       "link1": "https://wellmi.netlify.app/product-overview",
       "link2": "https://wellmi.netlify.app/demo",
       "text": "The first cloud wellbeing product of its kind. Supporting employee physical and mental wellbeing on smartphones, desktops and smart watches. Nothing is quite like Wellmi."
+    },
+    {
+      "_template": "partners",
+      "backgroundText": "Partners",
+      "text": "Organisations already enjoying Wellmi",
+      "image1": "/images/Heart-Heroes-Logo-colour.png",
+      "image2": "/images/Cirencester-College-Logo.png",
+      "image3": "/images/opp-hub-png.png",
+      "image4": "/images/ncs-ltd.png"
     },
     {
       "_template": "latestInsights",

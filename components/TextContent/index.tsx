@@ -1,18 +1,19 @@
 import { Box, Text } from 'grommet'
 import { InlineTextarea, BlocksControls } from 'react-tinacms-inline'
 import { HeaderText } from '../HeaderText'
+import { useCMS } from 'tinacms'
 
 export const TextContent = ({ index, data }) => {
   const alignment = data.alignment === 'Right' ? 'end' : data.alignment === 'Center' ? 'center' : 'start'
   const textSize = data.textSize || 'medium'
-
+  const cms = useCMS()
   return (
         <BlocksControls index={index} insetControls>
             <Box align="center">
                 <Box width="xlarge" pad="medium">
                     <Box pad="medium">
                         <HeaderText data={data} textAlign={alignment} />
-                        <Text textAlign={alignment} size={textSize}><InlineTextarea name="text" /></Text>
+                      {cms.enabled ? <InlineTextarea name="text" /> : data.text?.split('\n').map((text, i) => <Text textAlign={alignment} size={textSize} key={i}>{text}</Text>) }
                     </Box>
                 </Box>
             </Box>

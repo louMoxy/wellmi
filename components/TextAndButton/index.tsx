@@ -1,15 +1,15 @@
 import { Box, Text, Button } from 'grommet'
 import { InlineText, BlocksControls, InlineTextarea } from 'react-tinacms-inline'
+import { useCMS } from 'tinacms'
 
 export const TextAndButton = ({ index, data }) => {
+  const cms = useCMS()
   return (
         <BlocksControls index={index} insetControls>
             <Box justify="center" direction="row">
                 <Box width="xlarge" pad="medium" align="center">
                     <Box width="large">
-                        <Text margin="medium" textAlign="center">
-                            <InlineTextarea name="text"/>
-                        </Text>
+                      {cms.enabled ? <InlineTextarea name="text" /> : data.text?.split('\n').map((text, i) => <Text textAlign={'center'} margin="medium" key={i}>{text}</Text>) }
                     </Box>
                     <Button primary style={{ padding: '8px 20px' }} href={data.link || '/'} aria-label={data.buttonText} >
                         <InlineText name="buttonText"/>

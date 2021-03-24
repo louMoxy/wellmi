@@ -6,8 +6,10 @@ import { StyledButton, IconButton } from './styles'
 import BackgroundText from '../backgroundText'
 import { HeaderText } from '../HeaderText'
 import { ContentCardBlock } from '../ContentCard'
+import { useCMS } from 'tinacms'
 
 export const Supporting = ({ index, data }) => {
+  const cms = useCMS()
   return (
         <BlocksControls index={index} insetControls>
             <Box style={{ position: 'relative' }} align="center" margin={{ top: '150px' }} >
@@ -16,10 +18,8 @@ export const Supporting = ({ index, data }) => {
                     <Box width="xlarge" direction="row" align="center" wrap={true} justify="center">
                         <Box pad="medium" flex={true} width={{ min: '300px' }}>
                             <HeaderText data={data} />
-                            <Text>
-                                <InlineTextarea name="text" />
-                            </Text>
-                            <Box direction="row" margin={{ top: 'large' }} gap="large" >
+                          {cms.enabled ? <InlineTextarea name="text" /> : data.text?.split('\n').map((text, i) => <Text key={i}>{text}</Text>) }
+                          <Box direction="row" margin={{ top: 'large' }} gap="large" >
                                 <Link href={data.link1 || '/'}>
                                     <StyledButton plain={false}><InlineText name="button1" /></StyledButton>
                                 </Link>
@@ -33,7 +33,7 @@ export const Supporting = ({ index, data }) => {
                         </Box>
                         <Box width="large" direction="row" align="center" justify="center" pad="small" wrap={true}>
                             <Box pad="small">
-                                <ContentCardBlock cardName="contentCard1" secondaryButton={true} buttonLink={data.contentCard1.buttonLink} buttonText={data.contentCard1.buttonText}/>
+                                <ContentCardBlock cardName="contentCard1" secondaryButton={true} buttonLink={data.contentCard1.buttonLink} buttonText={data.contentCard1.buttonText} text={data.contentCard1.text}/>
                             </Box>
                             <Box pad="small" gap="medium">
                                 <ContentCardBlock cardName="contentCard2" secondaryButton={true} buttonLink={data.contentCard2.buttonLink} buttonText={data.contentCard2.buttonText} />

@@ -25,11 +25,24 @@ interface Post {
   fileName: string
   data: {
     featureImg: string
-    date: Date
+    date: string
     publish: boolean
     description?: string
     title?: string
   }
+}
+
+const calculateDate = (dateString: string) => {
+  const testDate = new Date(dateString)
+  if (!isNaN(testDate.getMonth())) {
+    return testDate
+  }
+  const [day, month, year] = dateString.split(' ')
+  const d = new Date()
+  d.setDate(+day)
+  d.setMonth(+month)
+  d.setFullYear(+year)
+  return d
 }
 
 interface Props { file: GitFile, posts: Post[], global: any, allPages,
@@ -70,7 +83,7 @@ export default function Page ({
                         margin="small"
                       >
                         <Text color="white" size="xsmall">
-                          {new Date(featuredBlog.data.date).toLocaleDateString('en-GB', options)}
+                          {new Date(calculateDate(featuredBlog.data.date)).toLocaleDateString('en-GB', options)}
                         </Text>
                       </Box>
                     </Stack>
@@ -106,7 +119,7 @@ export default function Page ({
                   >
                     <Image src={data.featureImg} fill="horizontal" alt={data.featureImg}/>
                     <Text size="small" margin={{ top: 'medium', bottom: 'small' }}>
-                      {new Date(data.date).toLocaleDateString('en-GB', options)}
+                      {new Date(calculateDate(data.date)).toLocaleDateString('en-GB', options)}
                     </Text>
                     <Text>{data.title}</Text>
                     <Anchor href={`/blog/${fileName}`} margin={{ top: 'small' }}>
@@ -131,10 +144,11 @@ export const getStaticProps = async function ({ preview, previewData }) {
   const blogs = await getBlogPosts(preview, previewData, 'content/blog')
   const allBlogs = blogs.map((post: any) => post.data.title?.toLowerCase()).filter(Boolean)
   const global = await getGlobalStaticProps(preview, previewData)
-  const posts = await getBlogPosts(preview, previewData, 'content/blog')
+  const posts: any[] = await getBlogPosts(preview, previewData, 'content/blog')
+  const publishedPosts = posts.filter(post => post.data.publish)
   const fileRelativePath = 'content/blog.json'
-  const featuredBlog = posts.length > 0 ? posts[0] : undefined
-  const blogPosts = posts.length > 1 ? posts.splice(1) : []
+  const featuredBlog = publishedPosts.length > 0 ? publishedPosts[0] : undefined
+  const blogPosts = publishedPosts.length > 1 ? publishedPosts.splice(1) : []
   if (preview) {
     try {
       const previewProps = await getGithubPreviewProps({

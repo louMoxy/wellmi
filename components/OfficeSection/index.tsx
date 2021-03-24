@@ -12,14 +12,14 @@ export const OfficeSection = ({ index, data }) => {
                 <BackgroundText text="Office" style={{ transform: 'rotate(-90deg)', left: 130, width: 400, top: -50 }} />
                 <Box width="xlarge" pad="medium" style={{ zIndex: 3 }}>
                     <Box direction="row" wrap={true} justify="between">
-                        <Box basis="1/3" width={{ min: '300px' }}>
+                        <Box basis="1/3" width={{ min: '280px' }}>
                             <HeaderText data={data}/>
                             <Text size="small"><InlineTextarea name="text" /></Text>
                             <Box border="top">
                                 <LocationText name="locationText" imgName="locationImg"/>
                             </Box>
                         </Box>
-                        <Box basis="2/3" direction="row" width={{ min: '300px' }} margin={{ left: 'auto' }} gap="small" flex={true}>
+                        <Box basis="2/3" direction="row" width={{ min: '280px' }} margin={{ left: 'auto' }} gap="small" flex={true}>
                             <Box gap="medium" align="end">
                                 <Box height="medium" round="medium" pad={{ right: 'medium' }}>
                                     <ImageComponent name="img1"/>

@@ -9,7 +9,7 @@ export const ColWysiwyg = ({ index, data }) => {
             <Box align="center">
                 <Box width="xlarge" pad={data.padding ? 'medium' : {top: 'none', bottom: 'none', right: 'medium', left: 'medium'}} direction="row" wrap>
                     {cols.map((index) => (
-                        <Box pad="small" key={index} basis={+data.cols === 2 ? "1/2" : "1/3"} className="content" width={{ min: '300px' }} flex justify={data[`justify${index + 1}`]} style={{ textAlign: data[`textAlign${index + 1}`] || 'left' }}>
+                        <Box pad="small" key={index} basis={+data.cols === 2 ? "1/2" : "1/3"} className="content" width={{ min: '280px' }} flex justify={data[`justify${index + 1}`]} style={{ textAlign: data[`textAlign${index + 1}`] || 'left' }}>
                             <InlineWysiwyg
                                 name={`html${index + 1}`}
                                 format="html"

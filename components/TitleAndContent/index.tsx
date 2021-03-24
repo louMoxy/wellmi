@@ -15,7 +15,7 @@ export const TitleAndContent = ({ index, data }) => {
                             <UnderLine width="100%" />
                         </Box>
                     </Box>
-                    <Box pad="small" flex={true} width={{ min: '400px' }}>
+                    <Box pad="small" flex={true} width={{ min: '280px' }}>
                         <Paragraph fill={true} color="text-light">
                             <InlineTextarea name="text" />
                         </Paragraph>

@@ -160,7 +160,7 @@ const HelpPage = ({ file, global }) => {
                       <TextInput name="email" placeholder="jahid.jaykar@gmail.com" required />
                     </FormField>
                   </Box>
-                  <Box basis="1/2" width={{ min: '320px' }} flex pad="small">
+                  <Box basis="1/2" width={{ min: '280px' }} flex pad="small">
                     <FormField
                       name="message"
                       label="Your Message"

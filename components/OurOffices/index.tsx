@@ -10,7 +10,7 @@ export const Offices = ({ index, data }) => {
         <BlocksControls index={index} insetControls>
             <Box align="center">
                 <Box width="xlarge" direction="row" wrap={true} pad="medium">
-                    <Box basis="60%" width={{ min: '300px' }} pad="small" round="medium" margin={{ top: '95px' }} justify="end" flex="grow" >
+                    <Box basis="60%" width={{ min: '280px' }} pad="small" round="medium" margin={{ top: '95px' }} justify="end" flex="grow" >
                         <ImageComponent name="img1" className="border"/>
                         <Box width={{ max: '380px' }}>
                             <LocationText name="locationText1" imgName="locationImg1"/>

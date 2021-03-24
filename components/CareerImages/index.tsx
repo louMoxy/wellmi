@@ -20,7 +20,7 @@ export const CareerImages = ({ index, data }) => {
 const TextImage = ({ componentName, data }) => {
   const img = data[componentName].image
   return (
-        <Box basis="1/3" style={{ minWidth: 300 }}>
+        <Box basis="1/3" style={{ minWidth: 250 }}>
         <Box flex="shrink" margin="medium" style={{ position: 'relative' }} background={`url(${img})`} height="medium" justify="end" round="small" animation="fadeIn">
             <Box background="linear-gradient( transparent, rgba(0,0,0,0.4));" style={{
               height: '100%',

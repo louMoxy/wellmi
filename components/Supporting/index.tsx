@@ -16,7 +16,7 @@ export const Supporting = ({ index, data }) => {
                 <BackgroundText text="sotries" style={{ transform: 'rotate(-90deg)', transformOrigin: '0%', top: '50%', width: '50%', left: '18%' }} />
                 <Box justify="center" align="center" style={{ zIndex: 2 }} width="xlarge">
                     <Box width="xlarge" direction="row" align="center" wrap={true} justify="center">
-                        <Box pad="medium" flex={true} width={{ min: '300px' }}>
+                        <Box pad="medium" flex={true} width={{ min: '280px' }}>
                             <HeaderText data={data} />
                           {cms.enabled ? <InlineTextarea name="text" /> : data.text?.split('\n').map((text, i) => <Text key={i}>{text}</Text>) }
                           <Box direction="row" margin={{ top: 'large' }} gap="large" >

@@ -16,7 +16,7 @@ export const JobCard = ({ index, data }) => {
                 <Box width="xlarge" pad="small" align="center">
                     <Link href={data.link || '/'}>
                         <Container background="white" elevation="small" width="xlarge" direction="row" justify="between" pad="xsmall" hoverIndicator={true} wrap={true}>
-                            <Box direction="row" justify="between" pad="large" basis="1/2" width={{ min: '300px' }} flex={true}>
+                            <Box direction="row" justify="between" pad="large" basis="1/2" width={{ min: '280px' }} flex={true}>
                                 <Box direction="row" gap="small" basis="2/3" align="center">
                                     <PersonIcon width="30px" height="30px" className="highlight" />
                                     <Text color={color} className="highlight"><InlineText name="title" /></Text>
@@ -26,7 +26,7 @@ export const JobCard = ({ index, data }) => {
                                     <Text color={lightText}><InlineText name="location" /></Text>
                                 </Box>
                             </Box>
-                            <Box direction="row" justify="between" pad="large" basis="1/2" width={{ min: '300px' }} flex={true} align="center">
+                            <Box direction="row" justify="between" pad="large" basis="1/2" width={{ min: '280px' }} flex={true} align="center">
                                 <Box direction="row" gap="small" align="center" >
                                     <Image src="/images/clock.png" height="15px" alt='clock'/>
                                     <Text color={lightText}><InlineText name="type" /></Text>

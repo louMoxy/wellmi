@@ -91,7 +91,7 @@ export default function Page ({
                   <Box
                     basis="1/2"
                     pad="medium"
-                    width={{ min: '400px' }}
+                    width={{ min: '280px' }}
                     background="white"
                     flex={true}
                   >
@@ -115,7 +115,7 @@ export default function Page ({
                     key={fileName}
                     pad="medium"
                     margin={{ bottom: 'medium' }}
-                    width={{ min: '300px', max: '500px' }}
+                    width={{ min: '280px', max: '500px' }}
                   >
                     <Image src={data.featureImg} fill="horizontal" alt={data.featureImg}/>
                     <Text size="small" margin={{ top: 'medium', bottom: 'small' }}>

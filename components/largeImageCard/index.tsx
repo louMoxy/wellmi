@@ -7,7 +7,7 @@ export const ImageCard = ({ index, data }) => {
         <BlocksControls index={index} insetControls>
             <Box align="center" >
                 <Box width="xlarge" pad="medium">
-                    <Box pad="large" width={{ min: '400px', max: '900px' }} background="linear-gradient( transparent, transparent 30%, white 31%, white)" alignSelf={data.alignment === 'right' ? 'end' : 'start'} margin={{ bottom: 'large' }}>
+                    <Box pad="large" width={{ max: '900px' }} background="linear-gradient( transparent, transparent 30%, white 31%, white)" alignSelf={data.alignment === 'right' ? 'end' : 'start'} margin={{ bottom: 'large' }}>
                         <Box width="85%" margin={{ bottom: 'medium' }} alignSelf={data.alignment === 'right' ? 'end' : 'start'}>
                             <ImageComponent name="image" className={data.alignment === 'right' ? 'right' : ''}/>
                         </Box>
